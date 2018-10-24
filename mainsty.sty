@@ -1,0 +1,72 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{mainsty}
+  [2018/10/24 v0.01 LaTeX package thesis]
+
+\RequirePackage{amsmath}
+\RequirePackage{xspace}
+\RequirePackage{xcolor}
+
+% ____________________________________________________________________________
+% Physics
+
+\newcommand{\hboson}{\ensuremath{\mathrm{H}}\xspace}
+\newcommand{\bquark}{\ensuremath{\mathrm{b}}\xspace}
+\newcommand{\cquark}{\ensuremath{\mathrm{c}}\xspace}
+\newcommand{\tquark}{\ensuremath{\mathrm{t}}\xspace}
+\newcommand{\zboson}{\ensuremath{\mathrm{Z}}\xspace}
+\newcommand{\gluon}{\ensuremath{\mathrm{g}}\xspace}
+\newcommand{\photon}{\ensuremath{\mathrm{\gamma}}\xspace}
+\newcommand{\jpsi}{\ensuremath{\mathrm{J}/\mathrm{\psi}}\xspace}
+\newcommand{\proton}{\ensuremath{\mathrm{p}}\xspace}
+\newcommand{\vboson}{\ensuremath{\mathrm{V}}\xspace}
+\newcommand{\taulepton}{\ensuremath{\mathrm{\tau}}\xspace}
+\newcommand{\electron}{\ensuremath{\mathrm{e}}\xspace}
+\newcommand{\muon}{\ensuremath{\mathrm{\mu}}\xspace}
+
+\newcommand{\muF}{\ensuremath{\mu_\mathrm{F}}\xspace}
+\newcommand{\muR}{\ensuremath{\mu_\mathrm{R}}\xspace}
+
+\newcommand{\bbbar}{\ensuremath{\bquark\bar{\bquark}}\xspace}
+\newcommand{\ccbar}{\ensuremath{\cquark\bar{\cquark}}\xspace}
+\newcommand{\ttbar}{\ensuremath{\tquark\bar{\tquark}}\xspace}
+
+\newcommand{\hbb}{\ensuremath{\hboson\to\bbbar}\xspace}
+\newcommand{\hcc}{\ensuremath{\hboson\to\ccbar}\xspace}
+\newcommand{\hgg}{\ensuremath{\hboson\to\photon\photon}\xspace}
+\newcommand{\hzz}{\ensuremath{\hboson\to\zboson\zboson}\xspace}
+\newcommand{\hzztofourl}{\ensuremath{\hzz^{(\ast)}\to 4\ell}\xspace}
+
+\newcommand{\BRgamgam}{\ensuremath{\mathcal{B}_{\photon\photon}}\xspace}
+\newcommand{\BRZZ}{\ensuremath{\mathcal{B}_{\zboson\zboson}}\xspace}
+
+\newcommand{\pth}{\ensuremath{\pt^\hboson}\xspace}
+\newcommand{\njets}{\ensuremath{N_\text{jets}} \xspace}
+\newcommand{\absynoH}{\ensuremath{\left|y\right|} \xspace}
+\newcommand{\absy}{\ensuremath{\left|y_\hboson\right|} \xspace}
+\newcommand{\ptjet}{\ensuremath{\pt^\text{jet}} \xspace}
+\newcommand{\Emiss}{\ETm}
+
+\newcommand{\mH}{\ensuremath{m_{\hboson}}\xspace}
+\newcommand{\msd}{\ensuremath{m_\mathrm{SD}}\xspace}
+
+\newcommand{\ggh}{\ensuremath{\gluon\gluon\hboson}\xspace}
+\newcommand{\tth}{\ensuremath{\tquark\tquark\hboson}\xspace}
+
+\newcommand{\cg}{\ensuremath{c_\gluon}\xspace}
+\newcommand{\kappab}{\ensuremath{\kappa_{\bquark}}\xspace}
+\newcommand{\kappac}{\ensuremath{\kappa_{\cquark}}\xspace}
+\newcommand{\kappat}{\ensuremath{\kappa_{\tquark}}\xspace}
+
+\newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
+\newcommand{\fbinv}{\ensuremath{\,\text{fb}^{-1}}\xspace}
+\newcommand{\TeV}{\ensuremath{\,\text{TeV}}\xspace}
+\newcommand{\GeV}{\ensuremath{\,\text{GeV}}\xspace}
+\newcommand{\MeV}{\ensuremath{\,\text{MeV}}\xspace}
+
+% ____________________________________________________________________________
+
+\newcommand{\tk}[1]{\textbf{\color{orange} [TK: #1]}}
+\newcommand{\pasq}[1]{\textbf{\color{green} [PM #1 ]}}
+\newcommand{\md}[1]{\textbf{\color{red} [MD: #1]}}
+
+\endinput
