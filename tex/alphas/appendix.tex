@@ -1,0 +1,189 @@
+\section{Including strongly correlated uncertainty sources in the combination}
+\label{sec:appendix}
+
+Our approach of excluding strongly correlated uncertainties from the combination is generally recommended when using the covariance matrix to fit strongly correlated data~\cite{DAgostini:1993arp}.
+% 
+To illustrate the effect of strong correlations, the combination is here performed again with the PDF, scale and $\mt$ uncertainties included in the combination one by one.
+% 
+The PDF and scale uncertainties are considered fully correlated between measurements made with the LHC, and partially correlated between measurements made with the LHC and Tevatron.
+% 
+In the case of the PDF uncertainties the degree of correlation between LHC and Tevatron measurements was determined using the procedure described in Ref.~\cite{LHAPDF}.
+%
+The $\mt$ uncertainties are considered fully correlated for all measurements.
+% 
+
+Tables~\ref{tab:theoryUncertainties_CT14_NNLO} and \ref{tab:theoryUncertainties_CT14_NNLO_NNLL} show the results for the CT14 PDF set, using NNLO and NNLO+NNLL respectively, and Tables~\ref{tab:theoryUncertainties_NNPDF30_NNLO} and \ref{tab:theoryUncertainties_NNPDF30_NNLO_NNLL} for the NNPDF30\_nolhc PDF set.
+% 
+As expected, the total uncertainty decreases as more sources are included in the combination.
+% 
+As the sensitivity to $\as$ is stronger for a larger cross section, determinations that deviate up can have a smaller uncertainty, and therefore obtain a larger weight in the combination.
+% 
+This is the case for the determination from the ATLAS measurement at 7$\TeV$ when using the CT14 PDF set.
+% 
+A larger weight may also be obtained for determinations that are more independent with respect to the others. This is primarily the case for the Tevatron determination, for both PDF sets.
+% 
+These effects are enhanced if the overall correlation is increased by including strongly correlated uncertainty sources, which explains why the combination yields increasing values of $\as$ as more sources are included.
+% 
+The results found this way are larger than both the straight average and the median of the individual determinations, though the difference is well within one standard deviation. 
+% 
+Taking them as our final results would imply a high degree of trust in the assumed correlations.
+% 
+Due to the inherent difficulty of determining correlations, notably as concerns the scale variations, and the importance of the subtle interplay between an individual determination's $\alpha_s$ result and its error, the conservative approach is to exclude the strongly correlated sources from the combination.
+%
+
+\begin{table}[ht] 
+\renewcommand{\arraystretch}{1.4}
+\setlength\tabcolsep{5pt}
+\centering
+{\scriptsize
+    % \begin{center} 
+    \hspace*{-0.75cm}%
+    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{tabular}{l l l l}
+    \toprule
+    \lcell{2.4cm}{Uncertainties included in combination} & 
+    \lcell{0.7cm}{Center} & 
+    \lcell{1.5cm}{Combination uncertainty} & 
+    \lcell{1.5cm}{Total uncertainty} \\ 
+    \midrule
+    \input{img/alphas/extr-NNLO-CT14nnlo_theoryUncertaintyEffect.tex}
+    \bottomrule
+    \end{tabular} 
+    % \end{center} 
+    \caption{\small
+        Combination results including also uncertainties from the PDF, the scale
+        and the top mass in the combination.
+        % 
+        The first row corresponds to our
+        approach of excluding correlated uncertainties from the combination.
+        % 
+        The results listed here are obtained using NNLO cross sections with
+        the CT14nnlo series of PDFs.
+        }
+    \label{tab:theoryUncertainties_CT14_NNLO}
+    \end{minipage}%
+    % 
+    \hspace*{1cm}%
+    % 
+    % \begin{center} 
+    % \hspace*{-0.75cm}%
+    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{tabular}{l l l l }
+    \toprule
+    \lcell{2.4cm}{Uncertainties included in combination} & 
+    \lcell{0.7cm}{Center} & 
+    \lcell{1.5cm}{Combination uncertainty} & 
+    \lcell{1.5cm}{Total uncertainty} \\ 
+    \midrule
+    \input{img/alphas/extr-NNLO-NNLL-CT14nnlo_theoryUncertaintyEffect.tex}
+    \bottomrule
+    \end{tabular} 
+    % \end{center} 
+    \caption{\small
+        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO+NNLL
+        cross sections with the CT14nnlo series of PDFs.
+        }
+    \label{tab:theoryUncertainties_CT14_NNLO_NNLL}
+    \end{minipage}
+    % 
+    % NEW LINE
+    \\[16pt]
+    % 
+    \hspace*{-0.75cm}%
+    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{tabular}{l l l l }
+    \toprule
+    \lcell{2.4cm}{Uncertainties included in combination} & 
+    \lcell{0.7cm}{Center} & 
+    \lcell{1.5cm}{Combination uncertainty} & 
+    \lcell{1.5cm}{Total uncertainty} \\ 
+    \midrule
+    \input{img/alphas/extr-NNLO-NNPDF30-nolhc-nnlo_theoryUncertaintyEffect.tex}
+    \bottomrule
+    \end{tabular} 
+    % \end{center} 
+    \caption{\small
+        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO
+        cross sections with the NNPDF30\_nolhc series of PDFs.
+        }
+    \label{tab:theoryUncertainties_NNPDF30_NNLO}
+    \end{minipage}%
+    % 
+    \hspace*{1cm}%
+    % 
+    % \begin{center} 
+    % \hspace*{-0.75cm}%
+    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{tabular}{l l l l }
+    \toprule
+    \lcell{2.4cm}{Uncertainties included in combination} & 
+    \lcell{0.7cm}{Center} & 
+    \lcell{1.5cm}{Combination uncertainty} & 
+    \lcell{1.5cm}{Total uncertainty} \\ 
+    \midrule
+    \input{img/alphas/extr-NNLO-NNLL-NNPDF30-nolhc-nnlo_theoryUncertaintyEffect.tex}
+    \bottomrule
+    \end{tabular} 
+    % \end{center} 
+    \caption{\small
+        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO+NNLL
+        cross sections with the NNPDF30\_nolhc series of PDFs.
+        }
+    \label{tab:theoryUncertainties_NNPDF30_NNLO_NNLL}
+    \end{minipage}%
+}%
+\end{table} 
+
+
+% ____________________________________________________________________________
+\section{Overview of asymmetric uncertainties used in the combination}
+\label{sec:appendix2}
+
+Tables~\ref{tab:uncertaintyCoefficients_CT14_NNLO} and \ref{tab:uncertaintyCoefficients_CT14_NNLO_NNLL} show the numerical values for the uncertainty coefficients used in the combination procedure for the CT14 PDF set, using NNLO and NNLO+NNLL cross sections respectively.
+% 
+Only experimental uncertainties are listed.
+% 
+Theoretical uncertainties, which are taken into account after the combination procedure, can be found in Tables~\ref{tab:determination_NNLO_CT14}-\ref{tab:determination_NNLO_NNLL_NNPDF30nolhc}.
+% 
+The correlations for the correlated uncertainties (with a $\delta$ symbol) are described in Section~\ref{sec:correlationcoefficients}.
+
+\begin{table}[ht] 
+\renewcommand{\arraystretch}{2.0}
+\renewcommand{\ErrTableWidth}{1.0cm}
+\setlength\tabcolsep{5pt}
+\centering
+{\footnotesize
+    \hspace*{-0.75cm}%
+    \begin{minipage}[t]{0.5\hsize}\centering
+        \begin{tabular}{l c c c c c }
+        \toprule
+        \input{img/alphas/extr-Oct16-NNLO-CT14nnlo_all_deltas.tex}
+        \bottomrule
+        \end{tabular} 
+        % \end{center} 
+        \caption{\small
+            Overview of the uncertainty coefficients for the CT14 (NNLO) PDF set.
+            % 
+            The coefficients with a $\delta$ correspond to the coefficients of the correlated
+            uncertainty sources, and those with a $\Delta$ to the uncorrelated uncertainty sources.
+            }
+        \label{tab:uncertaintyCoefficients_CT14_NNLO}
+        \end{minipage}%
+    % 
+    \hspace*{1cm}%
+    % 
+    \begin{minipage}[t]{0.5\hsize}\centering
+        \begin{tabular}{l c c c c c }
+        \toprule
+        \input{img/alphas/extr-Oct16-NNLO-NNLL-CT14nnlo_all_deltas.tex}
+        \bottomrule
+        \end{tabular} 
+        \caption{\small
+            As in Table~\ref{tab:uncertaintyCoefficients_CT14_NNLO}, but now using
+            NNLO+NNLL cross sections with the CT14 PDF set.
+            }
+        \label{tab:uncertaintyCoefficients_CT14_NNLO_NNLL}
+        \end{minipage}%    % 
+}%
+\end{table} 
+

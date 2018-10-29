@@ -13,6 +13,12 @@
 % Margins
 \RequirePackage[margin=1.0in]{geometry}
 
+% Line numbers
+\RequirePackage{lineno}
+\ifbool{draftmode}{
+    \linenumbers
+    }{}
+
 % Draft watermark if in draftmode
 \ifbool{draftmode}{
     \RequirePackage{draftwatermark}
@@ -37,6 +43,13 @@
 \RequirePackage{amsmath}
 \RequirePackage{tabularx}
 \RequirePackage{hyperref} % Needs to be *after* float
+
+% For alpha_s
+\RequirePackage{booktabs}
+\RequirePackage{makecell}
+\RequirePackage{amssymb}
+\RequirePackage{multirow}
+\RequirePackage{bm}
 
 
 \RequirePackage{mainsty}

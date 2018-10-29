@@ -1,0 +1,813 @@
+\subsection{Determination of $\as$ from $\ttbar$ cross section measurements}
+
+\subsubsection{Theory prediction for the top pair production cross section $\stt$}
+\label{sec:theory-predictions}
+
+Theory predictions for the dependence of $\stt$ on $\as$ are
+calculated using the program
+\texttt{top++2.0}~\cite{topplusplus}. 
+%
+It provides the computation of the total cross section up to
+NNLO~\cite{topplusplus2}, with possible inclusion of soft-gluon
+resummation at next-to-next-to-leading logarithmic order (NNLL), as
+described in Refs.~\cite{Beneke:2009rj,Czakon:2009zw}.
+
+The predicted cross section is evaluated setting both the
+renormalisation scale $\mu_R$ and factorisation scale $\mu_F$ equal to
+the top-quark pole mass. 
+%
+The theoretical uncertainty associated with missing higher-order
+contributions is evaluated by independently varying $\mu_R$ and $\mu_F$
+up and down by a factor of 2, under the constraint that
+$\frac{1}{2} \leq \mu_R / \mu_F \leq 2$.
+%
+The scale uncertainties are modelled as corresponding to a $68\%$
+confidence interval with a Gaussian-shaped uncertainty profile.
+%
+This choice is more conservative than the (flat) $100\%$ confidence
+interval that is sometimes taken for scale variations and used,
+notably, in Ref.~\cite{CMS-ttbar-alphas}. 
+%
+The latter choice leads to a scale
+uncertainty contribution that is smaller by a factor $\sqrt{3}$ (the
+ratio of the standard deviations of the two uncertainty profiles).
+%
+Note that a $100\%$ confidence
+interval for scale uncertainties is known to be inconsistent with the
+observation that a significant fraction of NNLO calculations is
+outside the scale uncertainty interval of the corresponding NLO
+calculation.\footnote{As discussed in \cite{Bagnaschi:2014wea} and
+  also \cite{GavinLHCPtalk}. 
+  % 
+  Note that the experience with NLO scale uncertainties may not apply
+  to NNLO scale uncertainties.
+  %
+  In particular, for the two cases of hadron-collider calculations
+  available at N3LO accuracy, Higgs production in the
+  gluon-fusion~\cite{Anastasiou:2016cez} and
+  vector-boson-fusion~\cite{Dreyer:2016oyx} channels, while the
+  central NNLO results are outside the NLO scale uncertainty bands, the N3LO
+  results are well within the corresponding NNLO bands. }
+
+A further choice that needs to be made is whether to include the NNLL
+threshold resummation for the cross section.
+%
+This is a procedure that resums terms whose leading-logarithmic (LL)
+structure is $(\as \ln^2 N)^n$, where $N \sim d\ln\sigma_{\ttbar}/d\ln s$ and
+$s$ is the squared centre-of-mass energy.
+%
+When $m_{\ttbar}^2/s$ approaches one, i.e.\ when one approaches the
+threshold for $t\bar t$ production, $N$ is proportional to
+$1/(1-m_{\ttbar}^2/s$) and the threshold resummation is a necessity.
+%
+However, at the LHC and even at the Tevatron, top-pair production is
+far from threshold and $N$ is not especially large: for the dominant
+gluon-gluon production channel at LHC, $N \simeq 1.4$ for
+$m_{t\bar t} = 2 \mt$ and $\sqrt{s} = 7\TeV$; while for the dominant
+$q\bar q$ production channel at the Tevatron, $N \simeq 1.8$.
+%
+Accordingly, there is debate within the community as to
+whether threshold resummation is called for.
+%
+On one hand, one may argue that it brings terms that have a certain
+physical meaning.
+%
+On the other, one may argue that there is no reason why the terms
+brought by threshold resummation should dominate over other, neglected
+terms, and therefore it is more consistent to include just the
+fixed-order contributions, which are known exactly.
+%
+We will take an agnostic approach to this question, carry out fits
+with and without NNLL resummation, and then average both the central
+values and the uncertainties in the two cases in order to obtain our
+final result.
+
+The theory prediction for $\stt$ also depends on a choice of PDF set.
+%
+Since that choice needs to be related to the data that we fit, we
+postpone our discussion of the PDF choice to
+section~\ref{sec:pdf-choice}.
+
+
+%----------------------------------------------------------------------
+\subsubsection{Measurements of the top pair production cross section}
+\label{sec:data}
+
+Our $\as$ determination is performed using seven $\stt$ inputs, listed
+in Table~\ref{tab:includedmeasurements}.
+%
+The six measurements at the LHC include three updated measurements
+by the CMS Collaboration at centre-of-mass energies of 7\TeV,
+8\TeV~\cite{CMS78TeV} and 13\TeV~\cite{CMS13TeV}.  
+%
+These measurements were performed in the $e \mu$ decay channel,%
+\footnote{The $\stt$ measurement by CMS at 13\TeV using events with
+  one lepton and at least one jet in the final
+  state~\cite{CMS13TeVoneleptononejet} has a slightly better precision
+  than the CMS result used in our analysis. However, the effect on the
+  final result is marginal, and using measurements from the same decay
+  channel yields a clearer correlation structure for the combination.
+}
+%
+where the $W$-bosons from the top quark decays each themselves decay
+into a charged lepton and a neutrino, one of the $W$ decays producing
+an electron, the other producing a muon.
+% 
+The measurements are based on data collected in the years of 2011, 2012 and 2015
+respectively, with integrated luminosities of 5.0\fbinv,
+19.7\fbinv, and 2.2\fbinv.
+%
+From the ATLAS Collaboration, three similar
+measurements performed in the
+$e\mu$ decay channel are included, based on datasets with
+integrated luminosities of 4.6\fbinv, 20.3\fbinv and
+3.2\fbinv for the 7\TeV, 8\TeV~\cite{ATLAS78TeV} and
+13\TeV~\cite{ATLAS13TeV} centre-of-mass energies
+respectively.
+%
+A seventh input from
+the Tevatron collider~\cite{D0CDFcombination} at a centre-of-mass
+energy of 1.96\TeV is included, which
+comprises a combination of measurements performed in multiple decay
+channels from both the CDF Collaboration and the D0 Collaboration.  
+
+\newcommand{\xstableWidth}{2cm}
+\begin{table*}[ht]
+{\footnotesize
+\setlength\tabcolsep{0pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\begin{tabular}{l c c c c c c }
+\toprule
+\vbox to 10pt {} &
+\cell{1.2cm}{$\stt$ [pb]} &
+\cell{\xstableWidth}{Statistical unc. [\%]} &
+\cell{\xstableWidth}{Systematic unc. [\%]} &
+\cell{\xstableWidth}{Luminosity unc. [\%]} &
+\cell{\xstableWidth}{E$_{\text{beam}}$ unc. [\%]} &
+\cell{\xstableWidth}{Exp. $\mt$ unc. [\%]} \\
+\midrule
+\input{img/alphas/includedExperimentsTable_Aug15.tex}
+\bottomrule
+\end{tabular}
+\end{center}
+\caption{\small Cross sections and experimental uncertainties for the
+  $\stt$ inputs that we
+  use~\cite{D0CDFcombination,CMS78TeV,CMS13TeV,ATLAS78TeV,ATLAS13TeV}.
+  %
+  The LHC beam energy uncertainties quoted in these references have been scaled down by a factor $6.6$
+  in light of the recent beam-energy calibration~\cite{LHCBeamMomentumCalibration}, which has a $0.1\%$
+  uncertainty and coincides
+  with the nominal energy within uncertainties. 
+  %
+  The original beam-energy-induced uncertainties corresponded to
+  $0.66\%$~\cite{OldBeamEnergy}.
+  %
+  The Tevatron beam energy uncertainty is sufficiently
+  small (cf.\ Ref.~\cite{Johnson:1988bx}) that no beam energy uncertainty is
+  quoted by CDF and D0 in the $t\bar t$ cross section measurements.
+  %
+  The cross section and uncertainties listed here are adjusted to the
+  top mass corresponding to the
+  latest world average value computed by the Particle Data Group~\cite{PDG},
+  $\mt = 173.2 \pm 0.51 \pm 0.71 \GeV$.
+  %
+  The ``Exp.\ $\mt \text{ unc.}$''
+  column corresponds to the $\delta \mt$ 
+  uncertainty discussed in section~\ref{sec:top-mass-dependence},
+  signed such that the upper (lower) uncertainty corresponds to an
+  increase (decrease) in $\mt$.
+  % 
+} 
+\label{tab:includedmeasurements}
+}
+\end{table*}
+
+
+%----------------------------------------------------------------------
+\subsubsection{Choice of PDF}
+\label{sec:pdf-choice}
+
+Several considerations arise in our choice of PDF. 
+%
+Firstly, we restrict our attention to recent global fits that are
+available through the LHAPDF interface~\cite{LHAPDF}.
+%
+Secondly, we require that the PDFs should be available for at least
+three $\as$ values, so that we can correctly determine the $\as$
+dependence of the cross section in the context of that PDF.
+%
+These two conditions limit us to the CT14~\cite{CT14},
+MMHT2014~\cite{MMHT2014} and the NNPDF3.0~\cite{NNPDF30} series.
+%
+Thirdly, we impose a requirement that the PDF should not have included
+$\stt$ data in its fitting procedure.
+%
+As should be obvious qualitatively, and as we will discuss
+quantitatively elsewhere~\cite{InPrep}, using a PDF with top-data
+included would bias our fits.
+
+\newcommand{\yes}{\checkmark}  % or cmark?
+\newcommand{\no}{$-$}
+\begin{table}
+  \centering
+  {\setlength\tabcolsep{5pt}
+  \begin{tabular}{lccccc}
+    \toprule
+    & Tevatron        
+    & \cell{1.8cm}{ATLAS (7\TeV)}
+    & \cell{1.8cm}{ATLAS (8\TeV)}
+    & \cell{1.8cm}{CMS (7\TeV)}
+    & \cell{1.8cm}{CMS (8\TeV)}
+    \\\midrule
+    %%                               TEV    A7     A8     C7     C8
+    CT14~\cite{CT14}              & \no  & \no  & \no  & \no  & \no  \\
+    MMHT2014~\cite{MMHT2014}      & \yes & \yes & \no  & \yes & \yes \\
+    NNPDF30~\cite{NNPDF30}        & \no  & \yes & \yes & \yes & \yes \\
+    NNPDF30\_noLHC~\cite{NNPDF30} & \no  & \no  & \no  & \no  & \no  \\
+    \bottomrule
+  \end{tabular}}
+  \caption{Top pair cross section data included in a selection of recent
+    PDF fits. A ``\yes'' (``\no'') indicates that the corresponding $t\bar t$
+    cross section measurement is (is not)
+    included in the PDF fit.
+    %
+    The specific sets of $7$ and $8\TeV$ ATLAS and CMS data used in
+    the fits do not
+    always coincide 
+    with those that we list in Table~\ref{tab:includedmeasurements}.
+    %
+    All the PDFs shown here predate the $13\TeV$ measurements.
+  }
+  \label{tab:pdf-fit-ttbar-choices}
+\end{table}
+
+Table~\ref{tab:pdf-fit-ttbar-choices} summarises what data has been
+included in each of these PDF sets, including both the default NNPDF30
+set and NNPDF30\_nolhc, obtained without LHC data.
+%
+One sees that the two options that are available to us are CT14 and
+NNPDF30\_nolhc.\footnote{As this article was being completed the
+  NNPDF31 series~\cite{Ball:2017nwa} of PDF sets became available. 
+  %
+  It includes a set fitted without top data, however only
+  for a single value of the strong coupling, and accordingly is not
+  suitable for use in a strong coupling determination.}
+
+\newcommand{\predxstableWidth}{2.2cm}
+\begin{table*}[ht]
+{
+\footnotesize 
+\renewcommand{\arraystretch}{1.3}
+\setlength\tabcolsep{3pt}
+\begin{center}
+\begin{tabular}{l c c c c c }
+\toprule
+&
+\cell{1.8cm}{$\stt^{\text{pred}}(\as^{\text{ref}})$ [pb]} &
+\cell{1.8cm}{PDF unc. [\%]} &
+\cell{1.8cm}{Scale unc. [\%]} &
+\cell{1.8cm}{$\mt$ unc. [\%]} & 
+$\displaystyle
+    % \frac{1}{\stt(\as^{\text{ref}})}
+    \frac{ \text{d}\ln{\stt(\as^{\text{ref}})} }{ \text{d}\ln\as }
+    $ \\
+\midrule 
+\input{img/alphas/theoryPredictionTable_Aug15.tex}
+\bottomrule
+\end{tabular}
+\end{center}
+\caption{\small Predicted cross sections and uncertainties for the
+  PDF sets that we use~\cite{CT14,NNPDF30}, as determined with the
+  \texttt{Top++} program~\cite{topplusplus} at a reference value
+  of $\as^\rf = 0.118$.
+  %
+  The results are for $\mt = 173.2\GeV$ and the ``$\mt \text{ unc.}$''
+  column corresponds to the $\delta \mt$ 
+  uncertainty discussed in section~\ref{sec:top-mass-dependence},
+  signed such that the upper (lower) uncertainty corresponds to an
+  increase (decrease) in $\mt$.
+  %
+  } 
+\label{tab:includedpredictions}
+}
+\end{table*}
+
+
+
+\newcommand{\FitFigureWidth}{0.44}  
+\begin{figure}[t]
+\centering
+\begin{tabular}{ccc}
+\includegraphics[width=\FitFigureWidth\linewidth]{img/alphas/fits_ATLAS7000.pdf}
+&
+\includegraphics[width=\FitFigureWidth\linewidth]{img/alphas/fits_ATLAS8000.pdf}
+\\[-8pt]
+(a) & (b) \\[-3pt]
+%
+\includegraphics[width=\FitFigureWidth\linewidth]{img/alphas/fits_ATLAS13000.pdf}
+&
+\includegraphics[width=\FitFigureWidth\linewidth]{img/alphas/fits_TEV1960.pdf}
+\\[-8pt]
+(c) & (d) \\[6pt]
+\end{tabular}
+\vspace{-0.3cm}
+\caption{
+  Predicted cross section as a function of $\as$. The points are the cross
+  sections calculated using the \texttt{Top++} program~\cite{topplusplus}, and
+  the line is our polynomial fit.
+  %
+  The plot also includes horizontal lines corresponding to the central
+  values of the measured cross sections, adjusted to correspond to the
+  same top mass as the theory cross sections ($\mt = \mt^\text{ref} =
+  173.2\GeV$), cf.~Section~\ref{sec:top-mass-dependence}.
+}
+\label{fig:FitsToPrediction}
+\end{figure}
+% 
+
+We use PDF uncertainties calculated at the 68\% confidence level,
+following the error propagation prescription from the individual PDF
+groups.
+%
+The uncertainties from the CT14 PDF set, which are provided at a 90\%
+confidence level by default, are scaled by a factor of
+$1/(\sqrt2 \, \text{erf}^{-1}( 0.90) )\simeq 0.608 $.
+
+The predicted cross sections for both PDF sets, with NNLO and
+NNLO+NNLL calculations, are listed in
+Table~\ref{tab:includedpredictions}.
+%
+The cross sections are $1{-}3\%$ higher when including NNLL
+contributions.
+%
+The scale uncertainties are in the $4{-}6\%$ range for the NNLO
+results and get reduced by between one third and one half when
+including NNLL terms.
+%
+At LHC energies, the cross sections with NNPDF30\_nolhc are about $1\%$ larger
+than those with CT14, however the opposite pattern is seen at
+Tevatron. 
+%
+Finally, the PDF uncertainties are somewhat larger with NNPDF\_nolhc than
+with CT14.
+
+To understand the final errors on the $\as$ determination it is
+important also to examine how the predicted cross sections depend on
+$\as$, a result of the $\as$ dependence both of the hard cross section
+and of the PDFs.
+%
+This is shown in Fig.~\ref{fig:FitsToPrediction}: points correspond
+to the values of $\as$ for which the given PDF is available, and lines
+correspond to a fit for $\ln \stt$ using a polynomial of $\ln \as$. 
+%
+We use polynomials of degree $3$ and $1$ respectively for the CT14 and
+NNPDF30\_nolhc PDFs, chosen based on the available number of $\as$ points and
+requirements of stability of the extrapolation beyond the available
+$\as$ points.
+%
+A steeper slope of the $\as$ dependence (also quoted at $\as=0.118$ in
+the last column of Table~\ref{tab:includedpredictions})
+leads to a smaller final error on $\as$ for any given source of
+uncertainty on $\stt$. 
+%
+For LHC energies, CT14 is generally steeper, while at the Tevatron
+it is NNPDF\_nolhc that is steeper.
+%
+Note also that CT14 curves have substantial curvature, and this will
+induce asymmetric uncertainties for $\as$, even in the case of
+uncertainties on the cross section that are symmetric.
+
+
+
+%----------------------------------------------------------------------
+\subsubsection{Top-mass dependence}
+\label{sec:top-mass-dependence}
+
+The top-quark pole mass is taken to be $173.2 \pm 0.87\,$GeV, which
+is consistent with the world average value computed by the Particle Data
+Group~\cite{PDG}. 
+% 
+% 
+The experimentally measured cross section, $\stt^{\text{exp}} (\mt)$,
+depends on $\mt$ through the acceptance corrections, whose
+parametrization is given together with the individual
+measurements.
+% 
+The uncertainty on the experimentally measured cross section due to the top-quark pole mass is given in Tab.~\ref{tab:includedmeasurements}, where the uncertainty was calculated by shifting the top mass up and down by its uncertainty.
+% 
+An increase in the top mass leads to a decrease in the measured total
+cross section.
+%
+This is because the experiments effectively measure a fiducial cross
+section (which is independent of $\mt$) and then extrapolate it to a
+total cross section by dividing by the acceptance for the fiducial
+cross section.
+%
+For larger values of $\mt$ the acceptance is larger, since decay
+products are more likely to pass transverse momentum cuts, and so the resulting
+total cross section is lower.
+% 
+The theoretically predicted cross section,
+$\stt^{\text{pred}} ( \mt )$, also depends on $\mt$, because of the
+structure of the underlying hard cross section and the $x$-dependence
+of the PDFs, cf.\ Tab.~\ref{tab:includedpredictions}.
+%
+It too decreases for an increase in the cross section, and this
+effect is larger than for the measured cross section.
+
+To define a single error contribution associated with the
+top-mass uncertainty, it is convenient to absorb these different
+sources of $\mt$ dependence into an effective predicted cross section,
+\begin{equation}
+  \label{eq:eff-mtop-dep}
+\sigma_{t\bar{t}}^{\text{eff}}(\mt) = 
+    \stt^{\text{pred}} (  \mt  ) \cdot 
+        \frac{
+            \stt^{\text{exp}} (  \mt^\rf  )
+            }{
+            \stt^{\text{exp}} (  \mt  )
+            }\,,
+\end{equation}
+where $\mt^\rf = 173.2$ is the central value of the world average top
+mass.
+%
+For $\mt = \mt^\rf$, this effective predicted cross section coincides
+with the actual predicted one.
+
+The final uncertainty on the effective predicted cross section
+associated with the error of $\Delta \mt = 0.87\GeV$ on the world
+average top mass is then given by
+\begin{equation}
+  \label{eq:mtop-uncertainty-impact}
+  \sigma_{t\bar{t}}^{\text{eff}}(\mt^\rf \pm \Delta \mt) - 
+  \sigma_{t\bar{t}}^{\text{eff}}(\mt^\rf)\,.
+\end{equation}
+This can be used in our $\as$ determination in a manner similar to
+any of the theoretical and PDF uncertainties on the predicted cross
+section.
+% 
+To a good approximation, the final top-mass uncertainty on the
+effective cross section is equal to the difference between the
+percentage uncertainties in Tabs.~\ref{tab:includedmeasurements} and
+\ref{tab:includedpredictions}.
+%
+
+%----------------------------------------------------------------------
+\subsubsection{Strong coupling determination procedure}
+\label{sec:determination-procedure}
+
+In the determination of $\as$ from $\stt$, the theory prediction is
+treated as a Bayesian prior (one prior for any given value of $\as$)
+and the experimental result as a likelihood function.  The
+multiplication of these is the joint posterior probability function
+from which $\as$ and its uncertainties are determined after
+marginalisation of $\stt$.  The procedure is mostly analogous to that
+used by the CMS Collaboration in Ref.~\cite{CMS-ttbar-alphas}.
+
+The construction of the Bayesian prior from the theory dependence
+necessitates a single probability distribution function given all
+individual theory uncertainties. 
+%
+The three theory uncertainties are each interpreted as corresponding
+to an asymmetric Gaussian function:
+%
+\begin{equation}
+f^{\text{Unc. source}} \; (\stt \,|\, \as) = 
+\left\{
+    \begin{array}{ll}
+        \frac{1}{\sqrt{2\pi} \Delta_-}
+        \, \text{e}  \,^{-\frac12 \left(
+        \frac{
+            \stt - \stt^{\text{pred}}(\as)
+            }{
+            \Delta_-
+            }
+        \right)^2 }
+        & \quad \text{if} \; \stt \leq \stt^{\text{pred}}
+        \\[20pt]
+        \frac{1}{\sqrt{2\pi} \Delta_+}
+        \, \text{e}  \,^{ -\frac12\left(
+        \frac{
+            \stt - \stt^{\text{pred}}(\as)
+            }{
+            \Delta_+
+            }        
+        \right)^2 }
+        & \quad \text{if} \; \stt > \stt^{\text{pred}}
+    \end{array}
+    \right.
+,
+\label{eq:asymgauss}
+\end{equation}
+%
+where $\stt^{\text{pred}}(\as)$ is the predicted central value at a
+given value of $\as$, and $\Delta_{+(-)}$ is the positive (negative)
+uncertainty from a given theory uncertainty source. This function has
+the advantage that the integral normalizes naturally to one, and that
+the integral from $(\stt^{\text{pred}}-\Delta_-)$ to
+$(\stt^{\text{pred}}+\Delta_+)$ corresponds to a 68\% 
+confidence interval.  
+% 
+On average there is a 20\% difference between $\Delta_+$ and $\Delta_-$,
+and up to a difference of about 85\% for the most asymmetric uncertainty.
+%
+The central value for $\stt$ corresponds to the median of the
+distribution.
+
+The combined probability distribution function of the predicted cross
+section, $f^{\text{pred}}(\stt\,|\,\as)$, is computed by taking the
+numerical convolution of the individual asymmetric Gaussian functions:
+% 
+\begin{equation}
+f^{\text{pred}}(\stt\,|\,\as) = 
+    f^{\text{PDF}}(\stt\,|\,\as)    \otimes
+    f^{\mt}(\stt\,|\,\as)           \otimes
+    f^{\text{Scale}}(\stt\,|\,\as)\,,
+\end{equation}
+% 
+where the convolution is performed such that the probability distribution
+functions are centred around $\stt^\text{pred}$.
+% % 
+%
+While the individual uncertainty distributions contain a discontinuity
+at $\stt = \stt^{\text{pred}}(\as)$, the convolution is a smooth
+function.
+%
+The dependence on $\as$ of the width of the uncertainty band is neglected.%
+% 
+\footnote{ With this approach of fixed absolute uncertainties on $\stt$,
+    theory uncertainties on $\as$ will turn out relatively smaller for
+    determinations with a higher central $\as$ value.
+    %
+    One concern is that this might affect the relative weights of
+    different determinations in the combination that is described
+    later in Sect.~\ref{sec:combination}.
+    % 
+    To address this concern, a cross-check was performed in which the
+    individual theory errors from our procedure were scaled relative
+    to the default approach by a factor
+    $\frac{ \as^\text{determination} }{ \as^\text{ref} }$.
+    %
+    That is equivalent to taking fixed relative (rather than fixed
+    absolute) theory uncertainties on $\stt$.
+    %
+    With the combination procedure of section~\ref{sec:combination},
+    the difference induced by this change was below the per mille
+    level.
+    %
+    For the alternative combination procedure in
+    Appendix~\ref{sec:appendix}, the effect is less than half a 
+    percent on $\as$, which remains much smaller than the difference
+    between the two combination procedures.  }
+%
+The probability distribution function of the predicted cross section
+is multiplied by the probability distribution function of the measured
+cross section $f^{\text{exp}}(\stt\,|\,\as)$, yielding the joint
+Bayesian posterior in terms of $\as$ and $\stt$. The Bayesian
+confidence interval of $\as$ can be computed through marginalisation
+of the posterior by integrating over $\stt$:
+%
+\begin{equation}
+  \label{eq:likelihood-master-equation}
+  L(\as) = \int f^{\text{pred}}(\stt\,|\,\as) 
+  \cdot 
+  f^{\text{exp}}(\stt\,|\,\as) \; \text{d}\stt\,.
+\end{equation}
+%
+Here, $f^{\text{exp}}(\stt\,|\,\as)$ is taken to be independent of
+$\as$. Technically a small dependence on $\as$ is introduced in
+$f^{\text{exp}}(\stt\,|\,\as)$ through the acceptance corrections;
+however, in the region of relevance around $\as^{\text{ref}} = 0.118$,
+the effect of this on the uncertainty of the cross section is below
+the percent level~\cite{CMS-ttbar-alphas}, and can thus be safely
+neglected.  
+%
+The marginalised joint posterior $L(\as)$ can be treated
+as a probability distribution function. 
+%
+The central value for the $\as$ determination is taken to be the
+location of the peak of $L(\as)$, and the
+%
+uncertainty is extracted by computing the 68\% confidence interval
+whose left and right bounds are at equal height.\footnote{This is
+  somewhat different from the prescription to define an asymmetric
+  probability distribution in Eq.~(\ref{eq:asymgauss}), but coincides
+  with widespread practice in ATLAS and CMS likelihood fits.}
+%
+The procedure is illustrated in Fig.~\ref{fig:fullproc}, showing the
+experimental and theory probability distribution functions and the
+unmarginalised posterior (Fig.~\ref{fig:fullproc}(a)) as well as the
+marginalised posterior with extracted central value and uncertainties
+(Fig.~\ref{fig:fullproc}(b)).
+
+
+\begin{figure}[htb]
+\centering
+\begin{tabular}{cc}
+\includegraphics[width=0.5\linewidth]{img/alphas/fullproc.pdf}
+&
+\includegraphics[width=0.5\linewidth]{img/alphas/alphasDistribution.pdf}
+\\
+(a) & (b)
+\end{tabular}
+\vspace{-0.3cm}
+\caption{
+  (a) The central values and 1$\sigma$ deviations for the predicted cross
+  section ($f^{\text{pred}}(\stt\,|\,\as)$, blue oblique lines) and
+  %
+  the experimental cross section ($f^{\text{exp}}(\stt\,|\,\as)$,
+  red horizontal lines) 
+  %
+  and the product of the probability distribution functions (green
+  shading).
+  The markers on the predicted cross
+  section indicate the fit points from \texttt{top++2.0}. (b)
+  Marginalisation of the joint posterior with Bayesian confidence
+  interval.
+  }
+\label{fig:fullproc}
+\end{figure}
+
+
+The combination of determinations from different experiments
+necessitates a breakdown of the total uncertainty into components that
+can be assigned to the individual uncertainty sources.  To this end,
+the determination is repeated each time omitting a different
+uncertainty source, and the squared difference of the resulting
+uncertainty with respect to the total uncertainty is computed.  A
+relative contribution to the total uncertainty is then computed per
+uncertainty source. 
+
+%----------------------------------------------------------------------
+\subsubsection{Individual results for $\as$ per $\sigma_{t\bar t}$ measurement}
+\label{sec:results-by-exp}
+
+The results of our $\as$ determination are listed for the CT14nnlo
+PDF set in Tables~\ref{tab:determination_NNLO_CT14} and
+\ref{tab:determination_NNLO_NNLL_CT14} and for the
+NNPDF30\_nolhc PDF set in
+Tables~\ref{tab:determination_NNLO_NNPDF30nolhc} and
+\ref{tab:determination_NNLO_NNLL_NNPDF30nolhc}.
+
+The individual $\as$ determinations are all compatible with the world
+average to within uncertainties.
+%
+The central values are rather similar with the CT14 and NNPDF sets.
+%
+The largest individual sources of uncertainty on $\as$ are the PDF
+uncertainties and the scale uncertainties.
+%
+For the LHC determinations, the PDF uncertainties tend to be larger
+with NNPDF, in part a consequence of the larger uncertainties in the
+cross section in Table~\ref{tab:includedpredictions}. 
+%
+However the other uncertainties are also larger with NNPDF, because
+of its weaker dependence on $\as$.
+
+The NNLO+NNLL determinations all have smaller $\as$ results,
+consistent with the larger cross sections in
+Table~\ref{tab:includedpredictions}.
+%
+The scale uncertainties are also noticeably smaller.
+%
+Other uncertainties are largely unchanged.
+
+A final comment concerns the somewhat larger scale, $\mt$ and PDF
+uncertainties with the CT14 PDF for the CMS 7 TeV case as compared to
+the ATLAS 7 TeV case, or also ATLAS 8 TeV as compared to ATLAS 7 TeV.
+%
+In general with the CT14 PDF, a smaller value of $\as$ corresponds to
+larger uncertainties, because the $\as$ dependence of the cross
+section is weaker for small $\as$ values,
+cf.~Fig.~\ref{fig:FitsToPrediction}. 
+%
+Note however, that the scale and other uncertainties on the cross
+section predictions have been evaluated only for the reference value
+of $\as=0.118$, and in general the question of how one should
+correlate uncertainties with the central value is a delicate
+one.\footnote{As an example, imagine that we had used scale
+  uncertainties that depended on $\as$: then for an experimental
+  measurement with cross section that fluctuates low, one would deduce
+  a smaller scale uncertainty than for a cross section that fluctuates
+  high; when combining them, depending on the procedure, this might
+  then lead to a larger weight for the smaller value of $\as$.}
+%
+Accordingly one should be wary of reading too much into the variation
+of uncertainties with the central $\as$ value.
+
+\newcommand{\ErrTableWidth}{0.8cm}
+\begin{table*}[ht] 
+{\scriptsize  
+\renewcommand{\arraystretch}{1.4}
+\begin{center} 
+\begin{tabular}{l c c c c c c c c c }
+\toprule
+&
+\cell{\ErrTableWidth}{Center} & 
+\cell{\ErrTableWidth}{Stat.} & 
+\cell{\ErrTableWidth}{Syst.} & 
+\cell{\ErrTableWidth}{Lumi.} & 
+\cell{\ErrTableWidth}{$E_{\text{beam}}$} & 
+\cell{\ErrTableWidth}{PDF} & 
+\cell{\ErrTableWidth}{Scale} & 
+\cell{\ErrTableWidth}{$\mt$} & 
+\cell{\ErrTableWidth}{Total} \\ 
+\midrule
+\input{img/alphas/resultTable_Jul10_NNLO-CT14nnlo_asym.tex}
+\bottomrule
+\end{tabular} 
+\end{center} 
+\caption{
+    \small Results for the strong coupling evaluated at the Z-boson mass scale
+    and individual uncertainty contributions. 
+    %
+    These are based on cross sections calculated at NNLO
+    using the CT14nnlo series of PDFs.
+    \label{tab:determination_NNLO_CT14}
+    }
+} 
+\end{table*} 
+
+\begin{table*}[ht] 
+{\scriptsize  
+\renewcommand{\arraystretch}{1.4}
+\begin{center} 
+\begin{tabular}{l c c c c c c c c c }
+\toprule
+&
+\cell{\ErrTableWidth}{Center} & 
+\cell{\ErrTableWidth}{Stat.} & 
+\cell{\ErrTableWidth}{Syst.} & 
+\cell{\ErrTableWidth}{Lumi.} & 
+\cell{\ErrTableWidth}{$E_{\text{beam}}$} & 
+\cell{\ErrTableWidth}{PDF} & 
+\cell{\ErrTableWidth}{Scale} & 
+\cell{\ErrTableWidth}{$\mt$} & 
+\cell{\ErrTableWidth}{Total} \\ 
+\midrule
+\input{img/alphas/resultTable_Jul10_NNLO-NNPDF30_nolhc_asym.tex}
+\bottomrule
+\end{tabular} 
+\end{center} 
+\caption{\small As in Table.~\ref{tab:determination_NNLO_CT14}, but
+  now using NNLO cross sections with the NNPDF30\_nolhc series of PDFs.} 
+\label{tab:determination_NNLO_NNPDF30nolhc}
+} 
+\end{table*} 
+
+\begin{table*}[ht] 
+{\scriptsize  
+\renewcommand{\arraystretch}{1.4}
+\begin{center} 
+\begin{tabular}{l c c c c c c c c c }
+\toprule
+&
+\cell{\ErrTableWidth}{Center} & 
+\cell{\ErrTableWidth}{Stat.} & 
+\cell{\ErrTableWidth}{Syst.} & 
+\cell{\ErrTableWidth}{Lumi.} & 
+\cell{\ErrTableWidth}{$E_{\text{beam}}$} & 
+\cell{\ErrTableWidth}{PDF} & 
+\cell{\ErrTableWidth}{Scale} & 
+\cell{\ErrTableWidth}{$\mt$} & 
+\cell{\ErrTableWidth}{Total} \\ 
+\midrule
+\input{img/alphas/resultTable_Jul10_NNLO+NNLL-CT14nnlo_asym.tex}
+\bottomrule
+\end{tabular} 
+\end{center} 
+\caption{\small As in Table.~\ref{tab:determination_NNLO_CT14}, but
+  now using NNLO+NNLL cross sections with the CT14nnlo series of PDFs.}
+\label{tab:determination_NNLO_NNLL_CT14}
+} 
+\end{table*} 
+
+\begin{table*}[ht] 
+{\scriptsize  
+\renewcommand{\arraystretch}{1.4}
+\begin{center} 
+\begin{tabular}{l c c c c c c c c c }
+\toprule
+& 
+\cell{\ErrTableWidth}{Center} & 
+\cell{\ErrTableWidth}{Stat.} & 
+\cell{\ErrTableWidth}{Syst.} & 
+\cell{\ErrTableWidth}{Lumi.} & 
+\cell{\ErrTableWidth}{$E_{\text{beam}}$} & 
+\cell{\ErrTableWidth}{PDF} & 
+\cell{\ErrTableWidth}{Scale} & 
+\cell{\ErrTableWidth}{$\mt$} & 
+\cell{\ErrTableWidth}{Total} \\ 
+\midrule
+% Updated 30-06-2017
+\input{img/alphas/resultTable_Jul10_NNLO+NNLL-NNPDF30_nolhc_asym.tex}
+\bottomrule
+\end{tabular} 
+\end{center} 
+\caption{\small As in Table.~\ref{tab:determination_NNLO_CT14}, but
+  now using NNLO+NNLL cross sections with the NNPDF30\_nolhc series of PDFs.} 
+\label{tab:determination_NNLO_NNLL_NNPDF30nolhc}
+} 
+\end{table*} 
+

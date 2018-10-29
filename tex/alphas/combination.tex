@@ -1,0 +1,270 @@
+\subsection{Combination of $\as$ determinations}
+\label{sec:combination}
+
+\subsubsection{Correlation coefficients}
+\label{sec:correlationcoefficients}
+
+A combination of measurements can strongly depend on the assumed or calculated correlations~\cite{BLUE1}.
+%
+It is therefore necessary to carefully evaluate the correlation coefficients used for the combination.
+In the case of $\as$ determinations many correlations can be reasonably motivated or computed.
+The correlation coefficients between individual measurements are motivated per uncertainty source.
+
+\newcommand{\lowersub}[1]{\raisebox{-3pt}{\scriptsize #1}}
+\newcommand{\highersub}[1]{\raisebox{2pt}{\scriptsize #1}}
+
+\begin{enumerate}
+\item \textit{Statistical uncertainties} are considered uncorrelated
+  for all experimental inputs.
+
+\item \textit{Systematic uncertainties} are considered fully
+  correlated only for measurements obtained with the same
+  detector. This concerns the measurements performed by CMS and ATLAS
+  at different centre-of-mass energies.
+
+\item \textit{Uncertainties due to beam energy} are fully correlated
+  between ATLAS and CMS and are taken to be correlated across
+  energies.
+  %
+  The beam-energy uncertainty at the Tevatron was tiny and is
+  neglected, as outlined in the caption of
+  Table~\ref{tab:includedmeasurements}. 
+  %
+
+\item
+    \textit{Uncertainties due to luminosity} are partially correlated between
+    ATLAS and CMS. The correlated component of the luminosity uncertainty
+    stems from the uncertainty on the bunch current density and
+    similarities in the Van der Meer scan fit model.
+
+    The correlated and uncorrelated uncertainties are estimated using the same
+    principles as used for the top-quark pair production cross section combinations
+    between ATLAS and CMS at 7 and
+    8\,TeV~\cite{topcombination_7TeV,topcombination_8TeV}, updated
+    with the latest luminosity
+    determinations~\cite{Aad:2013ucp,Aaboud:2016hhf,CMS:2012rua,CMS:2013gfa,CMS:2016eto}.
+    %
+    The luminosity uncertainty (as a percentage of the top-quark pair
+    production cross section) is displayed in Table~\ref{tab:lumitable}.
+    The luminosity uncertainties on $\as$ are taken to have the same correlation
+    coefficient.
+
+    \newcommand{\tableWidthLumi}{2.5cm}  
+    \begin{table*}[ht]
+    { %\scriptsize   
+    \begin{center}  
+    \begin{tabular}{l c c c c}
+    \toprule
+    $\sqrt{s}$                & Experiment & Corr.  & Uncorr. & Total \\
+    \midrule
+    \multirow{2}{*}{7\,TeV}   &  ATLAS     &  0.46  &  1.72  &  1.78 \\
+                              &  CMS       &  0.46  &  2.13  &  2.17 \\
+    \multirow{2}{*}{8\,TeV}   &  ATLAS     &  0.60  &  1.84  &  1.94 \\
+                              &  CMS       &  0.68  &  2.50  &  2.59 \\
+    \multirow{2}{*}{13\,TeV}  &  ATLAS     &  0.36  &  2.29  &  2.32 \\
+                              &  CMS       &  0.36  &  2.31  &  2.34 \\
+    \bottomrule
+    \end{tabular} 
+    \end{center} 
+    \caption{\small
+    Correlated, uncorrelated and total luminosity uncertainties with
+    respect to the top-quark pair production cross section (in
+    percentages)~\cite{topcombination_7TeV,topcombination_8TeV,Aad:2013ucp,Aaboud:2016hhf,CMS:2012rua,CMS:2013gfa,CMS:2016eto}.
+    }
+    \label{tab:lumitable}
+    }
+    \end{table*} 
+\end{enumerate}
+
+The uncertainties on the predicted cross sections (due to the PDF, the
+top-quark mass and the renormalisation and factorisation scale) 
+are generally strongly correlated. 
+%
+The combination result strongly depends on the assumed correlation
+structure of these theoretical uncertainties if included in the
+combination, which is usually not known precisely in particular for
+the scale uncertainty.
+%
+We therefore adopt
+a different procedure: The individual results are
+simultaneously shifted up and down by their respective total theory uncertainties, and the
+combination is re-evaluated.
+% 
+The difference between the upper and
+lower bounds and the original combination is taken to be the
+(asymmetric) theoretical uncertainty.
+
+The impact of the alternative procedure of including also the theory
+uncertainties within a single combination is discussed in
+Appendix~\ref{sec:appendix}.
+
+%----------------------------------------------------------------------
+\subsubsection{Combining correlated measurements: Likelihood-based approach}
+
+In order to combine the individual results, we opted for a
+likelihood-based approach~\cite{likelihoodapproach}.\footnote{As a cross-check, we also
+  used the \textit{Best Linear Unbiased Estimate} procedure
+  (BLUE)~\cite{BLUE1,BLUE2}. This is only suitable for symmetric
+  errors and in that case we found essentially identical results.}
+%
+In this
+approach a global likelihood function is constructed from the
+probability distribution functions of individual determinations.  
+%
+Let us suppose we have $n_m$ measurements of the top cross section and
+associated determinations of $\as$. 
+%
+For each determination $i$, $\as{}_{,i}$, we have $n_u$ uncorrelated
+error components, each specific to that determination.
+%
+The magnitude of the $k^\text{th}$ uncorrelated error for
+determination $i$ is labelled $\Delta^k_i$.
+%
+We additionally have $n_c$ error components that are correlated across
+all determinations.
+%
+For each of the correlated components, $j$, we introduce a nuisance
+parameter $\theta_j$ that is common across all measurements.
+%
+Its impact on measurement $i$ is governed by a coefficient
+$\delta_i^j$. 
+%
+The full set of $\theta_j$ will be denoted $\bm\theta$.
+
+The likelihood will be composed of a product of probability
+distribution functions (pdf)\footnote{
+\textit{pdf}, for probability density function, is not to be confused with \textit{PDF}, for parton distribution function.
+}.
+% \siggi{
+% We should not use the term ``pdf'' here as that is being
+% used for parton density functions already!
+% Say ``gdf'' here instead?
+% }
+%
+For each nuisance parameter we will have one pdf, a Gaussian
+distribution with a standard deviation of one:
+% 
+\begin{equation}
+    \text{pdf}_{\theta_j} = 
+    \frac{1}{\sqrt{2\pi}} e^{-\theta_j^2/2}
+    %\text{Gauss}( \, \theta_j,\, 0,\, 1 \,)
+    \,.
+\end{equation}
+%
+There will also be a pdf for each combination of measurement $i$ and
+associated uncorrelated error $\Delta^k_i$. 
+%
+It is given by
+% 
+\begin{equation}
+\text{pdf}_{i,\,k}(\as, \bm{\theta}) =
+    \frac{1}{\sqrt{2\pi} \Delta_i^k}
+    \, \exp{ \displaystyle\left[
+    -\frac{
+        (\as {}_{,i} \, + \sum_j \theta_j \cdot \delta_i^j - \as)^2
+        }{
+        2(\Delta_i^k)^2
+        }
+    \right] }
+    \;.
+\end{equation}
+%
+To address the issue of errors that are not symmetric, we adopt the
+following prescription for the $\Delta_i^k$ and $\delta_i^j$:
+% 
+\begin{equation}
+\Delta_i^k =
+    \left\{
+    \begin{array}{ll}
+        \displaystyle
+        \Delta_i^{k,\,-}
+        & \quad \text{if} \;\; \as \le \as {}_{,i}
+        \\[20pt]
+        \displaystyle
+        \Delta_i^{k,\,+}
+        & \quad \text{if} \;\; \as > \as {}_{,i}
+    \end{array}
+    \right. 
+    \;,
+\end{equation}
+% 
+\begin{equation}
+\delta_i^j =
+    \left\{
+    \begin{array}{ll}
+        \displaystyle
+        \delta_i^{j,\,-}
+        & \quad \text{if} \;\; \as \le \as {}_{,i}
+        \\[20pt]
+        \displaystyle
+        \delta_i^{j,\,+}
+        & \quad \text{if} \;\; \as > \as {}_{,i}
+    \end{array}
+    \right. 
+    \;.
+\end{equation}
+% 
+An overview of the values used for $\delta_i^{j,\,\pm}$ and $\Delta_i^{k,\,\pm}$
+is given in Appendix~\ref{sec:appendix2}.
+% 
+The probability distribution function of determination $i$ including
+all uncorrelated uncertainties is then constructed by convolution:
+% 
+\begin{equation}
+\text{pdf}_{ \as {}_{,i} }(\as, \bm{\theta}) =
+    \text{pdf}_{i,\,1}(\as, \bm{\theta}) \otimes \text{pdf}_{i,\,2}(\as, \bm{\theta})
+    \otimes \cdots
+    % \otimes \text{pdf}_{i,\,j}(\as, \bm{\theta})
+    \otimes \text{pdf}_{i,\,n_u}(\as, \bm{\theta})
+\end{equation}
+% 
+where the convolution is performed such that the probability distribution
+functions are centred around $\as{}_{,i}$.
+% 
+% where the convolution is defined in analogy with
+% Eq.~(\ref{eq:convolution-operator}), replacing $\sigma^\text{pred}$
+% with $\as{}_{,i}$.
+% 
+The global likelihood function $L( \as , \bm{\theta} )$ is constructed
+by multiplication of the probability distribution functions of the
+determinations and the nuisance parameters:
+% 
+\begin{equation}
+L( \as , \bm{\theta} ) = 
+    \prod_{i=1}^{n_m} \text{pdf}_{ \as {}_{,i} }(\as, \bm{\theta})
+    \, \times \,
+    \prod_{j=1}^{n_c} \text{pdf}_{\theta_j}
+    \,.
+    \label{eq:globallikelihoodfunction}
+\end{equation}
+% 
+In order to complete the formalism of a statistical test the test
+statistic $q$ is introduced:
+%
+\begin{equation}
+q( \as ) = -2 \log \frac{ L( \as ,\, \hat{\bm{\theta}}' ) }{ L( \hat{\alpha}_s ,\, \hat{\bm{\theta}} ) }
+\;.
+\end{equation}
+% 
+Here $L$ is maximized for variables that carry a hat and in general
+$\hat{\bm{\theta}}'$ will take on different values from
+$\hat{\bm{\theta}}$.
+%
+The quantity $L( \hat{\alpha}_s ,\, \hat{\bm{\theta}} )$ is therefore
+the global maximum likelihood, and the ratio cannot be larger than
+one. 
+%
+The normalisation is such
+that $q$ can be treated as $\chi^2$-distributed with one degree of
+freedom.
+
+The test statistic $q$ is scanned over a range of $\as$ values. The
+minimum of the scan, by construction at $q=0$, is the maximum
+likelihood value for $\as$, and the $1\sigma$ confidence interval is
+extracted from the interval between the intersection points of the
+scan with $q=1$. Any skewness of the parabola of the scan is due to
+the inclusion of asymmetric uncertainties.
+% Fig.~\ref{fig:CT14combination} and 
+Figure~\ref{fig:ScanResults} shows the scan and the corresponding
+combination results for each of the PDF sets. 
+
