@@ -50,6 +50,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{multirow}
 \RequirePackage{bm}
+\RequirePackage{doi}
 
 
 \RequirePackage{mainsty}
