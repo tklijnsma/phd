@@ -28,14 +28,15 @@
     }{}
 
 % Page break at sections
-\usepackage{titlesec}
+\RequirePackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 
 % Bold in (section) titles
 \g@addto@macro\bfseries{\boldmath}
 
 % No paragraph indent
-\setlength\parindent{0pt}
+% \setlength\parindent{0pt}
+\RequirePackage[parfill]{parskip}
 
 % Packages
 \RequirePackage{float} % To use the [H] float option
