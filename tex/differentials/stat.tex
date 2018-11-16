@@ -1,9 +1,20 @@
 \subsection{Statistical analysis}
 \label{sec:stat}
 
-The cross sections are extracted through a simultaneous extended maximum likelihood fit to the diphoton mass, four-lepton mass, and $\msd$ spectra in all the analysis categories of the $\hgg$, $\hzz$, and $\hbb$ channels, respectively.
+The measurement of the combined differential cross sections is performed via a simultaneous extended maximum likelihood fit to the diphoton mass, four-lepton mass, and $\msd$ spectra in all the analysis categories of the $\hgg$, $\hzz$, and $\hbb$ channels, respectively.
+% 
+The differential cross section measurements for the variables considered ($\pth$, $\njets$, $\absy$, and $\ptjet$) are performed individually, i.e. a likelihood is constructed for each variable separately.
+% 
+Throughout this section the index $i$ will refer to a bin of the variable considered at the reconstructed level, whereas the index $j$ will refer to a bin of the variable at the generator level.
+% 
+As discussed in Section~\ref{backref}, the binning at generator and reconstructed level may differ depending on the considered variable and decay channel.
+% 
+The index $k$ will refer to an analysis category, i.e. the mass resolution categories, the final-state lepton configuration, and the double-$\bquark$ tagger output categories for the $\hgg$, $\hzz$, and $\hbb$ channels, respectively.
+% 
+Finally, the index $m$ will refer to a decay channel.
 
-The number of expected signal events $n^\text{sig}$ in a given reconstructed (kinematic) bin $i$, given analysis category $k$ and given decay channel $m$ is obtained from:
+
+The number of expected signal events $n^\text{sig}$ in a given reconstructed bin $i$, given analysis category $k$ and given decay channel $m$ is obtained from:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -35,12 +46,18 @@ Note that the corresponding matrix $\vec{M}^{\,km}$ need not be square; the numb
 \item $\vec{\theta}$ is the set of nuisance parameters.
 \end{itemize}
 % 
-The bin-to-bin migrations are taken into account via the folding matrix, effectively allowing unfolding of the detector effects.
+The first three terms of the product inside the sum describe the number of events at the generator level in bin $j$.
+% 
+Via the folding matrix $M$, the contribution of all generator-level bins to the reconstructed-level bin $i$ are taken into account, considering the effects from detector acceptance and bin-to-bin migrations.
+% 
+The unfolding of bin-to-bin migrations is mathematically an ill-defined problem, and as such it is not a priori clear whether this treatment of bin-to-bin migrations in the likelihood leads to unfolding instabilities.
+% 
+A study of the need for regularization of detector unfolding is performed in Appendix~\ref{unfoldingappendix}.
 % 
 Following the prescription in Ref.~\cite{Hansen:LShape}, we found that no regularization term for the unfolding procedure was needed. \tk{TODO: Appendix on regularization.}
 
 
-The input analyses considered all perform a cross section measurement based on a fit to a kinematic observable, commonly the invariant mass of the reconstructed decay products.
+The input analyses considered all perform a cross section measurement based on a fit to a kinematic observable, commonly the invariant mass of the reconstructed decay products of the Higgs boson.
 % 
 The kinematic observable, denoted by $\mathcal{O}$, is the diphoton invariant mass, the four-lepton invariant mass, and $\msd$ for the $\hgg$, $\hzz$, and $\hbb$ channels, respectively.
 % 
@@ -52,7 +69,7 @@ Its signal distribution, $S(\mathcal{O})$, is given by:
 S^{km}_{i}( \mathcal{O} | \vec{\Delta\sigma}, \vec{\theta})
 = &
     \sum_{j=1}^{n_\text{bins}^\text{gen}}
-        \Delta\sigma_j \cdot L \cdot \mathcal{B}^{m}
+        \Delta\sigma_j \cdot L(\vec{\theta}) \cdot \mathcal{B}^{m}
         \cdot M_{ji}^{km}(\vec{\theta})
         \cdot f_{j}^{\text{sig},\,km}( \mathcal{O} | \vec{\theta} )
     % 
@@ -70,7 +87,7 @@ where
 % 
 \begin{itemize}
 % 
-\item $f_{j}^{\text{sig},\,km}(\mathcal{O},\vec{\theta})$ is the signal distribution of events in observable $\mathcal{O}$; and
+\item $f_{j}^{\text{sig},\,km}(\mathcal{O},\vec{\theta})$ is the probability distribution function of signal events in observable $\mathcal{O}$; and
 % 
 \item $n^{\text{OOA},\,km}_i$ is the number of events reconstructed in bin $i$ originating from outside the fiducial phase space, and $f^{\text{OOA},\,km}( \mathcal{O} | \vec{\theta} )$ is the distribution thereof
 % 
@@ -114,6 +131,14 @@ The probability distribution function of finding an event given a value of $\mat
 Note $\text{pdf}(\mathcal{O})$ has, by construction, a normalization of $1$.
 
 
+Up to now, $\mathcal{O}$ was considered a continuous variable.
+% 
+However, due to constraints on computing time, it is necessary to perform a binned fit of the distribution of $\mathcal{O}$ rather than an unbinned fit, which requires substantially more computing resources.
+% 
+The index $l$ will refer to the $l^\text{th}$ bin of the binning of $\mathcal{O}$.
+% 
+Note the definition, and as such also the binning, of $\mathcal{O}$ differs per decay channel.
+% 
 Using the probability distribution functions for $\mathcal{O}$ and the overall number of expected events $n^\text{sig}$ and $n^\text{bkg}$, an extended likelihood function for a single decay channel $m$ is constructed:
 % 
 \begin{linenomath*}
