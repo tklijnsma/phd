@@ -34,6 +34,14 @@
 % Bold in (section) titles
 \g@addto@macro\bfseries{\boldmath}
 
+% Fancy header
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{\rightmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
 % No paragraph indent
 % \setlength\parindent{0pt}
 \RequirePackage[parfill]{parskip}
