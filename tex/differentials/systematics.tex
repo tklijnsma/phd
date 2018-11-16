@@ -45,10 +45,11 @@ Given the negligibly small impact, the acceptance uncertainties are neglected fo
     Acceptance uncertainties and the relative change they manifest when added in quadrature to the uncertainties of the $\pt$ combination.
     }
 \label{tab:accuncertainties}
-\setlength\tabcolsep{3pt}
 \begin{center}
+\setlength\tabcolsep{3pt}
 \begin{tabular}{lccccccccc}
 Bins                      & $[0,15)$ & $[15,30)$ & $[30,45)$ & $[45,80)$ & $[80,120)$ & $[120,200)$ & $[200,350)$ & $[350,600)$ & $[600,\infty)$  \\
+\hline
 Acc. uncertainties        & 0.6\%   & 1.3\%    & 2.8\%    & 5.7\%    & 1.0\%     & 1.7\%      & 4.1\%      & 10.2\%     & 28.8\%  \\
 Rel. change in syst. unc. & 0.3\%   & 0.7\%    & 4.1\%    & 19.7\%   & 0.3\%     & 1.8\%      & 2.0\%      & 7.6\%      & 1.0\%   \\
 Rel. change in tot. unc.  & 0.0\%   & 0.1\%    & 0.3\%    & 1.2\%    & 0.0\%     & 0.1\%      & 0.2\%      & 0.3\%      & 0.2\%   \\
@@ -99,21 +100,42 @@ Total                                & $7.10$                &              &   
 \end{table}
 
 
-The $\pth$ spectrum via $\ggh$ is shown in Fig.~\ref{fig:xH_uncertainty_impact} with and without the uncertainty on the other production modes included.
+The total systematic uncertainty, with and without the inclusion of an additional uncertainty due to the normalization on the non-$\ggh$ production modes, is shown in Table~\ref{tab:effect-of-xhunc}.
 % 
-The uncertainty manifests itself visibly in the systematic uncertainty, although the result is not significantly altered.
+While the systematic uncertainty increases slightly, the overall effect is small.
+
+\begin{table}[h!]
+\footnotesize
+\caption{
+    Systematic uncertainty of the $\pth$ spectrum, where the Higgs boson is produced exclusively via $\ggh$, with and without an additional systematic uncertainty related to the normalization of the non-$\ggh$ production modes.
+    }
+\label{tab:effect-of-xhunc}
+\begin{center}
+\setlength\tabcolsep{3pt}
+\begin{tabular}{lccccccccc}
+$\pth$  (\GeV)  & $0-15$      & $15-30$     & $30-45$     & $45-80$     & $80-120$    & $120-200$   & $200-350$   & $350-600$    & $600-850$    \\
+\hline 
+$\Delta_\text{syst}$ w/o non-$\ggh$ norm. unc. & $6.97\%$  & $6.35\%$  & $7.41\%$  & $8.16\%$  & $8.98\%$  & $10.44\%$ & $11.16\%$ & $23.43\%$  & $117.16\%$ \\
+$\Delta_\text{syst}$ w/ non-$\ggh$ norm. unc.  & $6.97\%$  & $6.38\%$  & $7.41\%$  & $8.17\%$  & $9.01\%$  & $10.52\%$ & $11.26\%$ & $23.57\%$  & $117.17\%$
+\end{tabular}
+\end{center}
+\end{table}
+
+% The $\pth$ spectrum via $\ggh$ is shown in Fig.~\ref{fig:xH_uncertainty_impact} with and without the uncertainty on the other production modes included.
+% % 
+% The uncertainty manifests itself visibly in the systematic uncertainty, although the result is not significantly altered.
 
 
-\begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\halflinewidth]{img/differentials/comparison_including_xH_unc.pdf}
-    % 
-    \caption{
-        Combination of $\pt^\text{ggH}$, using the $\hgg$, $\hzz$ and $\hbb$ decay channels. 
-        % 
-        \tk{Edit caption, and repeat this on the Asimov!}
-        }
-    \label{fig:xH_uncertainty_impact}
-  \end{center}
-\end{figure}
+% \begin{figure}[hbtp]
+%   \begin{center}
+%     \includegraphics[width=\halflinewidth]{img/differentials/comparison_including_xH_unc.pdf}
+%     % 
+%     \caption{
+%         Combination of $\pt^\text{ggh}$, using the $\hgg$, $\hzz$ and $\hbb$ decay channels. 
+%         % 
+%         \tk{Edit caption, and repeat this on the Asimov!}
+%         }
+%     \label{fig:xH_uncertainty_impact}
+%   \end{center}
+% \end{figure}
 
