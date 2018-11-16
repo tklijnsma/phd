@@ -1,22 +1,23 @@
 \subsection{Systematic uncertainties}
 \label{sec:systematics}
 
-The experimental systematic uncertainties from the input analyses are incorporated in the combination as nuisance parameters in the extended likelihood fit and are profiled.
+
+The inputs to the combination all have their individual systematic uncertainties, summarized in Section~\ref{sec:inputs}.
+% 
+The systematic uncertainties are implemented in the extended likelihood as nuisance parameters and are profiled in the fit.
+% 
+For the purpose of the combination, it is important to associate the correct correlations between systematic uncertainties of the individual analyses, and to associate an additional uncertainty due to unfolding to full phase space rather than a fiducial one.
 % 
 Among the decay channels, correlations are taken into account for the systematic uncertainties in the jet energy scale and resolution, and the integrated luminosity.
-% 
-Full descriptions of the experimental systematic uncertainties per decay channel can be found in Refs.~\cite{Sirunyan:2018kta,CMS_AN_2016-442,CMS_AN_2016-366}.
-% 
-\tk{Make more elaborate.}
 
 
-The individual $\hgg$ and $\hzz$ analyses in Refs.~\cite{} (respectively) are extrapolated to their respective fiducial phase spaces.
+As explained in more detail in Sections~\ref{hgg,hzz}, the individual $\hgg$ and $\hzz$ analyses from Refs.~\cite{Sirunyan:2018kta,Sirunyan:2017exp} are extrapolated to their respective fiducial phase spaces.
 % 
-A fiducial phase space is a conveniently chosen phase space which avoids poorly understood regions, such has for example the very-forward (high $\eta$) region, which in turn reduces the systematic uncertainties related to the extrapolation.
+A fiducial phase space is a conveniently chosen phase space which avoids poorly understood regions, such as the very-forward (high $\eta$) region, which in turn reduces the systematic uncertainties related to the extrapolation.
 % 
 While fiducial phase spaces are useful in the case of a single-channel analysis, there is no clear way of combining results obtained in different fiducial phase spaces.
 % 
-In order to combine multiple channels, the data have to unfolded to a common phase space, which commonly is chosen to be the full phase space.
+In order to combine multiple channels, the data have to be unfolded to a common phase space, which is commonly chosen to be the full phase space.
 % 
 The main systematic uncertainties associated with this extrapolation concern uncertainties in the detector acceptances and, if not profiled in the fit, the overall normalization of Higgs boson production modes.
 
@@ -24,63 +25,84 @@ The main systematic uncertainties associated with this extrapolation concern unc
 % ____________________________________________________________________________
 % Acceptances
 
-The combination is performed in a common phase space, chosen to be inclusive volume.
+The most pressing concern when unfolding to the full phase space, is the uncertainty on the detector acceptance, especially in the poorly understood regions of the detector.
 % 
-The mapping of the fiducial volumes per decay channel to the inclusive phase space comes with an uncertainty on the acceptance.
+The acceptances are calculated using a Monte Carlo simulation.
 % 
-The acceptance uncertainty was calculated via a procedure similar to that of the theory uncertainties described in Sec.~\ref{sec:scaleuncertainties}; $\mu_R$ and $\mu_F$ were independently varied between $0.5$, $1$ and $2$, whereas the fraction $\frac{\mu_R}{\mu_F}$ was not to be less than $0.5$ or greater than $2.0$.
+The corresponding uncertainties are calculated by varying the renormalization and factorization scales $\mu_R$ and $\mu_F$ in the simulation, and applying the so-called \emph{envelop method} on the resulting acceptances: The acceptance uncertainty per bin is given by the minimum and maximum variations.
 % 
-The acceptance uncertainty per bin is then given by the minimum and maximum variations (i.e. the envelop method).
+The scales $\mu_R$ and $\mu_F$ are allowed to vary independently, under the condition that $\frac{1}{2} < \frac{\mu_R}{\mu_F} < 2$.
 % 
-In order to assess the impact on the final result, these uncertainties were added in quadrature to the existing uncertainties of the $\pt$ combination (given in Sec.~\ref{sec:noncouplingresults}).
-%
-The numerical results are shown in Table~\ref{tab:accuncertainties}.
+The effect of the acceptance uncertainties on the $\pth$ distribution is shown in Table~\ref{tab:accuncertainties}, where the acceptance uncertainties are added in quadrature to the expected systematic uncertainties of the combined $\pth$ distribution.
 % 
-On solely the systematic uncertainty, the effect of the acceptance uncertainties is expected to be non-negligible in only two bins ( [45,80) and [350,60) ); on the overall uncertainty the effect is negligible throughout.
+On solely the systematic uncertainty, the effect of the acceptance uncertainties is expected to be non-negligible in only two bins, $[45,80)$ and $[350,600)$; on the total uncertainty the effect is negligible throughout.
 % 
-For this reason acceptance uncertainties are neglected for the final results.
+Given the negligibly small impact, the acceptance uncertainties are neglected for the final results in Section~\ref{diffresults}.
 
 \begin{table}[h!]
 \footnotesize
+\caption{
+    Acceptance uncertainties and the relative change they manifest when added in quadrature to the uncertainties of the $\pt$ combination.
+    }
+\label{tab:accuncertainties}
+\setlength\tabcolsep{3pt}
 \begin{center}
-\hspace*{-1cm}
 \begin{tabular}{lccccccccc}
-Bins                      & [0,15) & [15,30) & [30,45) & [45,80) & [80,120) & [120,200) & [200,350) & [350,600) & [600,infinity)  \\
+Bins                      & $[0,15)$ & $[15,30)$ & $[30,45)$ & $[45,80)$ & $[80,120)$ & $[120,200)$ & $[200,350)$ & $[350,600)$ & $[600,\infty)$  \\
 Acc. uncertainties        & 0.6\%   & 1.3\%    & 2.8\%    & 5.7\%    & 1.0\%     & 1.7\%      & 4.1\%      & 10.2\%     & 28.8\%  \\
 Rel. change in syst. unc. & 0.3\%   & 0.7\%    & 4.1\%    & 19.7\%   & 0.3\%     & 1.8\%      & 2.0\%      & 7.6\%      & 1.0\%   \\
 Rel. change in tot. unc.  & 0.0\%   & 0.1\%    & 0.3\%    & 1.2\%    & 0.0\%     & 0.1\%      & 0.2\%      & 0.3\%      & 0.2\%   \\
 \end{tabular}
 \end{center}
-\caption{
-    Acceptance uncertainties and the relative change they manifest when added in quadrature to the uncertainties of the $\pt$ combination.
-    }
-\label{tab:accuncertainties}
 \end{table}
 
 
 % ____________________________________________________________________________
 % xH normalization uncertainty
 
-For certain measurements the production cross sections of non-$\ggh$ production modes are assumed to be their respective SM value.
+When certain production modes are assumed to be at their SM values in a fit, the fit must include a systematic uncertainty related to the normalization of these processes.
 % 
-In these cases, the uncertainty in the inclusive production cross section from non-$\ggh$ modes, determined to be about 2.1\%~\cite{deFlorian:2016spz}, has been taken into account as a nuisance parameter.
+For most differential cross sections all production modes are fitted simultaneously, and thus no further systematic uncertainty is needed.
 % 
-\tk{Explain how obtained}
+In the case of the $\pth$ spectrum of only Higgs bosons produced via gluon fusion, the uncertainty on the normalization of the other modeled production modes is included as a nuisance parameter.
+% 
+The uncertainties per production mode are shown in Table~\ref{tab:xhunc}.
+% 
+The uncertainty on the normalization of non-$\ggh$ production modes is calculated to be $2.1\%$.
+% 
+It is implemented as a constant uncertainty throughout the $\pth$ spectrum in the fits that assume a SM normalization for non-$\ggh$ production modes.
 
 
-\tk{From AN:}
+\begin{table}[h!]
+\footnotesize
+\caption{
+    Uncertainties on the overall normalizations of Higgs production modes other than $\ggh$, taken from Ref.~\cite{deFlorian:2016spz}.
+    % 
+    The overall normalization uncertainty of all production modes other than $\ggh$ combined is found to be $2.1\%$
+    }
+\label{tab:xhunc}
+\begin{center}
+\begin{tabular}{llcccl}
+Production mode  &  $\sigma$ (pb)  &  $\Delta$Scale ($\%$)  &  $\Delta$PDF ($\%$)  &  $\Delta\alpha_s$ ($\%$)  &  Total (pb) \\
+\hline
+$\vbf$                               & $3.78$                & $0.35\%$     & $2.1\%$      & $0.05\%$            & $8.05 \cdot 10^{-2}$ \\
+$\wboson\hboson$                     & $1.37$                & $0.6\%$      & $1.7\%$      & $0.9\%$             & $2.76 \cdot 10^{-2}$ \\
+$\zboson\hboson$                     & $8.82 \cdot 10^{-1}$  & $3.4\%$      & $1.3\%$      & $0.9\%$             & $3.31 \cdot 10^{-2}$ \\
+$\tth$                               & $5.06 \cdot 10^{-1}$  & $7.5\%$      & $3.0\%$      & $2.0\%$             & $4.21 \cdot 10^{-2}$ \\
+$\bbh$                               & $4.86 \cdot 10^{-1}$  & $22.0\%$     & $0.0\%$      & $0.0\%$             & $1.07 \cdot 10^{-1}$ \\
+$\tquark\hboson (\text{t-channel})$  & $7.43 \cdot 10^{-2}$  & $10.6\%$     & $3.5\%$      & $1.2\%$             & $8.34 \cdot 10^{-3}$ \\
+$\tquark\hboson (\text{s-channel})$  & $2.87 \cdot 10^{-3}$  & $2.1\%$      & $2.2\%$      & $0.2\%$             & $8.76 \cdot 10^{-5}$ \\
+\hline
+Total                                & $7.10$                &              &              &                     & $0.15$ ($2.1\%$) \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+The $\pth$ spectrum via $\ggh$ is shown in Fig.~\ref{fig:xH_uncertainty_impact} with and without the uncertainty on the other production modes included.
 % 
-In the cases that only the cross section from ggH is to be fitted (in the $\pt^\text{ggH}$ combination and for all the coupling fits), the contribution from other production mechanisms (from now referred to as ``xH'') needs to be subtracted.
-% 
-The xH production comes with an uncertainty, which surmounts to about 2.1\% inclusively, obtained by adding up in quadrature the uncertainties of all the individual production modes (numbers from Ref.~\cite{deFlorian:2016spz}).
-% 
-The uncertainty is assumed to flat in $\pt$, and is implemented as a nuisance parameter in the fit.
-% 
-The $\pt^\text{ggH}$ spectrum is shown in Fig.~\ref{fig:xH_uncertainty_impact} with and without the uncertainty on xH included.
-% 
-The uncertainty manifests itself visibly in the systematic uncertainty, although the combination result is not significantly altered.
-% 
-The xH uncertainty is applied to the $\pt^\text{ggH}$ combination and for all the coupling fits.
+The uncertainty manifests itself visibly in the systematic uncertainty, although the result is not significantly altered.
+
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -88,6 +110,8 @@ The xH uncertainty is applied to the $\pt^\text{ggH}$ combination and for all th
     % 
     \caption{
         Combination of $\pt^\text{ggH}$, using the $\hgg$, $\hzz$ and $\hbb$ decay channels. 
+        % 
+        \tk{Edit caption, and repeat this on the Asimov!}
         }
     \label{fig:xH_uncertainty_impact}
   \end{center}
