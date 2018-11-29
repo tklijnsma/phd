@@ -25,17 +25,42 @@ As the tails concern only a small part of the inclusive cross section, these dev
 This thesis is concerned with the first two points, although the applied methodology would as well be suitable for a search of heavy particles in the $\ggh$ loop.
 
 
-\subsubsection{The low \texorpdfstring{$\pth$}{pTH} regime: variations of $\kappab$ and $\kappac$}
+\subsubsection{The low \texorpdfstring{$\pth$}{pTH} regime: variations of \texorpdfstring{$\kappab$}{kb} and \texorpdfstring{$\kappac$}{kc}}
 
 Light quarks affect the shape of the differential $\pth$ distribution due to interference with the top quark in $\ggh$ production loop.
 % 
-At moderate $\pth$, $m_\mathrm{q} \ll \pth \ll \mh$ where $m_\mathrm{q}$ is the mass of a light quark $\mathrm{q}$, the LO $\ggh$ production cross section obtains double logarithms depending on the coupling $\kappa_\mathrm{q}$ (the coupling of the Higgs to the light quark $\mathrm{q}$)~\cite{Baur:1989cm}.:
+At moderate $\pth$, where the transverse momentum stems from QCD emission with $\mq < \pt^\text{emission} < \mh$ ($\mq$ being the mass of a light quark $\qquark$), the LO calculation of the $\ggh$ production cross section contains terms of the following sort~\cite{Bishara:2016jga}:
+% 
+\begin{linenomath*}
+\begin{equation}
+\kappaq \frac{\mq^2}{\mh^2}
+    \ln^2 \left(
+        \frac{
+            \left( \pt^\text{emission} \right)^2
+            }{
+            m_\mathrm{q}^2
+            }
+        \right)
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+where $\kappaq$ is the coupling of the Higgs boson to $\qquark$.
+% 
+These terms stem from 
+
+
+% 
+At moderate $\pth$, $m_\mathrm{q} \ll \pth \ll \mh$ where $m_\mathrm{q}$ is the mass of a light quark $\mathrm{q}$, the LO $\ggh$ production cross section obtains double logarithms depending on the coupling $\kappa_\mathrm{q}$ (the coupling of the Higgs to the light quark $\mathrm{q}$)~\cite{%
+% Baur:1989cm % really not clear how Bishara et al derived it from this paper
+Bishara:2016jga%
+}:
 % 
 \begin{linenomath*}
 \begin{equation}
 \kappa_\mathrm{q} \frac{m_\mathrm{q}^2}{\mh^2}
     \ln^2 \left(
-        \frac{\pt^2}{m_\mathrm{q}}
+        \frac{\pt^2}{m_\mathrm{q}^2}
         \right)
 \,.
 \end{equation}
@@ -54,6 +79,9 @@ Mention dat fixed-order breaks down in this regime, en dat dus
 resummation nodig is up to all orders in QCD.
 }
 
+\textbf{\tk{
+Reconsider: Put all theory in the theory chapter.
+}}
 
 % In particular, when emissions have a transverse momen- tump⊥ intherangemQ ≪p⊥ ≪mh,withmQ beingthe internal quark mass, the leading-order (LO) cross section features double logarithms of the form [17]
 % OUTP-16-18P, CERN-TH-2016-136, LAPTH-026/16
@@ -69,9 +97,6 @@ resummation nodig is up to all orders in QCD.
 % % 
 
 
-
-\vspace{1cm}
-\hrule
 \tk{Literal paper text below}
 
 Differential cross sections may be used to constrain physical parameters.

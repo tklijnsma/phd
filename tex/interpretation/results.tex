@@ -1,48 +1,84 @@
-\subsection{Inclusive vs. differential measurements}
-
-\tk{TODO:
-Motivate the fits with coupling-dependent BRs and floating BRs.
-% 
-Refer back to this section for the kb/kc fits.
-}
-
-
-% ____________________________________________________________________________
 \subsection{Results for simultaneous variations of \texorpdfstring{$\kappat$}{kt}, \texorpdfstring{$\kappab$}{kb}, and anomalous point coupling \texorpdfstring{$\cg$}{cg}}
+\label{sec:interpretation-results-ktcgkb}
 
-\tk{TODO: Literal paper text now}
 
-The fits are repeated in a way analogous to that of Section~\ref{sec:ResultsKappabKappac} but with $\kappat$, $\cg$, and $\kappab$ as the parameters of the fit, using the parametrization obtained from Ref.~\cite{Grazzini:2017szg}.
+The parametrization of the theoretical predictions for simultaneous variations of $\kappat$ and $\cg$ are implemented into the likelihood as prescribed in Eq.~(\ref{eq:likelihood-interpretation}).
 % 
-The combined log-likelihood scan for $\kappat$ vs. $\cg$, assuming branching fractions that depend on the couplings, is shown in Fig.~\ref{fig:scans_kappatkappag_nominal} (left).
+The test statistic $q$ is computed over a grid with dimensions $\kappat$ and $\cg$, while the other Higgs boson couplings are fixed at their value expected in the SM.
 % 
-The normalization of the spectrum is, by construction, equal to the SM normalization for the points $( \kappat = 1.0, \cg = 0.0 )$ and $( \kappat = 0.0, \cg \simeq 0.08 )$.
+The 2-dimensional likelihood is shown Fig.~\ref{fig:ktcg}, under the assumption of branching fractions scaling according to the SM prescription (left) and with the branching ratios implemented as nuisance parameters without any prior constraint (right).
+
+
+The constraints on the couplings can be factorized into two contributions: one from the shape of the differential distribution, and another from the overall normalization.
 % 
-The differential shape of the parametrization $s$ is calculated by normalizing the differential cross section to $1$:
+Note that the inclusive cross section $\sigma_\text{incl} \sim \left| \kappat^2 + A \cdot \cg^2 \right|$, and the SM in the limit of infinite $\mt$ is given by $(\kappat=0, \cg=1/A)$ (where $A=12$ for the chosen definition of $\cg$~\cite{Grazzini:2016paz}).
+% 
+Thus, along the diagonal from $(\kappat=0, \cg=1/A)$ to $(\kappat=1, \cg=0)$, $\sigma_\text{incl}$ is at its SM expected value.
+% 
+Deviations from this diagonal are thus suppressed when the overall normalization is not profiled in the fit, as can be seen in Fig.~\ref{fig:ktcg} (left).
+
+
+The shape, as defined in Eq.~(\ref{eq:interpretation-shape}), can be simplified for the differential cross   sections via $\ggh$:
 % 
 \begin{linenomath*}
 \begin{equation}
-    s_i(\kappat, \cg) =
+\label{eq:interpretation-shape-ktcg}
+\begin{split}
+s^{\ggh}_i(\kappat, \cg)
+        &=
         \frac
-            {\sigma_i(\kappat, \cg)}
-            {\sum_j \sigma_j(\kappat, \cg)}
-    \,,
+            {\sigma^{\ggh}_i(\kappat, \cg)}
+            {\sum_j \sigma^{\ggh}_j(\kappat, \cg)}
+            \\
+        &=
+        \frac
+            {A_i \kappat^2 + B_i \cg^2 + C_i \kappat \cg}
+            {
+                \left(\sum_j A_j\right) \kappat^2
+                + \left(\sum_j B_j\right) \cg^2
+                + \left(\sum_j C_j\right) \kappat\cg
+                }
+            \\
+        &= 
+        \frac
+            {A_i \frac{\kappat^2}{\cg^2} + B_i + C_i \frac{\kappat}{\cg}}
+            {
+                \left(\sum_j A_j\right) \frac{\kappat^2}{\cg^2}
+                + \left(\sum_j B_j\right) 
+                + \left(\sum_j C_j\right) \frac{\kappat}{\cg}
+                }
+            \\
+        & = f(\frac{\kappat}{\cg})
+\,.
+\end{split}
 \end{equation}
 \end{linenomath*}
 % 
-where $\sigma_i$ is the parametrization in bin $i$.
+In other words, the shape of the $\ggh$ spectrum is only a function of the ratio of $\kappat$ and $\cg$; it is invariant under any transformation
 % 
-Plugging in the expected parabolic dependence of $\sigma_i(\kappat, \cg)$
+\begin{linenomath*}
+\begin{equation}
+\label{eq:interpretation-ktcg-transform}
+(\kappat, \cg) \to (c \cdot \kappat, c \cdot \cg)
+\,,
+\end{equation}
+\end{linenomath*}
 % 
-reveals that the shape of the parametrization for $\kappat$/$\cg$ variations becomes a function of the ratio of the two couplings, $s_i(\frac{\kappat}{\cg})$.
+where $c$ is any arbitrary real-valued constant.
 % 
-Thus any discrimination power in the radial direction with respect to the origin stems from constraints on the overall normalization, whereas discrimination in the angular direction stems from constraints on the shape of the distribution.
+This is clearly visible in Fig.~\ref{fig:ktcg} (right), where the constraints are posed mostly on the ratio $\kappat / \cg$, and in Fig.~\ref{fig:ktcg} (left), where the constraint \emph{along} the diagonal comes from the shape of the $\ggh$ spectrum.
 % 
-The angular dependence of the log-likelihood function becomes apparent in Fig.~\ref{fig:scans_kappatkappag_nominal} (right), where the branching fractions are implemented as nuisance parameters with no prior constraint in the fit.
+Applying the logic of Eq.~(\ref{eq:interpretation-shape-ktcg}) analogously on the other production modes reveals that here the constraints do not manifest themselves purely in the ratio.
 % 
-Except at small values of the couplings, the constraint on the couplings depends on their ratio.
+This explains why transformations such as Eq.~(\ref{eq:interpretation-ktcg-transform}) do not hold at small values of the couplings (as can be seen in Fig.~\ref{fig:ktcg} (right)), where the $\ggh$ production mode loses dominance over the others.
 % 
-The two symmetric sets of contours are due to a symmetry of the parametrization under $(\kappat,\,\cg) \, \to \, (-\kappat,\,-\cg)$.
+In the case of unconstrained branching fractions, there is an overall symmetry under $(\kappat,\,\cg) \, \to \, (-\kappat,\,-\cg)$, hence the two symmetric sets of contours in Fig.~\ref{fig:ktcg} (right).
+% 
+In the case of coupling-dependent branching fractions, this symmetry is broken by a linear term in $\kappat$ in $\BRgamgam$.
+% 
+A final noteworthy feature about Fig.~\ref{fig:ktcg} (right), is that seemingly the combination constraints the ratio $\kappat / \cg$ less than the $\hgg$ channel by itself; this is a feature of the observed data that is not seen in expected fits.
+% 
+These features may arise when the combination cancels out contrary deviations in the inputs.
 
 
 \begin{figure}[hbtp]
@@ -62,16 +98,40 @@ The two symmetric sets of contours are due to a symmetry of the parametrization 
         % 
         For the combination the two standard deviation contour is drawn as a black dashed line, and the shading indicates the negative log-likelihood, with the scale shown on the right hand side of the plots.
         }
-    \label{fig:scans_kappatkappag_nominal}
+    \label{fig:ktcg}
   \end{center}
 \end{figure}
 
 
-Figure~\ref{fig:scans_kappatkappab_rawInput} (left) shows the combined log-likelihood scan as a function of $\kappat$ and $\kappab$, with branching fractions scaling appropriately with the coupling modifiers and Figure~\ref{fig:scans_kappatkappab_rawInput} (right) with the branching fractions implemented as nuisance parameters with no prior constraint.
+It is noteworthy that in both scenarios the SM in the infinite $\mt$ limit is excluded, by $4.4$ and $2.2$ standard deviations for the coupling-dependent branching fractions and the unconstrained branching fractions, respectively.
 % 
-As the $\hgg$ branching fraction depends linearly on $\kappat$, the constraints on the $\hgg$ channel and the combination in Figure~\ref{fig:scans_kappatkappab_rawInput} (left) are not symmetric with respect to the $\kappat$ axis.
+This poses experimental evidence for the existence of the gluon fusion production loop.
+
+
+
+% ____________________________________________________________________________
+% kt/kb
+
+A fit of the parametrization of the same model, but now with $\kappat$ and $\kappab$ as the fitted parameters, is shown in Fig.~\ref{fig:ktkb}, for the fit with the branching fractions implemented as functions of the couplings.
 % 
-For the branching fractions implemented as nuisance parameters with no prior constraint, the parametrization is symmetric under $(\kappat,\,\kappab) \, \to \, (-\kappat,\,-\kappab)$, which explains the observed symmetry in Figure~\ref{fig:scans_kappatkappab_rawInput} (right).
+The likelihood is driven by constraints on the inclusive cross section times the branching fractions, $\sigma_\text{incl} \times \BRgamgam$ and $\sigma_\text{incl} \times \BRZZ$.
+% 
+The dependence of the cross section on the couplings contains only quadratic terms by construction.
+% 
+As in the case of variations of $\kappat$ and $\cg$, $\BRgamgam$ contains a linear term in $\kappat$, hence the likelihood in the $\hgg$ channel and in the combination is not symmetric under $(\kappat,\,\kappab) \, \to \, (-\kappat,\,-\kappab)$, unlike the result in the $\hzz$ channel.
+% 
+Deviations from the circular band in the $\hgg$ channel are excluded mostly due to the fact that $\sigma_\text{incl} \times \BRgamgam$ deviates too much from the observed data.
+% 
+At simultaneously low values of $\kappat$ and $\kappab$, the decay width of the Higgs boson to vector bosons becomes large, and consequently $\BRgamgam$ becomes very high, explaining the `gap' in the circular band.
+
+
+In Fig.~\ref{fig:ktkb} (right) the branching fractions are unconstrained, thus fitting only the shape of the parametrization to data.
+% 
+As the linear dependence on $\kappat$ disappears, the likelihood becomes symmetric under $(\kappat,\,\kappab) \, \to \, (-\kappat,\,-\kappab)$ for all decay channels.
+% 
+Applying Eq.~(\ref{eq:interpretation-shape-ktcg}) analogously on the parametrization of $\ggh$ for variations of $\kappat$ and $\kappab$ reveals that also here the shape of the differential distribution depends solely on the slope $\kappab/\kappat$, explaining the invariance under transformations like $(\kappat, \kappab) \to (c \cdot \kappat, c \cdot \kappab)$ for larger values of the couplings.
+
+
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -90,29 +150,66 @@ For the branching fractions implemented as nuisance parameters with no prior con
         % 
         For the combination the two standard deviation contour is drawn as a black dashed line, and the shading indicates the negative log-likelihood, with the scale shown on the right hand side of the plots.
         }
-    \label{fig:scans_kappatkappab_rawInput}
+    \label{fig:ktkb}
   \end{center}
 \end{figure}
 
 
+
 % ____________________________________________________________________________
 \subsection{Results for simultaneous variations of \texorpdfstring{$\kappab$}{kb} and \texorpdfstring{$\kappac$}{kc}}
-
-\tk{TODO: Literal copy from paper now}
-
-Figure~\ref{fig:scans_kappabkappac_nominal} (left) shows the one and two standard deviation contours of the fits of the $\kappab/\kappac$ parametrization from Ref.~\cite{Bishara:2016jga} to data, assuming the branching fractions are dependent on the Higgs boson couplings, i.e., $\mathcal{B} = \mathcal{B}(\kappab, \kappac)$, and that there are no beyond-the-SM contributions.
-% 
-The substructure on the combined scan shows a ring shape around the origin, in agreement with the SM prediction within one standard deviation.
+\label{sec:interpretation-results-kbkc}
 
 
-The fit is repeated with the branching fractions for the $\hgg$ and $\hzz$ channels implemented as nuisance parameters with no prior constraint, effectively removing dependence from the total width and the overall normalization.
+Analogously to Section~\ref{sec:interpretation-results-ktcgkb}, the theoretical predictions for simultaneous variations of $\kappab$ and $\kappac$ are parametrized and fitted to data.
 % 
-This way the constraint on $\kappab$ and $\kappac$ comes only from the knowledge of the $\pth$ distribution.
-% distortion of the normalized $\pth$ spectrum.
+The fit with the branching fractions implemented as functions of the couplings is shown in Fig.~\ref{fig:kbkc} (left), and the one with the branching fractions implemented as unconstrained nuisance parameters in Fig.~\ref{fig:kbkc} (right).
 % 
-The result of this fit is shown in Fig.~\ref{fig:scans_kappabkappac_nominal} (right).
+Similarly to Eq.~(\ref{eq:interpretation-shape-ktcg}), it can be shown that the dependence of the shape depends only on $\kappab/\kappac$, in the limit of large couplings:
 % 
-As expected, the range of allowed values of $\kappab$ and $\kappac$ is much wider than in the case of coupling-dependent branching fractions.
+\begin{linenomath*}
+\begin{equation}
+\label{eq:interpretation-shape-kbkc}
+\begin{split}
+\lim_{\kappab,\,\kappac\to\infty} s^{\ggh}_i(\kappab, \kappac)
+        &=
+        \lim_{\kappab,\,\kappac\to\infty}
+        \frac
+            {\sigma^{\ggh}_i(\kappab, \kappac)}
+            {\sum_j \sigma^{\ggh}_j(\kappab, \kappac)}
+            \\
+        &=
+        \lim_{\kappab,\,\kappac\to\infty}
+        \frac
+            {A_i \kappab^2 + B_i \kappac^2 + C_i \kappab \kappac
+                + D_i \kappab + E_i \kappac + F_i
+                }
+            {
+                \left(\sum_j A_j\right) \kappab^2
+                + \left(\sum_j B_j\right) \kappac^2
+                + \left(\sum_j C_j\right) \kappab\kappac
+                + \left(\sum_j D_j\right) \kappab
+                + \left(\sum_j E_j\right) \kappac
+                + \left(\sum_j F_j\right)
+                }
+            \\
+        &=
+        \frac
+            {A_i \frac{\kappab^2}{\kappac^2} + B_i + C_i \frac{\kappab}{\kappac}}
+            {
+                \left(\sum_j A_j\right) \frac{\kappab^2}{\kappac^2}
+                + \left(\sum_j B_j\right) 
+                + \left(\sum_j C_j\right) \frac{\kappab}{\kappac}
+                }
+            \\
+        & = f(\frac{\kappab}{\kappac})
+\,.
+\end{split}
+\end{equation}
+\end{linenomath*}
+% 
+However, for moderate values of the couplings the linear terms are not negligible, and clear constraints are obtained even when the overall normalization is profiled.
+
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -131,18 +228,18 @@ As expected, the range of allowed values of $\kappab$ and $\kappac$ is much wide
         % 
         For the combination the two standard deviation contour is drawn as a black dashed line, and the shading indicates the negative log-likelihood, with the scale shown on the right hand side of the plots.
         }
-    \label{fig:scans_kappabkappac_nominal}
+    \label{fig:kbkc}
   \end{center}
 \end{figure}
 
 
-Confidence intervals can be set on $\kappab$ and $\kappac$ by profiling one coupling and scanning over the other.
+For both scenarios of the branching fractions, scans are performed over each of the couplings individually while profiling the other, yielding the constraint on a single coupling.
 % 
-The results of these single-coupling scans are shown in Fig.~\ref{fig:scans_kappabkappac_oneDimScans} and \ref{fig:scans_kappabkappac_oneDimScans_scenario2}.
+The scans are shown in Figs.~\ref{fig:kbkc-onedim-couplingdependent} and \ref{fig:kbkc-onedim-floatingbrs} for the coupling-dependent branching fractions and the unconstrained branching fractions, respectively.
 % 
-The observed (expected) limits at 95\% CL in the one-dimensional scans are:
+
+The scans are shown in Figs.~\ref{fig:kbkc-onedim-couplingdependent} for the coupling-dependent branching fractions, and the corresponding observed (expected) limits at 95\% CL are:
 % 
-% \clearpage
 \begin{linenomath*}
 \begin{equation}
 \label{eq:kappasensitivity}
@@ -150,12 +247,12 @@ The observed (expected) limits at 95\% CL in the one-dimensional scans are:
 \kappabLeftObserved < \kappab < \kappabRightObserved  \quad(\kappabLeftAsimov < \kappab < \kappabRightAsimov )  \,,
 \\[8pt]
 \kappacLeftObserved < \kappac < \kappacRightObserved \quad(\kappacLeftAsimov < \kappac < \kappacRightAsimov )
-\,,
+\,.
 \end{array}
 \end{equation}
 \end{linenomath*}
 % 
-in the case of branching fractions that depend on $\kappab$ and $\kappac$, and
+Likewise, for the unconstrained branching fractions the scans are shown in Figs.~\ref{fig:kbkc-onedim-couplingdependent}, and the corresponding observed (expected) limits at 95\% CL are:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -164,14 +261,12 @@ in the case of branching fractions that depend on $\kappab$ and $\kappac$, and
 \kappabLeftObservedFLOATINGBRS < \kappab < \kappabRightObservedFLOATINGBRS  \quad(\kappabLeftAsimovFLOATINGBRS < \kappab < \kappabRightAsimovFLOATINGBRS )  \,,
 \\[8pt]
 \kappacLeftObservedFLOATINGBRS < \kappac < \kappacRightObservedFLOATINGBRS \quad(\kappacLeftAsimovFLOATINGBRS < \kappac < \kappacRightAsimovFLOATINGBRS )
-\,,
+\,.
 \end{array}
 \end{equation}
 \end{linenomath*}
 % 
-in the case of the branching fractions implemented as nuisance parameters with no prior constraint.
-% 
-For the coupling-dependent branching fractions, the results are shaped predominantly by the constraints from the total width rather than by distortions of the $\pth$ spectrum.
+In the proof-of-concept study in Ref.~\cite{Bishara:2016jga}, the branching fractions were fixed to their SM expectation, and as such the results obtained up to now are not directly comparable to the ones found in Ref.~\cite{Bishara:2016jga}.
 % 
 If the branching fractions are fixed to their SM expectations, the one-dimensional scans yield the following expected limits at 95\% CL:
 % 
@@ -203,7 +298,7 @@ The intervals obtained are competitive with the intervals from other direct sear
         % 
         The branching fractions are considered dependent on the values of the couplings.
         }
-    \label{fig:scans_kappabkappac_oneDimScans}
+    \label{fig:kbkc-onedim-couplingdependent}
   \end{center}
 \end{figure}
 
@@ -218,8 +313,10 @@ The intervals obtained are competitive with the intervals from other direct sear
         % 
         The branching fractions are implemented as nuisance parameters with no prior constraint.
         }
-    \label{fig:scans_kappabkappac_oneDimScans_scenario2}
+    \label{fig:kbkc-onedim-floatingbrs}
   \end{center}
 \end{figure}
+
+
 
 

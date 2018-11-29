@@ -1,31 +1,31 @@
 \subsection{Systematic uncertainties}
 
-\tk{TODO:
-Treat here how the scale variations are used, and explain the procedure to implement the bin-to-bin correlations in the likelihood.
+The theoretical predictions from Refs.~\cite{Bishara:2016jga,Grazzini:2017szg,Grazzini:2016paz} are subject to theoretical uncertainties from missing higher order contributions.
 % 
-Note PDF uncertainties are not included.
+In order to evaluate this uncertainty in each bin of the $\pth$ spectrum, $\muR$ and $\muF$ are independently varied between $0.5$, $1$, and $2$ times their nominal value, under the constraint that the fraction $\frac{\muR}{\muF}$ is not less than $0.5$ or greater than $2.0$.
 % 
-Refer back to this section for the kb/kc fits.
-}
+As also the resummation is subject to the resummation scale $Q$, also $Q$ is varied between $0.5$, $1$, and $2$ times their nominal value, while $\muR$ and $\muF$ are kept at their respective central values.
+% 
+The finely-binned variations are integrated piecewise so that its resulting binning matches the chosen experimental binning.
+% 
+On the variations described above, the so-called envelope is applied: the asymmetric uncertainty up (down) is taken to be the difference between the maximum (minimum) variation and the central variation.
+% 
+The resulting relative symmetrized uncertainties are shown in Table~\ref{tab:scaleunc-kbkc} for the variations of $\kappab$ and $\kappac$ (Ref.~\cite{Bishara:2016jga}) and in Table~\ref{tab:scaleunc-ktcgkb} for the variations of $\kappat$, $\cg$, and $\kappab$ (Ref.~\cite{Grazzini:2017szg,Grazzini:2016paz}).
+% 
+For the variations of $\kappab$ and $\kappac$, the scale uncertainties become larger as one strays from the region of the resummation and approaches $\mh$, as is expected.
+% 
+For the variations of $\kappat$, $\cg$, and $\kappab$, the uncertainties are largest in the region where the effects of the finite top mass are large, i.e. at about twice the top mass.
 
-The theoretical predictions described in Section~\ref{sec:theory} are subject to theoretical uncertainties from the renormalisation scale $\muR$ and the factorisation scale $\muF$.
-% 
-The standard approach to evaluate the impact of these uncertainties is to compute an envelope of scale variations, and to assign the extrema of the envelope as the uncertainty.
-% 
-To this end, $\muR$ and $\muF$ are independently varied between $0.5$, $1$, and $2$ times their nominal value, whereas the fraction $\frac{\muR}{\muF}$ is constrained not to be less than $0.5$ or greater than $2.0$.
-% 
-As the theoretical spectra in the $\kappat$/$\cg$/$\kappab$ case and the $\kappac$/$\kappab$ case contain a resummation, the uncertainty in the resummation scale $Q$ is also considered, and it is evaluated by varying $Q$ from $0.5$ to $2$ times its central value (while keeping $\muF$ and $\muR$ at their respective central values).
-% 
-The theoretical uncertainties are assigned by applying the minimum and maximum scale variations per bin.
-% 
-The resulting uncertainties for the spectra under variations of $\kappab$ and $\kappac$ and variations of $\kappat$, $\cg$, and $\kappab$ are shown in Table~\ref{tab:TheoryUncertainties_kappab_kappac} and \ref{tab:TheoryUncertainties_kappat_kappag}, respectively.
+
+Additional theoretical uncertainties due to the PDF and $\as$ are estimated to be below $2\%$~\cite{Bishara:2016jga}, which has a negligible effect on the overall interpretation uncertainty and are thus not taken into further account.
+
 
 
 \begin{table}[htb]
 \caption{
-    Theoretical uncertainties in the transverse momentum spectra under variations of $\kappab$ and $\kappac$.
+    Relative symmetrized theoretical uncertainties in the $\pth$ spectrum under variations of $\kappab$ and $\kappac$.
     }
-\label{tab:TheoryUncertainties_kappab_kappac}
+\label{tab:scaleunc-kbkc}
 \footnotesize
 \begin{center}
 \begin{tabular}{lccccc}
@@ -38,9 +38,9 @@ The resulting uncertainties for the spectra under variations of $\kappab$ and $\
 
 \begin{table}[htb]
 \caption{
-    Theoretical uncertainties in the transverse momentum spectra under variations of $\kappat$, $\cg$, and $\kappab$.
+    Relative symmetrized theoretical uncertainties in the $\pth$ spectrum under variations of $\kappat$, $\cg$, and $\kappab$.
     }
-\label{tab:TheoryUncertainties_kappat_kappag}
+\label{tab:scaleunc-ktcgkb}
 \footnotesize
 \begin{center}
 \setlength{\tabcolsep}{2pt}
@@ -53,9 +53,13 @@ The resulting uncertainties for the spectra under variations of $\kappab$ and $\
 \end{table}
 
 
-Theoretical uncertainties are subject to bin-to-bin correlations.
+\subsubsection{Bin-to-bin correlations of the scale uncertainties}
+
+The magnitude of the scale uncertainties provides only part of the full picture; typically, scale uncertainties are subject to pronounced bin-to-bin correlations, although the correlation structure is difficult to assess a priori.
 % 
-We adopt a procedure that produces a correlation coefficient $\rho_{ab}$ directly from the individual scale variations:
+The size of the bin-to-bin correlations are theoretically as ill known as the missing higher order contributions; as was the case for the size of the uncertainties, we can only define an estimation method that makes sense from first principles.
+% 
+To this extent, a procedure is adopted that produces a correlation coefficient $\rho_{ab}$ directly from the individual scale variations:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -74,58 +78,85 @@ We adopt a procedure that produces a correlation coefficient $\rho_{ab}$ directl
 % 
 where $\sigma_{a (b), i}$ is the cross section in bin $a$ ($b$) of the $i^\text{th}$ scale variation, $\overline{\sigma}_{a (b)}$ is the mean cross section in bin $a$ ($b$), and $\rho_{ab}$ is the resulting correlation coefficient between bin $a$ and $b$.
 % 
-The correlation structure is characterized by strong correlations among bins at moderate transverse momentum ($15 \leq \pth \leq 600\GeV$).
+The resulting correlation matrices for the experimental binning are shown in Fig.~\ref{fig:scalecorrelationmatrices} for the variations of $\kappab$ and $\kappac$ (left) and the variations of $\kappat$, $\cg$, and $\kappab$ (right).
 % 
-Only the bins with $\pth<15$ and $\pth>600$\GeV are anti-correlated with the bins at moderate transverse momentum.
-
-The correlation matrices obtained from this procedure are shown in Fig.~\ref{fig:scalecorrelationmatrices}.
+In the moderate $\pth$ region, $15 \leq \pth \leq 600\GeV$, the correlation structure is characterized by strong positive correlations.
 % 
-In both cases the low $\pth$-region is less correlated with other bins than the other bins among one another.
-% 
-This is mostly due to the resummation that has a large impact on the low $\pth$-region.
-% 
-In the case of $\kappat$/$\cg$ variations, the overflow bin is less correlated as well.
-
+The outer bins on either side of the spectrum, $\pth<15$ and $\pth>600$\GeV, are anti-correlated with the bins in the moderate $\pth$ region.
 
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\halflinewidth]{img/interpretation/other/corrmat_yukawa.pdf}
     \includegraphics[width=\halflinewidth]{img/interpretation/other/corrmat_tophighpt.pdf}
     \caption{
-        (left) Correlation matrix for theoretical uncertainties on $\kappab$/$\kappac$ variations.
-        (right) Correlation matrix for theoretical uncertainties on $\kappat$/$\cg$/$\kappab$ variations.
+        Correlation matrices of the scale uncertainties in the experimental $\pth$ binning for the variations of $\kappab$ and $\kappac$ (left), and for the variations of $\kappat$, $\cg$, and $\kappab$ (right).
         }
     \label{fig:scalecorrelationmatrices}
   \end{center}
 \end{figure}
 
 
-\tk{Scale uncertainty implementation in combine (doing the PCA, adding as nuis pars) -- should it go in?}
+In order to assess the resulting correlation structure in more detail, the correlation matrices are produced as well for the finer theoretical binning.
+% 
+This is achieved by omitting the piecewise integration of the scale variations to the experimental binning.
+% 
+The resulting correlation matrices are shown in Fig.~\ref{fig:scalecorrelationmatrices-theory}.
+% 
+For the variations of $\kappab$ and $\kappac$ the observed pattern matches the one from the experimental binning.
+% 
+For the variations of $\kappat$, $\cg$, and $\kappab$, it now becomes apparent that the bin-to-bin correlations are strongly positive up to roughly $300$\GeV, at which point the finite top mass corrections reduce the correlation with the preceding bins (as expected, since the theoretical calculation becomes significantly different).
 
 
-\subsubsection{Dependence of the correlation matrix on the couplings}
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\halflinewidth]{img/interpretation/other/corrmat_theorybinning_yukawa.pdf}
+    \includegraphics[width=\halflinewidth]{img/interpretation/other/corrmat_theorybinning_tophighpt.pdf}
+    \caption{
+        Correlation matrices of the scale uncertainties in the $\pth$ binning used for the theoretical calculations for the variations of $\kappab$ and $\kappac$ (left), and for the variations of $\kappat$, $\cg$, and $\kappab$ (right).
+        % 
+        The numerical values are omitted and the binning is only specified for a limited number of bins in order to avoid overcrowding the plot.
+        }
+    \label{fig:scalecorrelationmatrices-theory}
+  \end{center}
+\end{figure}
 
-The procedure described in Sec.~\ref{sec:correlationmatrixprocedure} neglects the effect of coupling variations on the correlation matrix.
+
+The effect of the adopted procedure on the results of the interpretation is assessed by performing the same interpretation under three scenarios: The bin-to-bin correlations as described above, no bin-to-bin correlations (i.e. no off-diagonal components in the correlation matrix), and no theoretical uncertainties whatsoever.
 % 
-In order to estimate the impact of this effect, the correlation matrices in Sec.~\ref{sec:correlationmatrixresults} are computed at different values of the couplings $\kappa_b$ and $\kappa_c$, using only the gluon-induced contributions (because only of only these variations, the theorists supplied the scale variations per coupling variation).
+With respect to the uncorrelated scale uncertainties (no theoretical uncertainties whatsoever), the adopted procedure increases the overall uncertainty of the interpretation by about $1\%$ ($5\%$).
 % 
-The minimum and maximum of every entry in all correlation matrices are displayed in Fig.~\ref{fig:CorrelationMatrix_minmaxStudy}.
+Thus, while the adopted procedure may lack solid theoretical underpinning, it seems from first principles better motivated than uncorrelated uncertainties, and the effect on the overall uncertainty is rather limited.
+
+
+Finally, there is no a priori reason for the bin-to-bin correlation structure to be invariant with respect to variations of the Higgs boson couplings.
 % 
-A cross-check performed in Sec.~\ref{sec:theoryuncertaintycrosschecks} reveals that large differences in the correlation matrix lead to relatively minor differences in the final fit results.
+In order to investigate the effect of coupling variations on the correlation matrix, the correlation matrix is recalculated according to the procedure described above, for a range of variations of $\kappab$ and $\kappac$.%
 % 
-Therefore, the correlation matrix at SM coupling values is considered the nominal correlation matrix to be used for all future results.
+\footnote{%
+Variations of all combinations of $\kappab \in -2, -1, 0, 1, 2$ and $\kappac \in -10, -5, 0, 1, 5, 10$ are considered.
+% 
+Only the gluon-induced contributions are considered, as only for these contributions the scale variations are calculated for each variation of the couplings.
+}
+% 
+From the resulting set of correlation matrices, the minimum and maximum entries per bin are selected, and are plotted in Fig.~\ref{fig:corrmat-minmax}.
+% 
+The moderate $\pth$ region is insensitive to variations of the couplings, whereas there is some dependence on the lower $\pth$ region.
+% 
+Given that the adopted procedure yields only a $1\%$ larger overall uncertainty with respect to no bin-to-bin correlations at all (see above), the effects of the coupling dependence in low $\pth$ bins is neglected in the results that follow.
+
 
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\halflinewidth]{img/interpretation/other/minmax_corrMat_exp.pdf}
     \caption{
-        Minima and maxima of the correlation matrices computed per coupling variation of $\kappa_b$/$\kappa_c$, for the gluon-induced contributions.
+        Minima (blue) and maxima (red) of the correlation matrices computed per coupling variation of $\kappa_b$ and $\kappa_c$, for the gluon-induced contributions.
         % 
-        The color scale is the difference between the minimum and maximum.
+        The cell color shading corresponds to the difference between the minimum and maximum.
         }
-    \label{fig:CorrelationMatrix_minmaxStudy}
+    \label{fig:corrmat-minmax}
   \end{center}
 \end{figure}
+
 
 
 % ____________________________________________________________________________
@@ -133,15 +164,20 @@ Therefore, the correlation matrix at SM coupling values is considered the nomina
 
 \subsubsection{Branching fractions}
 
-The branching ratios are subject to uncertainties stemming from the input parameters ($\alpha_s$, $m_b$, $m_c$ and $m_t$) and theoretical uncertainties due to missing higher order contributions.
+Some of the interpretations in Section~\ref{sec:interpretation-results} are based on a SM prescription of branching fractions as functions of the Higgs couplings (see also Section~\ref{sec:interpretation-brs}).
 % 
-The theoretical uncertainties are assumed to be uncorrelated, whereas the parametric uncertainties are assumed to be fully correlated.
+These fits are in principle subject to theoretical uncertainties in the branching fractions, stemming from input parameters of the branching fraction calculation ($\as$, $\mb$, $\mc$ and $\mt$) and theoretical uncertainties due to missing higher order contributions.
+% 
+The impact of these theoretical uncertainties on the interpretation results are assessed.
+
+
+The uncertainties from missing higher order contributions are assumed to be uncorrelated, whereas the parametric uncertainties are assumed to be fully correlated.
 % 
 Uncertainties on the partial widths are taken from Ref.~\cite{deFlorian:2016spz}.
 % 
-Figure~\ref{fig:scans_kappatkappag_brcomparison} shows the $\kappa_b$/$\kappa_c$ with branching ratios fixed to their SM expectation, with and without the uncertainties on the branching ratios.
+Figure~\ref{fig:kbkc-brcomparison} shows the expected simultaneous fit result of $\kappab$ and $\kappac$ with branching fractions fixed to their SM expectation, with and without the uncertainties on the branching fractions.
 % 
-The difference is clearly negligibly small, and as such the uncertainties on the branching ratios are neglected in further results.
+The theoretical uncertainties on the branching fractions have a clearly negligible impact on the overall interpretation uncertainty, and are thus not further taken into account.
 
 
 \begin{figure}[hbtp]
@@ -149,9 +185,13 @@ The difference is clearly negligibly small, and as such the uncertainties on the
     \includegraphics[width=\halflinewidth]{img/interpretation/other/multicont_Yukawa_compareBRuncertainties_asimov.pdf}
     % 
     \caption{
-        $\kappa_b$/$\kappa_c$ with branching ratios fixed to their SM expectation, with and without the uncertainties on the branching ratios.
+        Expected simultaneous fits of $\kappab$ and $\kappac$ to the differential $\pth$ spectrum using only the $\hzz$ channel, with (red) and without (blue) the branching fraction uncertainties.
+        % 
+        The branching fractions were fixed to their SM expected value.
+        % 
+        While the uncertainty is numerically confirmed to be slightly larger when branching fraction uncertainties are taken into account, the overall impact is very small.
         }
-    \label{fig:scans_kappatkappag_brcomparison}
+    \label{fig:kbkc-brcomparison}
   \end{center}
 \end{figure}
 
