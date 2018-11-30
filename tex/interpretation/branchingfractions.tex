@@ -1,0 +1,117 @@
+\subsection{Inclusive vs. differential measurements}
+\label{sec:interpretation-brs}
+
+The interpretation of the data in terms of Higgs boson couplings is improved by interpreting the $\pth$ spectrum rather than using an inclusive cross section, as the sensitivity of the shape of the $\pth$ spectrum is not taken into account in inclusive cross section measurements.
+% 
+It is, however, important to quantify to what extent performing the interpretation differentially improves the precision.
+% 
+In the context of this thesis, two questions arise:
+% 
+\begin{itemize}
+\item What is the best possible interpretation, using differential and inclusive cross sections?
+\item What is the contribution of the shape of the differential cross section to the interpretation?
+\end{itemize}
+% 
+Throughout the results that follow, two scenarios are considered in parallel to answer both questions:
+% 
+\begin{itemize}
+\item
+    \emph{Branching fractions implemented as functions of the Higgs boson couplings as prescribed by the SM.}
+    % 
+    The parametrized branching fractions assume full knowledge of the decay of the Higgs boson, i.e. no BSM physics is considered.
+    % 
+    Note that in this type of fit, the constraint posed by the shape of the differential distribution may be insignificant with respect to the constraints from the overall normalization, as the partial widths of certain decay channels can quickly saturate the total width of the Higgs boson under variation of the couplings.
+    % 
+    The branching fractions are implemented via scaling partial decay widths:
+    % 
+    \begin{linenomath*}
+    \begin{equation}
+    \BR_d (\vec{\kappa}) = 
+        \frac{
+        \Gamma_d(\vec{\kappa})
+        }{
+        \Gamma_\text{tot}(\vec{\kappa})
+        }
+    \,,
+    \end{equation}
+    \end{linenomath*}
+    % 
+    where $\BR_d$ is the branching fraction of decay channel $d$, $\Gamma_d$ the partial decay width, $\Gamma_\text{tot}$ the total width of the Higgs boson, and $\vec{\kappa}$ the set of Higgs boson couplings.
+    % 
+    The partial decay widths and their scaling with respect to the SM prediction included in the calculation of the total width are listed in Table~\ref{tab:decaywidths}.
+    % 
+    Some partial widths, such as the decay channel to two electrons, are neglected.
+% 
+\item
+    \emph{Branching fractions implemented as nuisance parameters without any prior constraint.}
+    % 
+    Simultaneous variation of all branching fractions is degenerate with a variation of the inclusive cross section, which for this type of fit is used cleverly to `profile' the inclusive cross section.
+    % 
+    This yields the constraint that comes exclusively from the shape of the differential distribution, which is weaker than using full information encapsulated in the SM.
+    % 
+    It is, however, independent of the overall normalization, and no assumption on the existence of BSM physics has to be made a priori.
+    % 
+\end{itemize}
+
+
+\begin{table}[htb]
+    \centering
+    \topcaption{
+        Summary of the partial decay widths implemented in the model.
+        % 
+        \tk{Will probably move this table to the theory section, and then just refer to it here.}
+        }
+    \label{tab:decaywidths}
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{ll}
+    Partial decay widths         & Scaling w.r.t. $\Gamma^\text{SM}$  \\[\tablelineskip]
+    \hline
+    $\Gamma_{\zboson\zboson}$       & $\kappaz^2$ \\[3pt]
+    $\Gamma_{\wboson\wboson}$       & $\kappaw^2$ \\[3pt]
+    $\Gamma_{\taulepton\taulepton}$ & $\kappatau^2 $ \\[3pt]
+    $\Gamma_{\bbbar}$               & $\kappab^2$ \\[3pt]
+    $\Gamma_{\ccbar}$               & $\kappac^2$ \\[12pt]
+    % 
+    Loop processes & \\[\tablelineskip]
+    \hline
+    $\Gamma_{\photon\photon}$       & $\begin{array}{llllll}
+        \hphantom{+}7.15 \times 10^{-2}      & \kappat^2
+        & + 1.94 \times 10^{-5}  & \kappab^2
+        & + 1.59                 & \kappaw^2
+        \\
+        - 1.77 \times 10^{-3}    & \kappat\kappab
+        & - 6.74 \times 10^{-1}  & \kappat\kappaw
+        & + 8.35 \times 10^{-3}  & \kappab\kappaw
+        \\
+        - 1.91 \times 10^{-3}    & \kappat\kappatau
+        & + 4.27 \times 10^{-5}  & \kappab\kappatau
+        & + 9.01 \times 10^{-3}  & \kappaw\kappatau
+        \\
+        + 2.35 \times 10^{-5}    & \kappatau^2
+        &                        &
+        &                        &
+        \end{array}$
+    \\[24pt]
+    $\Gamma_{\gluon\gluon}$        & $%
+        1.11 \;\kappat^2  \quad+  1.16 \times 10^{-2} \;\kappab^2  \quad-  1.23 \times 10^{-1} \;\kappat\kappab %
+        $
+    \\[10pt]
+    $\Gamma_{\gluon\zboson}$        & $\begin{array}{llllll}
+        \hphantom{+}3.47 \times 10^{-3}  & \kappat^2
+        & +3.04 \times 10^{-6} & \kappab^2
+        & +1.12                & \kappaw^2
+        \\
+          -1.77 \times 10^{-4} & \kappat\kappab
+        & -1.25 \times 10^{-1} & \kappat\kappaw
+        & +3.18 \times 10^{-3} & \kappab\kappaw
+        \\
+          +2.38 \times 10^{-9} & \kappatau^2
+        & -5.28 \times 10^{-6} & \kappat\kappatau
+        & +1.69 \times 10^{-7} & \kappab\kappatau
+        \\
+          +9.47 \times 10^{-5} & \kappaw\kappatau
+        &                      &
+        &                      &
+        \end{array}$
+    \end{tabular}
+    \end{table}

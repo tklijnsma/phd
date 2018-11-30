@@ -46,12 +46,16 @@
 % \setlength\parindent{0pt}
 \RequirePackage[parfill]{parskip}
 
+% Command to resize tables to text width
+\providecommand{\tabletextwidth}[1]{\resizebox{\textwidth}{!}{#1}}
+
 % Packages
 \RequirePackage{float} % To use the [H] float option
 \RequirePackage{import}
 \RequirePackage{amsmath}
 \RequirePackage{tabularx}
 \RequirePackage{hyperref} % Needs to be *after* float
+\RequirePackage{topcapt}
 
 % For alpha_s
 \RequirePackage{booktabs}
@@ -60,6 +64,5 @@
 \RequirePackage{multirow}
 \RequirePackage{bm}
 \RequirePackage{doi}
-
 
 \RequirePackage{mainsty}
