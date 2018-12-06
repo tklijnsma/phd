@@ -54,8 +54,11 @@
 \RequirePackage{import}
 \RequirePackage{amsmath}
 \RequirePackage{tabularx}
-\RequirePackage{hyperref} % Needs to be *after* float
 \RequirePackage{topcapt}
+
+% \RequirePackage{hyperref} % Needs to be *after* float
+% Some extra options, copied from cms-tdr
+\RequirePackage[bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,pdfborder={0 0 0},plainpages=false,pdfpagelabels]{hyperref}
 
 % For alpha_s
 \RequirePackage{booktabs}
@@ -64,5 +67,7 @@
 \RequirePackage{multirow}
 \RequirePackage{bm}
 \RequirePackage{doi}
+
+\RequirePackage[numbers,sort&compress,merge]{natbib} % Makes sure citations get a dash
 
 \RequirePackage{mainsty}
