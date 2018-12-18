@@ -6,7 +6,9 @@ This section treats the fundamentals of the theory of particle physics.
 % 
 Only topics that are deemed relevant for the rest of this thesis are treated, and as such this section is by no means comprehensive.
 %
-First the standard model and its particles are generally introduced, followed by \tk{todo}.
+First the standard model and its particles are generally introduced, followed by a short treatment of quantum chromodynamics, the Higgs mechanism, and the production modes and decay channels of the Higgs boson.
+% 
+The section is concluded by a discussion of the calculation of the Higgs boson transverse momentum spectrum.
 % 
 For a more comprehensive, accessible overview of particle physics, the reader is referred to Ref.~\cite{griffiths}, and for mathematical formulations of underlying symmetries and the derivations of the Feynman rules to Ref.~\cite{peskin}.
 }
@@ -34,7 +36,7 @@ The form of the SM Lagrangian is `derived' (not in the mathmatical sense) from o
 It is not a result of some underlying principles of QFT; it is instead postulated in such a way to fit experimental observations.
 
 
-In principle, deriving the physics of electromagnetic, strong, and weak interactions is then as simple as solving the equation of motion, which much like in classical mechanics is derived from the least-action principle:
+In principle, determining the physics of the electromagnetic, strong, and weak interactions is then as simple as solving the equation of motion, which much like in classical mechanics is derived from the least-action principle:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -52,7 +54,7 @@ In principle, deriving the physics of electromagnetic, strong, and weak interact
 \end{equation}
 \end{linenomath*}
 % 
-where $\mu$ is in index to the four dimensions of spacetime, $\partial_\mu$ is shorthand for $\frac{\partial}{\partial x^\mu}$, i.e. the spacetime derivative with respect to the coordinate $x^\mu$, and $\psi$ (shorthand for $\psi(x^\mu)$) is a field.
+where $\mu$ is an index to the four dimensions of spacetime, $\partial_\mu$ is shorthand for $\frac{\partial}{\partial x^\mu}$, i.e. the spacetime derivative with respect to the coordinate $x^\mu$, and $\psi$ (shorthand for $\psi(x^\mu)$) is a field.
 % 
 For a theory with multiple fields (as is the case for the SM), Equation~(\ref{eq:eom}) is supposed to hold for each field individually.
 % 
@@ -185,7 +187,7 @@ In order for pQCD to converge, corrections need to decrease as one goes to highe
 % 
 As for the coupling in quantum electrodynamics, $\alphas$ is a running coupling that depends on the momentum transfer $Q$ of the process under consideration.
 % 
-As $g_s$ is a free parameter of the QCD Lagrangian, there exists no theoretical for its value; however, once $\alphas$ is known at one value of $Q$, it can be calculated for any other value of $Q$ using the \textit{renormalization group equation} for QCD:
+As $g_s$ is a free parameter of the QCD Lagrangian, there exists no theoretical prediction for its value; however, once $\alphas$ is known at one value of $Q$, it can be calculated for any other value of $Q$ using the \textit{renormalization group equation} for QCD:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -346,18 +348,50 @@ In the end one finds massive $\zboson$ and $\wboson$ bosons, a massless photon, 
 % 
 Also the fermion masses can be explained through the Higgs mechanism, and in the SM it turns out the fermion mass is proportional to the coupling of the Higgs boson with the respective fermion.
 % 
+As can be seen in Fig.~\ref{fig:massproportion}, this not particularly trivial finding is thus far in good agreement with the observations; the proportionality of the Higgs boson couplings to the particle masses holds well over scales that vary many order of magnitudes.
+% 
 Although the Higgs mechanism incorporates masses into the SM Lagrangian beautifully, the actual values of the masses need to be determined experimentally.
 
 
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\halflinewidth]{img/theory/grandcomb/massproportion.pdf}
+    \caption{
+        Observed Higgs boson couplings as a function of the corresponding particle masses, with the SM shown as a black dotted line.
+        % 
+        Taken from Ref.~\cite{Sirunyan:2018koj}.
+        }
+    \label{fig:massproportion}
+  \end{center}
+\end{figure}
+
 
 % ____________________________________________________________________________
-\subsection{The Higgs production and decay modes}
+\subsection{Higgs boson production modes and decay channels}
+
+The formulas for the production modes and decay channels described below all assume a SM Higgs boson.
+% 
+The resonance discovered in 2012 has so far proven to be consistent with the SM Higgs boson, but this consistency is under constant scrutiny.
+% 
+A convenient framework to evaluate the likeliness of the $125$\GeV resonance being the SM Higgs boson is the \textit{\kappaframework}~\cite{LHCHXSWG:YR3}, in which the SM couplings of the Higgs boson with other particles is modified:
+% 
+\begin{linenomath*}
+\begin{equation}
+\kappa_{i} = \frac{y_{i}}{y_{i}^{\text{SM}}}\,,
+\end{equation}
+\end{linenomath*}
+% 
+where $y_i$ is the Higgs boson coupling to particle $i$, $\kappa_i$ is the corresponding \textit{coupling modifier}, which will often also be referred to as simply `the couplings'.
+% 
+The SM value of any $\kappa_i$ is equal to 1.
+% 
+The coupling modifiers naturally affect the production as well as the decay of the Higgs boson, and whenever one tests the SM by interpreting data in terms of coupling modifiers, one has to be careful to scale both production and decay appropriately.
+
 
 While Higgs boson production and decay is in principle possible through a myriad of modes and channels, only few are relevant in the context of hadron colliders.
 % 
 As the rest of this thesis is concerned with Higgs boson couplings, also the basic scalings of the production modes and decay channels in terms of Higgs boson couplings is discussed briefly.
-
-
+% 
 The Higgs boson is produced at hadron colliders through the following production modes (sorted by decreasing production cross section):
 % 
 \begin{itemize}
@@ -381,13 +415,17 @@ The $\tth$ and $\bbh$ production modes contain at leading order a single quark-H
 
 \begin{figure}[hbtp]
   \begin{center}
-    \includegraphics[width=0.7\linewidth]{img/theory/productiondiagrams_combined.png}
+    % \includegraphics[width=0.7\linewidth]{img/theory/productiondiagrams_combined.png}
+    \includegraphics[width=0.35\linewidth]{img/theory/grandcomb/ggh.pdf}
+    \includegraphics[width=0.35\linewidth]{img/theory/grandcomb/vbf.pdf}
+    \includegraphics[width=0.35\linewidth]{img/theory/grandcomb/vh.pdf}
+    \includegraphics[width=0.35\linewidth]{img/theory/grandcomb/tth.pdf}
     \caption{
         Summary of the dominant Higgs boson production modes at hadron colliders: $\ggh$ (top left), $\vbf$ (top right), $\vh$ (bottom left), and $\tth$ (bottom right).
         % 
         The $\bbh$ production mode has the same leading order diagram as $\tth$, but with the top quarks replaced by bottom quarks.
         % 
-        Adapted from Ref.~\cite{productionmodes-grab}.
+        Taken from Ref.~\cite{Sirunyan:2018koj}.
         }
     \label{fig:productionmodes}
   \end{center}
@@ -398,53 +436,271 @@ The Higgs boson decay channels are slightly more numerous.
 % 
 The most common decay channels without a loop are the decays to two $\zboson$ bosons ($\hzz$), two $\wboson$ bosons ($\hww$), two $\taulepton$ leptons ($\htautau$), two $\bquark$ quarks ($\hbb$), and two $\cquark$ quarks ($\hcc$).
 % 
-The decay widths of these channels all scale quadratically with respect to their SM decay widths in terms of the respective coupling to the Higgs boson.
+The decay widths of these channels all scale quadratically with respect to their SM decay widths in terms of their respective coupling to the Higgs boson, e.g. $\Gamma(\hbb) / \Gamma(\hbb)_\text{SM} \sim \kappab^2$.
 % 
-For the fermions, the decay width at leading order is given by
+For the fermions, the decay width is given by (excluding QCD corrections in the case of quarks)~\cite{higgshunter}
 % 
 \begin{linenomath*}
 \begin{equation}
-\text{Get from Higgs Hunting}
-\,.
+\label{eq:brhff}
+\Gamma(\hboson \to f\overline{f})
+=
+\frac{N_c g^2 m_f^2}{32\pi m_\wboson^2}
+\left( 1-4\frac{m_f^2}{\mh^2} \right)^{ 3/2 }
+\mh 
+\,,
 \end{equation}
 \end{linenomath*}
+% 
+where $g$ is the electroweak coupling constant.
 % 
 Since the Higgs boson-fermion couplings are proportional to the fermion mass, the decay width is typically larger for heavier fermions, with the obvious exception of the decay width to two top quarks.
 % 
-In practice, the decay width for quarks lighter than the charm is negligible, as well as the decay width to two electrons.
+In practice, the decay width to quarks lighter than the charm is negligible at the LHC, as well as the decay width to two electrons.
 % 
-The leading order decay width to vector bosons is given by
+The leading-order decay widths to vector bosons are given by~\cite{higgshunter}
 % 
 \begin{linenomath*}
 \begin{equation}
-\text{Get from Higgs Hunting}
-\,.
+\Gamma(\hzz)
+=
+\frac{g^2}{128\pi} \frac{\mh^3}{m_\wboson^2}
+\sqrt{1-x_\zboson}
+\left( 1 - x_\zboson + \frac{3}{4} x_\zboson^2 \right)
+\,
 \end{equation}
 \end{linenomath*}
 % 
+for the $\hzz$ channel, and
+% 
+\begin{linenomath*}
+\begin{equation}
+\Gamma(\hww)
+=
+\frac{g^2}{64\pi} \frac{\mh^3}{m_\wboson^2}
+\sqrt{1-x_\wboson}
+\left( 1 - x_\wboson + \frac{3}{4} x_\wboson^2 \right)
+\,
+\end{equation}
+\end{linenomath*}
+% 
+for the $\hww$ channel, where $x_{\zboson \, (\wboson)} = 4 m_{\zboson\,(\wboson)}^2 / \mh$.
 
 
-Besides decays involving a single vertex, the Higgs boson decays via loops to two photons ($\hgg$), two gluons ($\hgluglu$), and a gluon and a $\zboson$ ($\hzg$).
+Besides decays involving a single vertex, the Higgs boson decays via loops to two photons ($\hgg$), two gluons ($\hgluglu$), and a photon and a $\zboson$ boson ($\hzg$).
 % 
 In these cases the decay width calculation needs to take interference terms into account.
 % 
-For example, in the case of $\hgg$, the decay width is given by
+For example, in the case of $\hgg$, the decay width is given by~\cite{higgshunter}
 % 
 \begin{linenomath*}
 \begin{equation}
-\text{Get from Higgs Hunting}
-\,.
+\Gamma(\hgg) =
+\frac{\alpha^2g^2}{1024\pi^3} \frac{\mh^3}{m_\wboson^2}
+\left|
+\sum_{i,j} N_{cj} e_j^2 F_i^j
+\right|^2
+\,,
 \end{equation}
 \end{linenomath*}
+% 
+where $i$ is an index to spin-0, spin-1/2 or spin-1, $e_j$ is the electromagnetic charge  for particle $j$, $N_c^j$ is the number of colors (i.e. only 3 for quarks, otherwise 1), and $F_i^j$ is given by
+% 
+\begin{linenomath*}
+\begin{equation}
+\begin{split}
+F_0^j     &= \tau (1- \tau f(\tau)) \\
+F_{1/2}^j &= 2\tau ( 1 + (1-\tau) f(\tau) ) \\
+F_1^j     &= 2 + 3\tau + 3\tau( 2-\tau ) f(\tau)
+\,,
+\end{split}
+\end{equation}
+\end{linenomath*}
+% 
+with $\tau = 4m_j^2/\mh^2$ and
+% 
+\begin{linenomath*}
+\begin{equation}
+\label{eq:ffunction}
+f(\tau) = \left\{% This will break the tex parser!!!
+\begin{array}{ll}
+\left( \text{sin}^{-1}\left(\sqrt{1/\tau}\right) \right)^2 ,
+    & \quad \text{if} \; \tau \ge 1, \\[9pt]
+-\frac{1}{4} \left(
+        \ln \left(\frac{1+\sqrt{1-\tau}}{1-\sqrt{1-\tau}} \right)
+        -\imag \pi 
+        \right)^2
+    & \quad \text{if} \; \tau < 1.
+\end{array}%
+\right. 
+\end{equation}
+\end{linenomath*}
+% 
+For the decay channels involving a loop, the scaling with respect to the Higgs boson couplings is more complicated due to the interference terms.
+% 
+In the case of $\hgg$, the scaling is approximately given by~\cite{higgshunter}
+% 
+\begin{linenomath*}
+\begin{equation}
+\frac{\Gamma(\hgg)}{\Gamma(\hgg)_\text{SM}} \sim
+        7.15 \times 10^{-2}    \;   \kappat^2
+        % + 1.94 \times 10^{-5}   \kappab^2
+        + 1.59                \;  \kappaw^2
+        % - 1.77 \times 10^{-3}     \kappat\kappab
+        - 6.74 \times 10^{-1} \;  \kappat\kappaw
+        % + 8.35 \times 10^{-3}   \kappab\kappaw
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+where the interference with lighter particles in the loop has been neglected.
+% 
+The decay widths of the $\hgluglu$ and $\hzg$ channels and their scaling in terms of Higgs boson couplings can be found in Ref.~\cite{higgshunter}.
+% 
+The branching fractions are given by the ratio of the corresponding decay width over the sum of all decay widths.
 
-\tk{Continue here, need Higgs Hunting.}
+
+Equations~(\ref{eq:brhff}-\ref{eq:ffunction}) indicate the branching fractions depend rather strongly on $\mh$; although not explicitly shown in this section, the same is true for the production cross sections.
+% 
+Figure~\ref{fig:mh-production-decay} shows the production cross sections (left) and branching fractions (right) as a function of $\mh$.
+% 
+At the SM value of the Higgs mass, around 125\GeV, the dominant production mechanism is $\ggh$, and the most common decay channel is $\hbb$.
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\halflinewidth]{img/theory/mh_production.pdf}
+    \includegraphics[width=\halflinewidth]{img/theory/mh_decay.pdf}
+    \caption{
+        Higgs boson production cross sections for several production modes as a function of $\mh$ (left, taken from Ref.~\cite{deFlorian:2016spz}) and branching fractions for several decay channels (right, taken from Ref.~\cite{LHCHXSWG:YR3}).
+        }
+    \label{fig:mh-production-decay}
+  \end{center}
+\end{figure}
+
+
+% % ____________________________________________________________________________
+% \subsubsection{The \texorpdfstring{\kappaframework}{kappa-framework}}
 
 
 
 % ____________________________________________________________________________
-\subsection{The Higgs boson couplings and the transverse momentum spectrum}
+\subsection{The transverse momentum spectrum}
 
-\tk{Include $\kappac$ results section?}
+As this thesis is concerned primarily with the interpretation of the $\pth$ spectrum, this section shortly introduces the main aspects of its calculation and the most recently obtained results.
+% 
+The transverse momentum can be written in terms of the Mandelstam variables $s$, $u$, and $t$~\cite{peskin}:
+% 
+\begin{linenomath*}
+\begin{equation}
+\pt^2 = \frac{u \, t}{s}
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+The matrix element can be calculated in terms of the Mandelstam variables, and then expressed as a differential cross section of $\pt$, yielding the transverse momentum spectrum.
+% 
+In the case of $\ggh$, the transverse momentum of the Higgs boson originates from QCD radiation---in particular from the radiation of a single gluon ($\gluon\gluon\to\hboson\gluon$)---the contribution of which appears beyond the leading-order calculation.
+% 
+The lowest-order differential cross sections of Higgs boson production via $\ggh$ were first calculated in Ref.~\cite{Ellis:1987xu}; assuming a high top quark mass ($\mt \gg \mh$, abbreviated as HTL), one finds the following expression:
+% 
+\begin{linenomath*}
+\begin{equation}
+\frac{\mathrm{d}\sigma}{\mathrm{d}t} =
+\frac{1}{16\pi s^2} \frac{1}{4v^2}
+\sum_\text{spins, colors} \abs{\mathcal{M}}^2
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+where the sum over matrix elements $\sum\abs{\mathcal{M}}^2$ is given by the surprisingly simplistic expression
+% 
+\begin{linenomath*}
+\begin{equation}
+\sum_\text{spins, colors} \abs{\mathcal{M}}^2
+= \alpha_w \alpha_s^3 \frac{4 N_c v}{9} % Not 100% sure this is N_c.. looks like it though
+\left(
+    \frac{\mh^8 + s^4 + t^8 + u^4}{ s \, t \, u \; m_\wboson^2 }
+    \right)
+\quad \text{(HTL)}
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+Extending this calculation to higher orders or to include quark mass effects is unfortunately not as simplistic.
+% 
+At the time of writing, the $\pth$ spectrum in the HTL is known at NNLO~\cite{Boughezal:2015dra,Boughezal:2015aha,Chen:2016zka}, but a study of the $\ggh$ loop requires the inclusion of quark mass effects.
+% 
+The lowest-order cross section including quark mass effects, which can be found in Ref.~\cite{Ellis:1987xu}, contains terms with double logarithms for QCD radiation at moderate transverse momentum ($\mq \ll \pth \ll \mh$)~\cite{Baur:1989cm,Bishara:2016jga}, stemming from interference terms in the $\ggh$ production loop:
+% 
+\begin{linenomath*}
+\begin{equation}
+\kappaq \frac{\mq^2}{\mh^2}
+    \ln^2 \left(
+        \frac{
+            \left( \pt^\text{emission} \right)^2
+            }{
+            m_\mathrm{q}^2
+            }
+        \right)
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+where $\pt^\text{emission}$ is the $\pt$ of the radiated particle and $\kappaq$ is the coupling of the Higgs boson to quark $\qquark$.
+% 
+These logarithmic terms spoil the convergence of the perturbative expansion, and need to be \textit{resummed} at all orders in QCD to include quark mass effects in the $\pth$ calculation.
+% 
+Their analytic resummation under the assumption of finite quark masses has been the subject of much study~\cite{Bozzi:2003jy,Becher:2010tm,Mantler:2012bj,Grazzini:2013mca,Monni:2016ktx}, and has only recently become available at NNLL.
+
+
+In this thesis two particular calculations are considered, both computed up to NNLO and employing a resummation up to NNLL, and both investigating the properties of the $\pth$ spectrum under variations of the Higgs boson couplings.
+% 
+The first is a model of simultaneous variations of $\kappat$, $\cg$, and $\kappab$ by adding dimension-6 operators to the SM Lagrangian, which has been built in Refs.~\cite{Grazzini:2017szg,Grazzini:2016paz}.
+% 
+The dimension-6 operator whose coefficient is $\cg$ yields a direct coupling of the Higgs field to the gluon field with the same underlying tensor structure as in the heavy-top mass limit.
+% 
+In the SM, the value of $\cg$ equals 0.
+% 
+The introduction of $\cg$ in the effective Lagrangian is given in Ref.~\cite{Grazzini:2016paz} and the inclusive cross section is given by $\sigma \simeq \left| 12\cg + \kappat \right|^2 \sigma^\text{SM}$.
+% 
+Two other operators are included in the Lagrangian to describe modifications of the top and bottom Yukawa couplings with coefficients $\kappat$ and $\kappab$, respectively.
+% 
+% While the model allows simultaneous variation of all three coupling modifiers, only simultaneous variations of $\kappat$ and $\cg$, and of $\kappat$ and $\kappab$ are considered.
+% 
+Some precomputed spectra from Ref.~\cite{Grazzini:2017szg} are shown in Fig.~\ref{fig:ktcgkb-precomputed}.
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{img/theory/ktcgkb_variations.pdf}
+    \caption{
+        Selected $\pth$ spectra for various simultaneous variations of $\kappat$, $\cg$, and $\kappab$.
+        % 
+        The dark (light) band in the bottom part of the plot indicates the uncertainty due to missing higher order contributions in the NNLO+NNLL (NLO+NLL) calculation.
+        % 
+        Taken from Ref.~\cite{Grazzini:2017szg}.
+        }
+    \label{fig:ktcgkb-precomputed}
+  \end{center}
+\end{figure}
+
+
+The second model~\cite{Bishara:2016jga} under consideration concerns variations of the Higgs boson couplings to lighter quarks, namely $\kappab$ and $\kappac$, while taking into account the interference of the top quark loop with that from the bottom and charm quarks in the gluon fusion production loop.
+% 
+Some precomputed spectra from Ref.~\cite{Bishara:2016jga} are shown in Fig.~\ref{fig:kbkc-precomputed}.
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{img/theory/kbkc_variations.pdf}
+    \caption{
+        Normalized $\pth$ spectra for variations of $\kappac$, while $\kappab=1$.
+        % 
+        Taken from Ref.~\cite{Bishara:2016jga}.
+        }
+    \label{fig:kbkc-precomputed}
+  \end{center}
+\end{figure}
 
 
 
