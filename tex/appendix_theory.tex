@@ -1,0 +1,261 @@
+\clearpage
+\section{Spontaneous symmetry breaking in an Abelian field theory}
+\label{app:theory}
+
+This section shows how the expansion around the vacuum expectation and a clever gauge choice for a complex scalar field $\phi$ leads to spontaneous symmetry breaking in an Abelian field theory.
+% 
+The considered Lagrangian, repeated from Equation~(\ref{eq:lagrangian-higgs}), is
+% 
+\begin{linenomath*}
+\begin{equation}
+\label{eq:lagrangian-higgs-copy}
+\lagrangian =
+    -\frac{1}{4} F_{\mu\nu} F^{\mu\nu}
+    + (\partial^\mu - \imag e A^\mu) \phi^\ast (\partial_\mu + \imag e A_\mu) \phi
+    - \underbrace{(\mu^2 \phi^\ast \phi + \lambda (\phi^\ast \phi)^2)}_{V(\phi)}
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+and the transformation to be applied to the Lagrangian is
+% 
+\begin{linenomath*}
+\begin{equation}
+\label{eq:transformation-higgs-copy}
+\phi \to \exp{i\alpha(x)} \frac{1}{\sqrt{2}} \left( v + \phi_1(x) \right)
+\quad
+A_\mu(x) \to A_\mu(x) - \frac{1}{e} \partial_\mu \alpha(x)
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+Since we will need them soon, it also worth explicitly writing down the transformation of $\partial_\mu \phi$:
+% 
+\begin{linenomath*}
+\begin{equation}
+\partial_\mu \phi \to
+    \frac{1}{\sqrt{2}} \exp{\imag \alpha(x)} \left(
+    \partial_\mu \phi_1 + \imag (v+\phi_1) \partial_\mu \alpha(x)
+    \right)
+\quad
+\partial^\mu \phi^\ast \to
+    \frac{1}{\sqrt{2}} \exp{-\imag \alpha(x)} \left(
+    \partial^\mu \phi_1 - \imag (v+\phi_1) \partial^\mu \alpha(x)
+    \right)
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+It is trivial to show that the first term, $\frac{1}{4} F_{\mu\nu} F^{\mu\nu}$, is invariant under the transformation under consideration.
+% 
+The covariant derivative is a little trickier; expanding the term in the Lagrangian yields
+% 
+\begin{linenomath*}
+\begin{equation}
+\label{eq:covariant-derivative}
+(\partial^\mu - \imag e A^\mu) \phi^\ast (\partial_\mu + \imag e A_\mu) \phi
+=
+\underbrace{\partial^\mu \phi^\ast \partial_\mu \phi}_1
+- \underbrace{\imag e A^\mu \phi^\ast \partial_\mu \phi}_2
++ \underbrace{\partial^\mu \phi^\ast \imag e A_\mu \phi}_3
++ \underbrace{e^2 A^\mu A_\mu}_4
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+It turns out none of the terms $1$ to $4$ are invariant by themselves, but combined the non-invariant contributions cancel beautifully.
+% 
+Transforming term $1$ yields:
+% 
+\begin{linenomath*}
+\begin{equation}
+\partial^\mu \phi^\ast \partial_\mu \phi \to
+    \frac{1}{2} \partial^\mu \phi_1 \partial_\mu \phi_1
+    + \frac{1}{2} (v+\phi_1)^2 \partial_\mu \alpha(x) \partial^\mu \alpha(x)
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+Terms $2$ and $3$ contain many invariance-violating contributions:
+% 
+\begin{linenomath*}
+\begin{equation}
+\begin{split}
+-\imag e A^\mu \phi^\ast \partial_\mu \phi
+% 
+& \to -\imag e \frac{1}{2}
+    (A^\mu - \frac{1}{e} \partial^\mu \alpha(x) )
+    (v+\phi_1) \exp{-\imag \alpha(x)}
+    \exp{\imag \alpha(x)} \left(
+        \partial_\mu \phi_1 + \imag (v+\phi_1) \partial_\mu \alpha(x)
+        \right)
+    \\
+% 
+& \;= -\imag e \frac{1}{2} (v+\phi_1) \left[
+    A^\mu \partial_\mu \phi_1
+    - \frac{1}{e} \partial^\mu \alpha(x) \partial_\mu \phi_1
+    + \imag A^\mu (v+\phi_1) \partial_\mu \alpha(x)
+    - \imag \frac{1}{e} \partial^\mu \alpha(x) (v+\phi_1) \partial_\mu \alpha(x)
+    \right]
+    \\
+% 
+& \;= -\frac{1}{2} (v+\phi_1) \left[
+    \imag e A^\mu \partial_\mu \phi_1
+    - i \partial^\mu \alpha(x) \partial_\mu \phi_1
+    - e A^\mu (v+\phi_1) \partial_\mu \alpha(x)
+    + \partial^\mu \alpha(x) (v+\phi_1) \partial_\mu \alpha(x)
+    \right]
+% 
+\,,
+\end{split}
+\end{equation}
+\end{linenomath*}
+% 
+\begin{linenomath*}
+\begin{equation}
+\begin{split}
+\imag e \partial^\mu \phi^\ast A_\mu \phi
+% 
+& \to \imag e \frac{1}{2}
+    \exp{-\imag \alpha(x)} \left(
+        \partial^\mu \phi_1 - \imag (v+\phi_1) \partial^\mu \alpha(x)
+        \right)
+    (A_\mu - \frac{1}{e} \partial_\mu \alpha(x) )
+    (v+\phi_1) \exp{\imag \alpha(x)}
+    \\
+% 
+& \;= \imag e \frac{1}{2} (v+\phi_1) \left[
+    \partial^\mu \phi_1 A_\mu 
+    - \imag (v+\phi_1) \partial^\mu \alpha(x) A_\mu
+    - \frac{1}{e} \partial^\mu \phi_1 \partial_\mu \alpha(x)
+    + \imag \frac{1}{e} (v+\phi_1) \partial^\mu \alpha(x) \partial_\mu \alpha(x)
+    \right]
+    \\
+% 
+& \;= \frac{1}{2} (v+\phi_1) \left[
+    \imag e \partial^\mu \phi_1 A_\mu 
+    - \imag \partial^\mu \phi_1 \partial_\mu \alpha(x)
+    + e (v+\phi_1) \partial^\mu \alpha(x) A_\mu
+    - (v+\phi_1) \partial^\mu \alpha(x) \partial_\mu \alpha(x)
+    \right]
+% 
+\,,
+\end{split}
+\end{equation}
+\end{linenomath*}
+% 
+but their sum already cancels most of them:
+% 
+\begin{linenomath*}
+\begin{equation}
+\begin{split}
+- \imag e A^\mu \phi^\ast \partial_\mu \phi
++ \imag e \partial^\mu \phi^\ast A_\mu \phi
+% 
+&\to -(v+\phi_1) \left[
+    - e A^\mu (v+\phi_1) \partial_\mu \alpha(x)
+    + \partial^\mu \alpha(x) (v+\phi_1) \partial_\mu \alpha(x)
+    \right]
+    \\
+% 
+&\;=
+    e (v+\phi_1)^2 \partial_\mu \alpha(x) A^\mu
+    - (v+\phi_1)^2 \partial_\mu \alpha(x) \partial^\mu \alpha(x)
+\end{split}
+\end{equation}
+\end{linenomath*}
+% 
+And finally, term $4$:
+% 
+\begin{linenomath*}
+\begin{equation}
+\begin{split}
+e^2 A^\mu \phi^\ast A_\mu \phi
+% 
+&\to \frac{1}{2} e^2 (v+\phi_1)^2
+    (A^\mu - \frac{1}{e} \partial^\mu \alpha(x) )
+    (A_\mu - \frac{1}{e} \partial_\mu \alpha(x) )
+    \\
+% 
+&\;= \frac{1}{2} e^2 (v+\phi_1)^2 \left[
+    A^\mu A_\mu
+    - 2 \frac{1}{e} A^\mu \partial_\mu \alpha(x)
+    + \frac{1}{e^2} \partial^\mu \alpha(x) \partial_\mu \alpha(x)
+    \right]
+    \\
+% 
+&\;= 
+    \frac{1}{2} e^2 (v+\phi_1)^2 A^\mu A_\mu
+    - e (v+\phi_1)^2 A^\mu \partial_\mu \alpha(x)
+    + \frac{1}{2} (v+\phi_1)^2 \partial^\mu \alpha(x) \partial_\mu \alpha(x)
+\,.
+\end{split}
+\end{equation}
+\end{linenomath*}
+% 
+Inserting the individual transformed terms back into Equation~(\ref{eq:covariant-derivative}), we notice all the invariance-violating contributions cancel, and we obtain
+% 
+\begin{linenomath*}
+\begin{equation}
+(\partial^\mu - \imag e A^\mu) \phi^\ast (\partial_\mu + \imag e A_\mu) \phi
+\to
+    \frac{1}{2} \partial^\mu \phi_1 \partial_\mu \phi_1
+    + \frac{1}{2} e^2 (v+\phi_1)^2 A^\mu A_\mu
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+Next we consider the transformed potential.
+% 
+It pays of to first transform $\phi^\ast\phi$ and $(\phi^\ast\phi)^2$:
+% 
+\begin{linenomath*}
+\begin{equation}
+\phi^\ast\phi
+\to 
+\frac{1}{2} (v+\phi_1^2) = \frac{1}{2} v^2 + v\phi_1 + \frac{1}{2} \phi_1^2
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+\begin{linenomath*}
+\begin{equation}
+(\phi^\ast\phi)^2
+\to 
+\frac{1}{4}v^4 + v^3\phi_1 + \frac{3}{2} v^2 \phi_1^2 + v\phi_1^3 + \frac{1}{4}\phi_1^4
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+The potential then follows trivially:
+% 
+\begin{linenomath*}
+\begin{equation}
+V(\phi) = \mu^2 \phi^\ast \phi + \lambda (\phi^\ast \phi)^2
+\to
+\frac{1}{4}\lambda\phi_1^4 + v\lambda\phi_1^3 - \mu^2\phi_1^2 + \frac{1}{4}\mu^2 v^2
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+Inserting the transformed covariant derivative and potential into the Lagrangian then yields the transformed Lagrangian:
+% 
+\begin{linenomath*}
+\begin{equation}
+\lagrangian \to \lagrangian^\prime =
+    -\frac{1}{4} F_{\mu\nu} F^{\mu\nu}
+    + \frac{1}{2} \partial^\mu \phi_1 \partial_\mu \phi_1
+    + \frac{1}{2} e^2 (v+\phi_1)^2 A^\mu A_\mu
+    - \frac{1}{4}\lambda\phi_1^4 - v\lambda\phi_1^3 + \mu^2\phi_1^2 - \frac{1}{4}\mu^2 v^2
+\,.
+\end{equation}
+\end{linenomath*}
+% 
+As described in the main text, the fields that appear here can be interpreted as physical, massive fields.
+% 
+The original symmetry, described by the transformations in Equation~(\ref{eq:transformation-higgs-copy}), is no longer valid for the appearing physical fields, hence the symmetry is `broken'.
+
+
+
+
+

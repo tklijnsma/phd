@@ -4,11 +4,15 @@
 \emph{%
 The $\pth$ spectrum obtained in Section~\ref{sec:diffxs-results}, the most sensitive to potential deviations from the SM, is interpreted in terms of Higgs boson coupling modifiers.
 % 
-Two theoretical predictions of the $\pth$ spectrum under variations of the Higgs boson couplings are considered; one involving $\kappat$, $\cg$, and $\kappab$~\cite{Grazzini:2017szg,Grazzini:2016paz}, which is sensitive to deviations in the tails, and another involving $\kappab$ and $\kappac$~\cite{Bishara:2016jga}, which is sensitive to deviations at moderate $\pth$.
+Two theoretical predictions of the $\pth$ spectrum under variations of the Higgs boson couplings are considered; one involving $\kappat$, $\cg$, and $\kappab$~\cite{Grazzini:2017szg,Grazzini:2016paz}, which is sensitive to deviations in the tails, and another involving $\kappab$ and $\kappac$~\cite{Bishara:2016jga}, which is sensitive to deviations at moderate $\pth$ (see also Section~\ref{sec:theory-pt}).
+% 
+The section begins with a short introduction, followed by a description of the parametrization of the transverse momentum spectra, a treatment of the systematics, and finally a discussion of the obtained results.
 % 
 For the interpretation of the $\pth$ spectrum, the text, illustrations, results, and conclusions closely follow the original documentation, which can be found in Refs.~\cite{AN-17-244,HIG-17-028}.
 }
 
+
+\subsection{Introduction}
 
 The central theme in the interpretation of differential cross sections is the use of the \emph{shape} of the differential distribution in addition to the overall normalization (which is obtained from inclusive measurements).
 % 
@@ -24,12 +28,34 @@ The shape is in this thesis defined as the differential cross section normalized
 % 
 The shape of a differential distribution is a vector of measurable physical observables, which can be compared to theoretical predictions to obtain constraints on model parameters, or to search for deviations of the SM in order find (signs of) new physics.
 % 
-In this thesis most attention is given to the $\pth$ spectrum, for the reason that its shape is expected to be the most sensitive to certain model parameters of interest, such as the Higgs boson couplings.
+It contains exactly the information that is absent in an inclusive cross section measurement.
+% 
+Here, attention is given solely to the $\pth$ spectrum, for the reason that its shape is expected to be the most sensitive to the model parameters of interest: the Higgs boson couplings.
 
+
+A precise measurement of the Higgs boson couplings represents an important test of the SM, as the couplings are sensitive to several SM extensions~\cite{Dimopoulos:1981zb,Witten:1981nf}.
+% 
+While the couplings to the top ($y_\tquark$) and bottom ($y_\bquark$) quarks are known with fair precision, there is still a relatively large uncertainty in the measurement of the couplings to lighter quarks such as the coupling to the charm quark ($y_\cquark$).
+% 
+A proof-of-concept study determining limits on the modification of the SM Higgs boson coupling ($y_\cquark^\text{SM}$) to the charm quark, $\kappac = y_\cquark / y_\cquark^\text{SM}$, from the Higgs boson transverse momentum ($\pth$) distribution was performed in Ref.~\cite{Bishara:2016jga}.
+% 
+Using data collected by the ATLAS Collaboration, this analysis yields the overall bounds $\kappac \in [ -16, 18 ]$ at 95\% confidence level (\CL).
+% 
+Using the same data set, a reinterpretation of a search by the ATLAS Collaboration for the $\hboson\to\jpsi\photon$ channel~\cite{Aad:2015sda} yields $\abs{\kappac}<429$ at 95\% \CL~\cite{Koenig:2015pha}.
+% 
+More recently, a study from the ATLAS Collaboration~\cite{Aaboud:2018fhh}, using data collected at $\sqrt{s}=13$\TeV corresponding to an integrated luminosity of $36.1$\fbinv, yields an observed upper limit on the product of the production cross section and branching fraction $\sigma(\proton\proton\to\zboson\hboson) \BR(\hcc)$ of $110$ times the SM value at 95\% \CL.
+% 
+Secondly, while it is strongly anticipated that gluon fusion in the SM proceeds via a loop, inclusive measurements are not able to distinguish an anomalous point-like coupling of the Higgs boson to the gluon field from a loop; this distinction can only become apparent in a differential measurement.
+% 
+A model of an anomalous point-like coupling to the gluon field, and couplings to the top and bottom quarks, was produced in Refs.~\cite{Grazzini:2017szg,Grazzini:2016paz}.
+% 
+By fitting $\pth$ as a function of the couplings to the gluon field and to the top quark simultaneously to data, one can quantitatively evaluate the likelihood of the SM, versus an alternative where the gluon field couples to the Higgs boson directly.
+% 
+The two models are treated more elaborately in Section~\ref{sec:theory-pt}; the rest of this section is dedicated to the parametrization of the $\pth$ predictions and its integration into the likelihood.
 
 
 % ____________________________________________________________________________
-\subimport{./}{theories}
+\subimport{./}{parametrization}
 \subimport{./}{systematics}
 \subimport{./}{branchingfractions}
 \subimport{./}{results}

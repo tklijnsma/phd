@@ -2,7 +2,7 @@
 \label{sec:interpretation-results-ktcgkb}
 
 
-The parametrization of the theoretical predictions for simultaneous variations of $\kappat$ and $\cg$ are implemented into the likelihood as prescribed in Eq.~(\ref{eq:likelihood-interpretation}).
+The parametrization of the theoretical predictions for simultaneous variations of $\kappat$ and $\cg$ are implemented into the likelihood as prescribed in Equation~(\ref{eq:likelihood-interpretation}).
 % 
 The test statistic $q$ is computed over a grid with dimensions $\kappat$ and $\cg$, while the other Higgs boson couplings are fixed at their value expected in the SM.
 % 
@@ -18,61 +18,13 @@ Consequently, along the diagonal from $(\kappat=0, \cg=1/A)$ to $(\kappat=1, \cg
 Deviations from this diagonal are thus suppressed when the overall normalization is not profiled in the fit, as can be seen in Fig.~\ref{fig:ktcg} (left).
 
 
-The shape, as defined in Eq.~(\ref{eq:interpretation-shape}), can be simplified for the differential cross   sections via $\ggh$:
-% 
-\begin{linenomath*}
-\begin{equation}
-\label{eq:interpretation-shape-ktcg}
-\begin{split}
-s^{\ggh}_i(\kappat, \cg)
-        &=
-        \frac
-            {\sigma^{\ggh}_i(\kappat, \cg)}
-            {\sum_j \sigma^{\ggh}_j(\kappat, \cg)}
-            \\
-        &=
-        \frac
-            {A_i \kappat^2 + B_i \cg^2 + C_i \kappat \cg}
-            {
-                \left(\sum_j A_j\right) \kappat^2
-                + \left(\sum_j B_j\right) \cg^2
-                + \left(\sum_j C_j\right) \kappat\cg
-                }
-            \\
-        &= 
-        \frac
-            {A_i \frac{\kappat^2}{\cg^2} + B_i + C_i \frac{\kappat}{\cg}}
-            {
-                \left(\sum_j A_j\right) \frac{\kappat^2}{\cg^2}
-                + \left(\sum_j B_j\right) 
-                + \left(\sum_j C_j\right) \frac{\kappat}{\cg}
-                }
-            \\
-        & = f(\frac{\kappat}{\cg})
-\,,
-\end{split}
-\end{equation}
-\end{linenomath*}
-% 
-where $A_i$, $B_i$, and $C_i$ are the coefficients of the parametrization in bin $i$.
-% 
-In other words, the shape of the $\ggh$ spectrum is only a function of the ratio of $\kappat$ and $\cg$; it is invariant under any transformation
-% 
-\begin{linenomath*}
-\begin{equation}
-\label{eq:interpretation-ktcg-transform}
-(\kappat, \cg) \to (c \cdot \kappat, c \cdot \cg)
-\,,
-\end{equation}
-\end{linenomath*}
-% 
-where $c$ is any arbitrary real-valued constant.
+In Equation~(\ref{eq:interpretation-shape-ktcg}) it was found that the shape of the $\pth$ spectrum via $\ggh$ depends only on the ratio $\kappat/\cg$.
 % 
 This is clearly visible in Fig.~\ref{fig:ktcg} (right), where the constraints are posed mostly on the ratio $\kappat / \cg$, and in Fig.~\ref{fig:ktcg} (left), where the constraint \emph{along} the diagonal comes from the shape of the $\ggh$ spectrum.
 % 
-Applying the logic of Eq.~(\ref{eq:interpretation-shape-ktcg}) analogously on the other production modes reveals that here the constraints do not manifest themselves purely in the ratio.
+Applying the logic of Equation~(\ref{eq:interpretation-shape-ktcg}) analogously on the other production modes reveals that here the constraints do not manifest themselves purely in the ratio.
 % 
-This explains why transformations such as Eq.~(\ref{eq:interpretation-ktcg-transform}) do not hold at small values of the couplings (as can be seen in Fig.~\ref{fig:ktcg} (right)), where the $\ggh$ production mode loses dominance over the others.
+This explains why transformations such as Equation~(\ref{eq:interpretation-ktcg-transform}) do not hold at small values of the couplings (as can be seen in Fig.~\ref{fig:ktcg} (right)), where the $\ggh$ production mode is no longer dominant over the others.
 % 
 In the case of unconstrained branching fractions, there is an overall symmetry under $(\kappat,\,\cg) \, \to \, (-\kappat,\,-\cg)$, hence the two symmetric sets of contours in Fig.~\ref{fig:ktcg} (right).
 % 
@@ -80,7 +32,7 @@ In the case of coupling-dependent branching fractions, this symmetry is broken b
 % 
 A final noteworthy feature about Fig.~\ref{fig:ktcg} (right), is that seemingly the combination constrains the ratio $\kappat / \cg$ less than the $\hgg$ channel by itself; this is a feature of the observed data that is not seen in expected fits.
 % 
-These features may arise when the combination cancels out contrary deviations in the inputs.
+These features may arise when the combination cancels out contrary deviations in the individual channels.
 
 
 \begin{figure}[hbtp]
@@ -131,7 +83,7 @@ In Fig.~\ref{fig:ktkb} (right) the branching fractions are unconstrained, thus f
 % 
 As the linear dependence on $\kappat$ disappears, the likelihood becomes symmetric under $(\kappat,\,\kappab) \, \to \, (-\kappat,\,-\kappab)$ for all decay channels.
 % 
-Applying Eq.~(\ref{eq:interpretation-shape-ktcg}) analogously on the parametrization of $\ggh$ for variations of $\kappat$ and $\kappab$ reveals that also here the shape of the differential distribution depends solely on the slope $\kappab/\kappat$, explaining the invariance under transformations like $(\kappat, \kappab) \to (c \cdot \kappat, c \cdot \kappab)$ for larger values of the couplings.
+Applying Equation~(\ref{eq:interpretation-shape-ktcg}) analogously on the parametrization of $\ggh$ for variations of $\kappat$ and $\kappab$ reveals that also here the shape of the differential distribution depends solely on the slope $\kappab/\kappat$, explaining the invariance under transformations like $(\kappat, \kappab) \to (c \cdot \kappat, c \cdot \kappab)$ for larger values of the couplings.
 
 
 
@@ -166,51 +118,6 @@ Applying Eq.~(\ref{eq:interpretation-shape-ktcg}) analogously on the parametriza
 Analogously to Section~\ref{sec:interpretation-results-ktcgkb}, the theoretical predictions for simultaneous variations of $\kappab$ and $\kappac$ are parametrized and fitted to data.
 % 
 The fit with the branching fractions implemented as functions of the couplings is shown in Fig.~\ref{fig:kbkc} (left), and the one with the branching fractions implemented as unconstrained nuisance parameters in Fig.~\ref{fig:kbkc} (right).
-% 
-Similarly to Eq.~(\ref{eq:interpretation-shape-ktcg}), it can be shown that the dependence of the shape depends only on $\kappab/\kappac$, in the limit of large couplings:
-% 
-\begin{linenomath*}
-\begin{equation}
-\label{eq:interpretation-shape-kbkc}
-\begin{split}
-\lim_{\kappab,\,\kappac\to\infty} s^{\ggh}_i(\kappab, \kappac)
-        &=
-        \lim_{\kappab,\,\kappac\to\infty}
-        \frac
-            {\sigma^{\ggh}_i(\kappab, \kappac)}
-            {\sum_j \sigma^{\ggh}_j(\kappab, \kappac)}
-            \\
-        &=
-        \lim_{\kappab,\,\kappac\to\infty}
-        \frac
-            {A_i \kappab^2 + B_i \kappac^2 + C_i \kappab \kappac
-                + D_i \kappab + E_i \kappac + F_i
-                }
-            {
-                \left(\sum_j A_j\right) \kappab^2
-                + \left(\sum_j B_j\right) \kappac^2
-                + \left(\sum_j C_j\right) \kappab\kappac
-                + \left(\sum_j D_j\right) \kappab
-                + \left(\sum_j E_j\right) \kappac
-                + \left(\sum_j F_j\right)
-                }
-            \\
-        &=
-        \frac
-            {A_i \frac{\kappab^2}{\kappac^2} + B_i + C_i \frac{\kappab}{\kappac}}
-            {
-                \left(\sum_j A_j\right) \frac{\kappab^2}{\kappac^2}
-                + \left(\sum_j B_j\right) 
-                + \left(\sum_j C_j\right) \frac{\kappab}{\kappac}
-                }
-            \\
-        & = f(\frac{\kappab}{\kappac})
-\,.
-\end{split}
-\end{equation}
-\end{linenomath*}
-% 
-However, for moderate values of the couplings the linear terms are not negligible, and clear constraints are obtained even when the overall normalization is profiled.
 
 
 \begin{figure}[hbtp]
