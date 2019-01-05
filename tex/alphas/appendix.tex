@@ -38,19 +38,8 @@ Due to the inherent difficulty of determining correlations, notably as concerns 
 {\scriptsize
     % \begin{center} 
     \hspace*{-0.75cm}%
-    \begin{minipage}[t]{0.5\hsize}\centering
-    \begin{tabular}{l l l l}
-    \toprule
-    \lcell{2.4cm}{Uncertainties included in combination} & 
-    \lcell{0.7cm}{Center} & 
-    \lcell{1.5cm}{Combination uncertainty} & 
-    \lcell{1.5cm}{Total uncertainty} \\ 
-    \midrule
-    \input{img/alphas/extr-NNLO-CT14nnlo_theoryUncertaintyEffect.tex}
-    \bottomrule
-    \end{tabular} 
-    % \end{center} 
-    \caption{\small
+    \begin{minipage}[b]{0.5\hsize}\centering
+    \topcaption{
         Combination results including also uncertainties from the PDF, the scale
         and the top mass in the combination.
         % 
@@ -61,13 +50,26 @@ Due to the inherent difficulty of determining correlations, notably as concerns 
         the CT14nnlo series of PDFs.
         }
     \label{tab:theoryUncertainties_CT14_NNLO}
+    \begin{tabular}{l l l l}
+    \toprule
+    \lcell{2.4cm}{Uncertainties included in combination} & 
+    \lcell{0.7cm}{Center} & 
+    \lcell{1.5cm}{Combination uncertainty} & 
+    \lcell{1.5cm}{Total uncertainty} \\ 
+    \midrule
+    \input{img/alphas/extr-NNLO-CT14nnlo_theoryUncertaintyEffect.tex}
+    \bottomrule
+    \end{tabular} 
     \end{minipage}%
     % 
     \hspace*{1cm}%
     % 
-    % \begin{center} 
-    % \hspace*{-0.75cm}%
-    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{minipage}[b]{0.5\hsize}\centering
+    \topcaption{%
+        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO+NNLL
+        cross sections with the CT14nnlo series of PDFs.
+        }
+    \label{tab:theoryUncertainties_CT14_NNLO_NNLL}
     \begin{tabular}{l l l l }
     \toprule
     \lcell{2.4cm}{Uncertainties included in combination} & 
@@ -78,19 +80,18 @@ Due to the inherent difficulty of determining correlations, notably as concerns 
     \input{img/alphas/extr-NNLO-NNLL-CT14nnlo_theoryUncertaintyEffect.tex}
     \bottomrule
     \end{tabular} 
-    % \end{center} 
-    \caption{\small
-        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO+NNLL
-        cross sections with the CT14nnlo series of PDFs.
-        }
-    \label{tab:theoryUncertainties_CT14_NNLO_NNLL}
     \end{minipage}
     % 
     % NEW LINE
     \\[16pt]
     % 
     \hspace*{-0.75cm}%
-    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{minipage}[b]{0.5\hsize}\centering
+    \topcaption{%
+        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO
+        cross sections with the NNPDF30\_nolhc series of PDFs.
+        }
+    \label{tab:theoryUncertainties_NNPDF30_NNLO}
     \begin{tabular}{l l l l }
     \toprule
     \lcell{2.4cm}{Uncertainties included in combination} & 
@@ -101,19 +102,18 @@ Due to the inherent difficulty of determining correlations, notably as concerns 
     \input{img/alphas/extr-NNLO-NNPDF30-nolhc-nnlo_theoryUncertaintyEffect.tex}
     \bottomrule
     \end{tabular} 
-    % \end{center} 
-    \caption{\small
-        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO
-        cross sections with the NNPDF30\_nolhc series of PDFs.
-        }
-    \label{tab:theoryUncertainties_NNPDF30_NNLO}
     \end{minipage}%
     % 
     \hspace*{1cm}%
     % 
     % \begin{center} 
     % \hspace*{-0.75cm}%
-    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{minipage}[b]{0.5\hsize}\centering
+    \topcaption{
+        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO+NNLL
+        cross sections with the NNPDF30\_nolhc series of PDFs.
+        }
+    \label{tab:theoryUncertainties_NNPDF30_NNLO_NNLL}
     \begin{tabular}{l l l l }
     \toprule
     \lcell{2.4cm}{Uncertainties included in combination} & 
@@ -124,12 +124,6 @@ Due to the inherent difficulty of determining correlations, notably as concerns 
     \input{img/alphas/extr-NNLO-NNLL-NNPDF30-nolhc-nnlo_theoryUncertaintyEffect.tex}
     \bottomrule
     \end{tabular} 
-    % \end{center} 
-    \caption{\small
-        As in Table~\ref{tab:theoryUncertainties_CT14_NNLO}, but now using NNLO+NNLL
-        cross sections with the NNPDF30\_nolhc series of PDFs.
-        }
-    \label{tab:theoryUncertainties_NNPDF30_NNLO_NNLL}
     \end{minipage}%
 }%
 \end{table} 
@@ -154,35 +148,34 @@ The correlations for the correlated uncertainties (with a $\delta$ symbol) are d
 \centering
 {\footnotesize
     \hspace*{-0.75cm}%
-    \begin{minipage}[t]{0.5\hsize}\centering
-        \begin{tabular}{l c c c c c }
-        \toprule
-        \input{img/alphas/extr-Oct16-NNLO-CT14nnlo_all_deltas.tex}
-        \bottomrule
-        \end{tabular} 
-        % \end{center} 
-        \caption{\small
+    \begin{minipage}[b]{0.5\hsize}\centering
+        \topcaption{%
             Overview of the uncertainty coefficients for the CT14 (NNLO) PDF set.
             % 
             The coefficients with a $\delta$ correspond to the coefficients of the correlated
             uncertainty sources, and those with a $\Delta$ to the uncorrelated uncertainty sources.
             }
         \label{tab:uncertaintyCoefficients_CT14_NNLO}
+        \begin{tabular}{l c c c c c }
+        \toprule
+        \input{img/alphas/extr-Oct16-NNLO-CT14nnlo_all_deltas.tex}
+        \bottomrule
+        \end{tabular} 
         \end{minipage}%
     % 
     \hspace*{1cm}%
     % 
-    \begin{minipage}[t]{0.5\hsize}\centering
+    \begin{minipage}[b]{0.5\hsize}\centering
+        \topcaption{%
+            As in Table~\ref{tab:uncertaintyCoefficients_CT14_NNLO}, but now using
+            NNLO+NNLL cross sections with the CT14 PDF set.
+            }
+        \label{tab:uncertaintyCoefficients_CT14_NNLO_NNLL}
         \begin{tabular}{l c c c c c }
         \toprule
         \input{img/alphas/extr-Oct16-NNLO-NNLL-CT14nnlo_all_deltas.tex}
         \bottomrule
         \end{tabular} 
-        \caption{\small
-            As in Table~\ref{tab:uncertaintyCoefficients_CT14_NNLO}, but now using
-            NNLO+NNLL cross sections with the CT14 PDF set.
-            }
-        \label{tab:uncertaintyCoefficients_CT14_NNLO_NNLL}
         \end{minipage}%    % 
 }%
 \end{table} 

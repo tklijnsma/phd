@@ -49,31 +49,28 @@ The correlation coefficients between individual measurements are motivated per u
     The luminosity uncertainties on $\as$ are taken to have the same correlation
     coefficient.
 
-    \newcommand{\tableWidthLumi}{2.5cm}  
+    \newcommand{\tableWidthLumi}{2.5cm}
     \begin{table*}[ht]
-    { %\scriptsize   
-    \begin{center}  
+    \centering
+    \topcaption{%
+        Correlated, uncorrelated and total luminosity uncertainties with
+        respect to the top-quark pair production cross section (in
+        percentages)~\cite{topcombination_7TeV,topcombination_8TeV,Aad:2013ucp,Aaboud:2016hhf,CMS:2012rua,CMS:2013gfa,CMS:2016eto}.
+        }
+    \label{tab:lumitable}
+    % 
     \begin{tabular}{l c c c c}
-    \toprule
     $\sqrt{s}$                & Experiment & Corr.  & Uncorr. & Total \\
     \midrule
-    \multirow{2}{*}{7\,TeV}   &  ATLAS     &  0.46  &  1.72  &  1.78 \\
-                              &  CMS       &  0.46  &  2.13  &  2.17 \\
-    \multirow{2}{*}{8\,TeV}   &  ATLAS     &  0.60  &  1.84  &  1.94 \\
-                              &  CMS       &  0.68  &  2.50  &  2.59 \\
-    \multirow{2}{*}{13\,TeV}  &  ATLAS     &  0.36  &  2.29  &  2.32 \\
-                              &  CMS       &  0.36  &  2.31  &  2.34 \\
-    \bottomrule
+    \multirow{2}{*}{7\,TeV}   &  ATLAS     &  0.46\%  &  1.72\%  &  1.78\% \\
+                              &  CMS       &  0.46\%  &  2.13\%  &  2.17\% \\[7pt]
+    \multirow{2}{*}{8\,TeV}   &  ATLAS     &  0.60\%  &  1.84\%  &  1.94\% \\
+                              &  CMS       &  0.68\%  &  2.50\%  &  2.59\% \\[7pt]
+    \multirow{2}{*}{13\,TeV}  &  ATLAS     &  0.36\%  &  2.29\%  &  2.32\% \\
+                              &  CMS       &  0.36\%  &  2.31\%  &  2.34\% \\
     \end{tabular} 
-    \end{center} 
-    \caption{\small
-    Correlated, uncorrelated and total luminosity uncertainties with
-    respect to the top-quark pair production cross section (in
-    percentages)~\cite{topcombination_7TeV,topcombination_8TeV,Aad:2013ucp,Aaboud:2016hhf,CMS:2012rua,CMS:2013gfa,CMS:2016eto}.
-    }
-    \label{tab:lumitable}
-    }
     \end{table*} 
+
 \end{enumerate}
 
 The uncertainties on the predicted cross sections (due to the PDF, the
@@ -104,7 +101,7 @@ Appendix~\ref{sec:appendix}.
 In order to combine the individual results, we opted for a
 likelihood-based approach~\cite{Cowan:2010js}.\footnote{As a cross-check, we also
   used the \textit{Best Linear Unbiased Estimate} procedure
-  (BLUE)~\cite{BLUE1,BLUE2}. This is only suitable for symmetric
+  (BLUE)~\cite{BLUE1,Valassi:2003mu}. This is only suitable for symmetric
   errors and in that case we found essentially identical results.}
 %
 In this
@@ -144,18 +141,21 @@ distribution functions (pdf)\footnote{
 For each nuisance parameter we will have one pdf, a Gaussian
 distribution with a standard deviation of one:
 % 
+\begin{linenomath*}
 \begin{equation}
     \text{pdf}_{\theta_j} = 
     \frac{1}{\sqrt{2\pi}} e^{-\theta_j^2/2}
     %\text{Gauss}( \, \theta_j,\, 0,\, 1 \,)
     \,.
 \end{equation}
+\end{linenomath*}
 %
 There will also be a pdf for each combination of measurement $i$ and
 associated uncorrelated error $\Delta^k_i$. 
 %
 It is given by
 % 
+\begin{linenomath*}
 \begin{equation}
 \text{pdf}_{i,\,k}(\as, \bm{\theta}) =
     \frac{1}{\sqrt{2\pi} \Delta_i^k}
@@ -168,10 +168,12 @@ It is given by
     \right] }
     \;.
 \end{equation}
+\end{linenomath*}
 %
 To address the issue of errors that are not symmetric, we adopt the
 following prescription for the $\Delta_i^k$ and $\delta_i^j$:
 % 
+\begin{linenomath*}
 \begin{equation}
 \Delta_i^k =
     \left\{
@@ -187,7 +189,9 @@ following prescription for the $\Delta_i^k$ and $\delta_i^j$:
     \right. 
     \;,
 \end{equation}
+\end{linenomath*}
 % 
+\begin{linenomath*}
 \begin{equation}
 \delta_i^j =
     \left\{
@@ -203,6 +207,7 @@ following prescription for the $\Delta_i^k$ and $\delta_i^j$:
     \right. 
     \;.
 \end{equation}
+\end{linenomath*}
 % 
 An overview of the values used for $\delta_i^{j,\,\pm}$ and $\Delta_i^{k,\,\pm}$
 is given in Appendix~\ref{sec:appendix2}.
@@ -210,6 +215,7 @@ is given in Appendix~\ref{sec:appendix2}.
 The probability distribution function of determination $i$ including
 all uncorrelated uncertainties is then constructed by convolution:
 % 
+\begin{linenomath*}
 \begin{equation}
 \text{pdf}_{ \as {}_{,i} }(\as, \bm{\theta}) =
     \text{pdf}_{i,\,1}(\as, \bm{\theta}) \otimes \text{pdf}_{i,\,2}(\as, \bm{\theta})
@@ -217,6 +223,7 @@ all uncorrelated uncertainties is then constructed by convolution:
     % \otimes \text{pdf}_{i,\,j}(\as, \bm{\theta})
     \otimes \text{pdf}_{i,\,n_u}(\as, \bm{\theta})
 \end{equation}
+\end{linenomath*}
 % 
 where the convolution is performed such that the probability distribution
 functions are centred around $\as{}_{,i}$.
@@ -229,6 +236,7 @@ The global likelihood function $L( \as , \bm{\theta} )$ is constructed
 by multiplication of the probability distribution functions of the
 determinations and the nuisance parameters:
 % 
+\begin{linenomath*}
 \begin{equation}
 L( \as , \bm{\theta} ) = 
     \prod_{i=1}^{n_m} \text{pdf}_{ \as {}_{,i} }(\as, \bm{\theta})
@@ -237,14 +245,17 @@ L( \as , \bm{\theta} ) =
     \,.
     \label{eq:globallikelihoodfunction}
 \end{equation}
+\end{linenomath*}
 % 
 In order to complete the formalism of a statistical test the test
 statistic $q$ is introduced:
 %
+\begin{linenomath*}
 \begin{equation}
 q( \as ) = -2 \log \frac{ L( \as ,\, \hat{\bm{\theta}}' ) }{ L( \hat{\alpha}_s ,\, \hat{\bm{\theta}} ) }
 \;.
 \end{equation}
+\end{linenomath*}
 % 
 Here $L$ is maximized for variables that carry a hat and in general
 $\hat{\bm{\theta}}'$ will take on different values from
