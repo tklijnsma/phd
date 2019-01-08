@@ -20,7 +20,7 @@ The standard model (SM), widely recognized as one of the greatest successes of p
 % 
 Its predictions are consistent with many experiments performed in the second half of the 20${}^\text{th}$ century at scales extending over several orders of magnitude.
 % 
-The discovery~\cite{Aad:2012tfa,Chatrchyan:2012xdj,Chatrchyan:2013lba} of a particle compatible with the SM Higgs boson at the CERN LHC completed an important of the puzzle of the SM, the mechanism behind the masses of the intermediate vector bosons.
+The discovery~\cite{Aad:2012tfa,Chatrchyan:2012xdj,Chatrchyan:2013lba} of a particle compatible with the SM Higgs boson at the CERN LHC completed an important part of the puzzle of the SM, the mechanism behind the masses of the intermediate vector bosons.
 % 
 Its conception is the result of decades of monumental effort from both the experimental and theoretical particle physics communities.
 
@@ -29,7 +29,7 @@ The SM is a quantum field theory (QFT); more specifically, it is a \textit{renor
 % 
 Its particles and interactions are encapsulated in the \textit{SM Lagrangian density} $\lagrangiansm$ (from here on referred to as simply the \textit{SM Lagrangian}), whose full, lengthy description can be found in Ref.~\cite{fullsmlagrangian}.
 % 
-The SM Lagrangian fulfills the requirements of local gauge invariance and renormalizability, but it is by no means the only Lagrangian to do so.
+The SM Lagrangian fulfills the requirements of local gauge invariance and renormalizability, but it is by no means the only possible Lagrangian to do so.
 % 
 The form of the SM Lagrangian is `derived' (not in the mathmatical sense) from our knowledge of non-relativistic quantum mechanics, symmetry considerations, and from experiment.
 % 
@@ -51,6 +51,7 @@ In principle, determining the physics of the electromagnetic, strong, and weak i
     -
     \frac{\partial\lagrangian}{\partial\psi}
     = 0
+\,,
 \end{equation}
 \end{linenomath*}
 % 
@@ -62,7 +63,7 @@ Unfortunately, there is no easy solution to the equation of motion of the SM Lag
 % 
 The full treatment of this perturbative expansion is beyond the scope of this text, and the reader is referred to the excellent treatment of this topic in Ref.~\cite{peskin}.
 % 
-In short, the perturbative expansion can be simplified to a sum of wonderfully descriptive \textit{Feynman diagrams}, which represent the terms of the perturbative expansion, and the \textit{Feynman rules}, which map the diagrams to an evaluable formulaic form.
+In short, the perturbative expansion can be represented by a sum of wonderfully descriptive \textit{Feynman diagrams}, which can be mapped to an evaluable formulaic form using the \textit{Feynman rules}.
 
 
 Although undeniably a great success, the SM comes with a number of important `gaps'.
@@ -75,24 +76,24 @@ These problems highlight some gaps in our description of naturally observed phen
 % 
 Overlooking for the moment the problem of massive neutrinos, the SM Lagrangian has 19 parameters that are, to the best of our knowledge, arbitrary.
 % 
-Although their experimentally determined values are used in SM predictions, there is no satisfying underlying theory explaining these parameters, which include for example the quark and lepton masses and the coupling constants of the electromagnetic, strong, and weak interactions.
+Although their experimentally determined values are used in the SM predictions, there is no satisfying underlying theory explaining these parameters, which include for example the quark and lepton masses and the coupling constants of the electromagnetic, strong, and weak interactions.
 % 
 Given that the universe would look profoundly different under reasonably small variations of the values of these parameters~\cite{Cahn:1996ag}, it is a big open question how the parameters ended up having the values they have.
 % 
 % In fact, it is not even understood why there are 3 generations of leptons and quarks, rather than just 1, or any other number.
 
 
-The particles encoded in SM Lagrangian can be categorized into quarks, leptons, gauge bosons, and the Higgs boson.
+The particles encoded in the SM Lagrangian can be categorized into quarks, leptons, gauge bosons, and the Higgs boson.
 % 
 The quarks come in 6 flavors, which are further categorized into 3 generations: the up and the down quark (the first generation), the strange and the charm quark (the second generation), and the bottom and the top quark (the third generation).
 % 
-The up, charm, and top quarks carry an electric charge $q = 2/3e$ (where $e$ is the elementary electric charge), whereas the down, strange, and bottom quarks carry $q=-1/3$.
+The up, charm, and top quarks carry an electric charge $q = 2/3e$ (where $e$ is the elementary electric charge), whereas the down, strange, and bottom quarks carry $q=-1/3e$.
 % 
 Each quark comes in 3 `colors', typically denoted red, blue and green; the color of a quark is to be understood as yet another property of the quark, and has nothing to do with the notion of color in colloquial use.
 % 
-Every quark has a corresponding antiquark which comes in 3 anticolors and carries an opposite electric charge.
+Every quark has a corresponding antiquark, which comes in 3 anticolors and carries an opposite electric charge.
 % 
-The leptons come in 3 generations as well: the electron $\electron^-$, the muon $\muon^-$ and the tau $\taulepton^-$, and their associated neutrinos, $\neutrino_\electron$, $\neutrino_\muon$, and $\neutrino_\taulepton$ respectively.
+The leptons come in 3 generations as well: the electron $\electron^-$, the muon $\muon^-$ and the $\taulepton^-$-lepton, and their associated neutrinos, $\neutrino_\electron$, $\neutrino_\muon$, and $\neutrino_\taulepton$ respectively.
 % 
 The corresponding antileptons carry opposite electric charge; the antiparticle of the electron is typically referred to as a \textit{positron}.
 % 
@@ -108,7 +109,7 @@ All the SM particles are summarized once more in Fig.~\ref{fig:particles}.
     \caption{
         Summary of the particles in the SM.
         % 
-        THe quarks, leptons, gauge bosons and the Higgs boson are displayed in purple, green, red and yellow cells, respectively, sorted along generations for the fermions.
+        The quarks, leptons, gauge bosons, and the Higgs boson are displayed in purple, green, red, and yellow cells, respectively.
         % 
         Each cell contains three numbers in the top-left corner, corresponding to the mass, electric charge, and spin of the particle.
         % 
@@ -151,7 +152,7 @@ The SM Lagrangian for QCD is~\cite{dissertori}
 \end{equation}
 \end{linenomath*}
 % 
-where $\qquark$ ($\overline{\qquark}$) are the six (anti)quark fields, $\gamma$ are the gamma matrices, $m_\qquark$ is the mass of the quark, $F^a_{\mu\nu}$ is the gluon field strength tensor, $g_s$ is the coupling constant for QCD, $A^\mu$ are the gauge (gluon) fields, and $T^a$ are generators of the SU(3) gauge symmetry group, which in the matrix representation equal $\lambda^a/2$, $\lambda_a$ being the Gell-Mann matrices.
+where $\qquark$ ($\overline{\qquark}$) are the six (anti)quark fields, $\gamma$ are the gamma matrices, $m_\qquark$ is the quark mass, $F^a_{\mu\nu}$ is the gluon field strength tensor, $g_s$ is the coupling constant for QCD, $A^\mu$ are the gauge (gluon) fields, and $T^a$ are the generators of the SU(3) gauge symmetry group, which in the matrix representation equal $\lambda^a/2$, $\lambda_a$ being the Gell-Mann matrices.
 % 
 The field strength tensor is given by
 % 
@@ -165,9 +166,9 @@ F^a_{\mu\nu}
 % 
 where $f^{abc}$ are the structure constants of the SU(3) symmetry group.
 % 
-The first, gluonic part of Equation~(\ref{qcdlagrangian}) is responsible for the gluon self-interactions, which consist of a vertex with three gluons and a vertex with four gluons.
+The first, gluonic term of Equation~(\ref{qcdlagrangian}) is responsible for the gluon self-interactions, which consist of a vertex with three gluons and a vertex with four gluons---in contrast to electrodynamics, for which the gauge boson has no self-interaction.
 % 
-The last part describes the interaction between quarks and gluons.
+The last term describes the interaction between quarks and gluons.
 
 
 Besides the quark masses, the only free parameter in Equation~(\ref{qcdlagrangian}) is $g_s$.
@@ -215,7 +216,7 @@ The coefficient $b_0$ is given by $(11 N_c - 2 N_f) / (12\pi)$~\cite{Dissertori:
 % 
 In the SM, $b_0$ is positive, and as such $\alphas$ decreases with increasing $Q^2$, in stark contrast to the behavior of the coupling constant of quantum electrodynamics.
 % 
-This phenomenon is called \textit{asymptotic freedom}, and it is visualized in Fig.~\ref{fig:alphasscaling}.
+This phenomenon is called \textit{asymptotic freedom}, and it is visualized in Fig.~\ref{fig:alphasscaling} together with measurements that confirm the expected scaling behavior.
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -223,7 +224,7 @@ This phenomenon is called \textit{asymptotic freedom}, and it is visualized in F
     \caption{
         Measurements of $\alphas(Q)$ at several values for $Q$.
         % 
-        The black lines indicates the running of $\as(Q^2)$ when setting $\asmz$ to the current PDF world average, plus or minus its uncertainty.
+        The black lines indicates the running of $\as(Q^2)$ when setting $\asmz$ to the current PDG world average~\cite{pdg}, plus or minus its uncertainty.
         % 
         Taken from Ref.~\cite{pdg}.
         }
@@ -240,9 +241,9 @@ Experimental observations undeniably point to massive $\wboson$ and $\zboson$ bo
 % 
 The Brout--Englert--Higgs mechanism~\cite{Higgs:1964pj,Englert:1964et,Guralnik:1964eu} was originally introduced as a solution to explain the massiveness of the vector bosons without violating gauge invariance.
 % 
-This section shortly illustrates the principle of the Higgs mechanism in the SM, closely following the reasoning found in Ref.~\cite{Djouadi:2005gi}.
+This section shortly illustrates the principle of the Higgs mechanism, closely following the reasoning found in Ref.~\cite{Djouadi:2005gi}.
 % 
-Rather than looking at the SM, consider a Lagrangian with a complex scalar field $\phi = \phi_\mathrm{R} + \imag \phi_\mathrm{C}$ coupled to a gauge field $A_\mu$ that resembles a photon in the QED Lagrangian:
+Rather than looking at the SM directly, consider a Lagrangian with a complex scalar field $\phi = \phi_\mathrm{R} + \imag \phi_\mathrm{C}$ coupled to a gauge field $A_\mu$ that resembles a photon in the QED Lagrangian:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -348,9 +349,9 @@ In the end one finds massive $\zboson$ and $\wboson$ bosons, a massless photon, 
 % 
 Also the fermion masses can be explained through the Higgs mechanism, and in the SM it turns out the fermion mass is proportional to the coupling of the Higgs boson with the respective fermion.
 % 
-As can be seen in Fig.~\ref{fig:massproportion}, this not particularly trivial finding is thus far in good agreement with the observations; the proportionality of the Higgs boson couplings to the particle masses holds well over scales that vary many order of magnitudes.
+As can be seen in Fig.~\ref{fig:massproportion}, this not particularly trivial finding is thus far in good agreement with the observations; the proportionality of the Higgs boson couplings to the particle masses holds well over scales that vary over many order of magnitudes.
 % 
-Although the Higgs mechanism incorporates masses into the SM Lagrangian beautifully, the actual values of the masses need to be determined experimentally.
+Although the Higgs mechanism incorporates masses into the SM Lagrangian beautifully, the actual values of the masses still need to be determined experimentally.
 
 
 \begin{figure}[hbtp]
@@ -374,7 +375,7 @@ The formulas for the production modes and decay channels described below all ass
 % 
 The resonance discovered in 2012 has so far proven to be consistent with the SM Higgs boson, but this consistency is under constant scrutiny.
 % 
-A convenient framework to evaluate the likeliness of the $125$\GeV resonance being the SM Higgs boson is the \textit{\kappaframework}~\cite{LHCHXSWG:YR3}, in which the SM couplings of the Higgs boson with other particles is modified:
+A convenient framework to evaluate the likeliness of the $125$\GeV resonance to be the SM Higgs boson is the \textit{\kappaframework}~\cite{LHCHXSWG:YR3}, in which the SM couplings of the Higgs boson with other particles are modified:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -382,21 +383,21 @@ A convenient framework to evaluate the likeliness of the $125$\GeV resonance bei
 \end{equation}
 \end{linenomath*}
 % 
-where $y_i$ is the Higgs boson coupling to particle $i$, $\kappa_i$ is the corresponding \textit{coupling modifier}, which will often also be referred to as simply `the coupling'.
+where $y_i$ is the Higgs boson coupling to particle $i$, and $\kappa_i$ is the corresponding \textit{coupling modifier}, which will often also be referred to as simply `the coupling'.
 % 
 The SM value of any $\kappa_i$ is equal to 1.
 % 
-The coupling modifiers naturally affect the production as well as the decay of the Higgs boson, and whenever one tests the SM by interpreting data in terms of coupling modifiers, one has to be careful to scale both production and decay appropriately.
+The coupling modifiers naturally affect the production as well as the decay of the Higgs boson, and whenever one tests the SM by interpreting data in terms of coupling modifiers, one has to be careful to treat both production and decay appropriately.
 
 
 While Higgs boson production and decay is in principle possible through a myriad of modes and channels, only few are relevant in the context of hadron colliders.
 % 
-As the rest of this thesis is concerned with Higgs boson couplings, also the basic scalings of the production modes and decay channels in terms of Higgs boson couplings is discussed briefly.
+As the rest of this thesis is concerned with Higgs boson couplings, also the scaling of the production modes and decay channels in terms of Higgs boson couplings is discussed briefly.
 % 
 The Higgs boson is produced at hadron colliders through the following production modes (sorted by decreasing production cross section):
 % 
 \begin{itemize}
-\item \textit{Gluon fusion} (\ggh), which in the SM exists only via a loop of (usually heavy) particles that couple to the Higgs boson, as the direct coupling of the Higgs boson to the gluon field is zero in SM;
+\item \textit{Gluon fusion} (\ggh), which in the SM exists only via a loop of (usually heavy) particles that couple to the Higgs boson, as the direct coupling of the Higgs boson to the gluon field is zero in the SM;
 % 
 \item \textit{Vector boson fusion} (\vbf), in which the Higgs boson is radiated off a virtual vector boson; the final state is characterized by two jets in the forward regions;
 % 
@@ -409,7 +410,7 @@ The Higgs boson is produced at hadron colliders through the following production
 % 
 The leading order diagrams for these production modes are shown in Fig.~\ref{fig:productionmodes}.
 % 
-The $\ggh$ production mode is dominant at the LHC, and its scaling in terms of Higgs boson couplings is complicated by interference terms.
+The $\ggh$ production mode is dominant at the LHC, and its scaling in terms of Higgs boson couplings is complicated by interference terms of the loop constituents.
 % 
 The $\tth$ and $\bbh$ production modes contain at leading order a single quark-Higgs boson vertex, which results in a simple quadratic dependence on the Higgs boson couplings for the respective production cross sections.
 
@@ -437,7 +438,7 @@ The Higgs boson decay channels are slightly more numerous.
 % 
 The most common decay channels without a loop are the decays to two $\zboson$ bosons ($\hzz$), two $\wboson$ bosons ($\hww$), two $\taulepton$ leptons ($\htautau$), two $\bquark$ quarks ($\hbb$), and two $\cquark$ quarks ($\hcc$).
 % 
-The decay widths of these channels all scale quadratically with respect to their SM decay widths in terms of their respective coupling to the Higgs boson, e.g. $\Gamma(\hbb) / \Gamma(\hbb)_\text{SM} \sim \kappab^2$.
+The decay widths of these channels all scale quadratically with respect to their SM decay widths in terms of their respective coupling to the Higgs boson, e.g. $\Gamma(\hbb) / \Gamma(\hbb)_\text{SM} = \kappab^2$.
 % 
 For the fermions, the decay width is given by (excluding QCD corrections in the case of quarks)~\cite{higgshunter}
 % 
@@ -455,7 +456,9 @@ For the fermions, the decay width is given by (excluding QCD corrections in the 
 % 
 where $g$ is the electroweak coupling constant.
 % 
-Since the Higgs boson-fermion couplings are proportional to the fermion mass, the decay width is typically larger for heavier fermions, with the obvious exception of the decay width to two top quarks.
+The decay width becomes larger for heavier fermions, with the obvious exception of the decay width to two top quarks.
+% 
+% Since the Higgs boson-fermion couplings are proportional to the fermion mass, the decay width is typically larger for heavier fermions, with the obvious exception of the decay width to two top quarks.
 % 
 In practice, the decay width to quarks lighter than the charm is negligible at the LHC, as well as the decay width to two electrons.
 % 
@@ -543,7 +546,7 @@ In the case of $\hgg$, the scaling is approximately given by~\cite{higgshunter}
 % 
 \begin{linenomath*}
 \begin{equation}
-\frac{\Gamma(\hgg)}{\Gamma(\hgg)_\text{SM}} \sim
+\frac{\Gamma(\hgg)}{\Gamma(\hgg)_\text{SM}} \approx
         7.15 \times 10^{-2}    \;   \kappat^2
         % + 1.94 \times 10^{-5}   \kappab^2
         + 1.59                \;  \kappaw^2
@@ -561,7 +564,7 @@ The decay widths of the $\hgluglu$ and $\hzg$ channels and their scaling in term
 The branching fractions are given by the ratio of the corresponding decay width over the sum of all decay widths.
 
 
-Equations~(\ref{eq:brhff}-\ref{eq:ffunction}) indicate the branching fractions depend rather strongly on $\mh$; although not explicitly shown in this section, the same is true for the production cross sections.
+Equations~(\ref{eq:brhff}-\ref{eq:ffunction}) indicate that the branching fractions depend rather strongly on $\mh$; although not explicitly shown in this section, the same is true for the production cross sections.
 % 
 Figure~\ref{fig:mh-production-decay} shows the production cross sections (left) and branching fractions (right) as a function of $\mh$.
 % 
@@ -626,7 +629,7 @@ where the sum over matrix elements $\sum\abs{\mathcal{M}}^2$ is given by the sur
 % 
 Extending this calculation to higher orders or to include quark mass effects is unfortunately not as simplistic.
 % 
-At the time of writing, the $\pth$ spectrum in the HTL is known at NNLO~\cite{Boughezal:2015dra,Boughezal:2015aha,Chen:2016zka}, but a study of the $\ggh$ loop requires the inclusion of quark mass effects.
+At the time of writing, the $\pth$ spectrum in the HTL is known at NNLO~\cite{Boughezal:2015dra,Boughezal:2015aha,Chen:2016zka}, but a precision study of the $\ggh$ loop requires the inclusion of quark mass effects.
 % 
 The lowest-order cross section including quark mass effects, which can be found in Ref.~\cite{Ellis:1987xu}, contains terms with double logarithms for QCD radiation at moderate transverse momentum ($\mq \ll \pth \ll \mh$)~\cite{Baur:1989cm,Bishara:2016jga}, stemming from interference terms in the $\ggh$ production loop:
 % 

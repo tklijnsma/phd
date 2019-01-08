@@ -7,7 +7,7 @@ The differential cross section measurements for the variables considered ($\pth$
 % 
 Throughout this section the index $i$ will refer to a bin of the variable considered at the reconstructed level, whereas the index $j$ will refer to a bin of the variable at the generator level.
 % 
-As discussed in Section~\ref{backref}, the binning at generator and reconstructed level may differ depending on the considered variable and decay channel.
+As discussed in Section~\ref{sec:inputs}, the binning at generator and reconstructed level may differ depending on the considered variable and decay channel.
 % 
 The index $k$ will refer to an analysis category, i.e. the mass resolution categories, the final-state lepton configuration, and the double-$\bquark$ tagger output categories for the $\hgg$, $\hzz$, and $\hbb$ channels, respectively.
 % 
@@ -54,7 +54,7 @@ The unfolding of bin-to-bin migrations is mathematically an ill-defined problem,
 % 
 A study of the need for regularization of detector unfolding is performed in Appendix~\ref{sec:regularization}.
 % 
-Following the prescription in Ref.~\cite{Hansen:LShape}, we found that no regularization term for the unfolding procedure was needed.
+Following the prescription in Ref.~\cite{Hansen:LShape}, it is found that no regularization term for the unfolding procedure was needed.
 
 
 The input analyses considered all perform a cross section measurement based on a fit to a kinematic observable, commonly the invariant mass of the reconstructed decay products.
@@ -119,7 +119,7 @@ B^{km}_i(\mathcal{O}|\vec{\theta})
 % 
 where $n^{\text{bkg},\,km}_i$ is the expected number of background events in reconstructed bin $i$ and $f^{\text{bkg},\,km}_i$ is the distribution thereof, which is determined from Monte Carlo simulation.
 % 
-As was the case for $S$, $f^\text{bkg}$ is a probability distribution function (with a normalization of $1$), whereas $B$ is here defined as the distribution of background events with respect to the observable (with unit \textit{number of events over the unit of the observable}).
+As in the case for $S$, $f^\text{bkg}$ is a probability distribution function (with a normalization of $1$), whereas $B$ is defined as the distribution of background events with respect to the observable (with unit \textit{number of events over the unit of the observable}).
 % 
 The probability distribution function of finding an event given a value of $\mathcal{O}$, $\text{pdf}(\mathcal{O})$, can then be constructed:
 % 
@@ -143,11 +143,12 @@ Note $\text{pdf}(\mathcal{O})$ has, by construction, a normalization of $1$.
 
 Up to now, $\mathcal{O}$ was considered a continuous variable.
 % 
-However, due to constraints on available computing time, it is necessary to perform a binned fit of the distribution of $\mathcal{O}$ rather than an unbinned fit, which would require substantially more computing resources.
+However, due to constraints on available computing time, it is necessary to perform a binned fit of the distribution of $\mathcal{O}$ rather than an unbinned fit.
+% , which would require substantially more computing resources.
 % 
 The index $l$ will refer to the $l^\text{th}$ bin of the binning of $\mathcal{O}$.
 % 
-Note the definition, and as such also the binning, of $\mathcal{O}$ differs per decay channel.
+Note the definition (and as such also the binning) of $\mathcal{O}$ differs per decay channel.
 % 
 Using the probability distribution functions for $\mathcal{O}$ and the overall number of expected events $n^\text{sig}$ and $n^\text{bkg}$, an extended likelihood function for a single decay channel $m$ is constructed:
 % 
@@ -200,7 +201,9 @@ In order to combine the decay channels, the likelihoods for the individual decay
 \end{equation}
 \end{linenomath*}
 % 
-where $n_c$ is the number of decay channels included in the combination, $\mathcal{L}_m$ is the likelihood formula from Eq.~(\ref{eq:L_per_decaychannel}) specific to the decay channel $m$, and $\text{pdf}(\vec{\theta})$ is the probability distribution function of the nuisance parameters.
+where $n_c$ is the number of decay channels included in the combination
+% , $\mathcal{L}_m$ is the likelihood formula from Eq.~(\ref{eq:L_per_decaychannel}) specific to the decay channel $m$,
+and $\text{pdf}(\vec{\theta})$ is the probability distribution function of the nuisance parameters.
 % 
 For the individual analyses, the number of categories, invariant mass bins, and even the number of reconstructed bins may differ, although the number of bins at the generator level and their binning need to be aligned between decay channels.
 % 

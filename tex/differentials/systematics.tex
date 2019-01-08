@@ -11,13 +11,13 @@ For the purpose of the combination, it is important to associate the correct cor
 Among the decay channels, correlations are taken into account for the systematic uncertainties in the jet energy scale and resolution, and the integrated luminosity.
 
 
-As explained in more detail in Sections~\ref{hgg,hzz}, the individual $\hgg$ and $\hzz$ analyses from Refs.~\cite{Sirunyan:2018kta,Sirunyan:2017exp} are extrapolated to their respective fiducial phase spaces.
+As explained in more detail in Section~\ref{sec:inputs}, the individual $\hgg$ and $\hzz$ analyses from Refs.~\cite{Sirunyan:2018kta,Sirunyan:2017exp} are extrapolated to their respective fiducial phase spaces.
 % 
 A fiducial phase space is a conveniently chosen phase space which avoids poorly understood regions, such as the very-forward (high $\eta$) region, which in turn reduces the systematic uncertainties related to the extrapolation.
 % 
 While fiducial phase spaces are useful in the case of a single-channel analysis, there is no clear way of combining results obtained in different fiducial phase spaces.
 % 
-In order to combine multiple channels, the data have to be unfolded to a common phase space, which is commonly chosen to be the full phase space.
+In order to combine multiple channels, the data have to be unfolded to a common phase space, which is typically chosen to be the full phase space.
 % 
 The main systematic uncertainties associated with this extrapolation concern uncertainties in the detector acceptances and, if not profiled in the fit, the overall normalization of Higgs boson production modes.
 
@@ -27,9 +27,9 @@ The main systematic uncertainties associated with this extrapolation concern unc
 
 The most pressing concern when unfolding to the full phase space, is the uncertainty on the detector acceptance, especially in the poorly understood regions of the detector.
 % 
-The acceptances are calculated using a Monte Carlo simulation.
+The acceptances are determined via Monte Carlo simulation.
 % 
-The corresponding uncertainties are calculated by varying the renormalization and factorization scales $\mu_R$ and $\mu_F$ in the simulation, and applying the so-called \emph{envelop method} on the resulting acceptances: The acceptance uncertainty per bin is given by the minimum and maximum variations.
+The corresponding uncertainties are calculated by varying the renormalization and factorization scales $\mu_R$ and $\mu_F$ in the simulation, and applying the so-called \emph{envelop method} on the resulting acceptances; the acceptance uncertainty per bin is then given by the minimum and maximum variations.
 % 
 The scales $\mu_R$ and $\mu_F$ are allowed to vary independently, under the condition that $\frac{1}{2} < \frac{\mu_R}{\mu_F} < 2$.
 % 
@@ -40,12 +40,12 @@ On solely the systematic uncertainty, the effect of the acceptance uncertainties
 Given the negligibly small impact, the acceptance uncertainties are neglected for the final results in Section~\ref{sec:diffxs-results}.
 
 \begin{table}[h!]
-\footnotesize
-\caption{
+\centering
+\topcaption{
     Acceptance uncertainties and the relative change they manifest when added in quadrature to the uncertainties of the $\pt$ combination.
     }
 \label{tab:accuncertainties}
-\begin{center}
+\tabletextwidth{
 \setlength\tabcolsep{3pt}
 \begin{tabular}{lccccccccc}
 Bins                      & $[0,15)$ & $[15,30)$ & $[30,45)$ & $[45,80)$ & $[80,120)$ & $[120,200)$ & $[200,350)$ & $[350,600)$ & $[600,\infty)$  \\
@@ -54,16 +54,16 @@ Acc. uncertainties        & 0.6\%   & 1.3\%    & 2.8\%    & 5.7\%    & 1.0\%    
 Rel. change in syst. unc. & 0.3\%   & 0.7\%    & 4.1\%    & 19.7\%   & 0.3\%     & 1.8\%      & 2.0\%      & 7.6\%      & 1.0\%   \\
 Rel. change in tot. unc.  & 0.0\%   & 0.1\%    & 0.3\%    & 1.2\%    & 0.0\%     & 0.1\%      & 0.2\%      & 0.3\%      & 0.2\%   \\
 \end{tabular}
-\end{center}
+}
 \end{table}
 
 
 % ____________________________________________________________________________
 % xH normalization uncertainty
 
-When certain production modes are assumed to be at their SM values in a fit, the fit must include a systematic uncertainty related to the normalization of these processes.
+When certain production modes are assumed to be at their SM values in a fit, the fit must include systematic uncertainties related to the normalization of these processes.
 % 
-For most differential cross sections all production modes are fitted simultaneously, and thus no further systematic uncertainty is needed.
+For most differential cross sections in this thesis, all production modes are fitted simultaneously, and thus no further systematic uncertainty is needed.
 % 
 In the case of the $\pth$ spectrum of only Higgs bosons produced via gluon fusion, the uncertainty on the normalization of the other modeled production modes is included as a nuisance parameter.
 % 
@@ -75,14 +75,13 @@ It is implemented as a constant uncertainty throughout the $\pth$ spectrum in th
 
 
 \begin{table}[h!]
-\footnotesize
-\caption{
+\centering
+\topcaption{
     Uncertainties on the overall normalizations of Higgs production modes other than $\ggh$, taken from Ref.~\cite{deFlorian:2016spz}.
     % 
     The overall normalization uncertainty of all production modes other than $\ggh$ combined is found to be $2.1\%$
     }
 \label{tab:xhunc}
-\begin{center}
 \begin{tabular}{llcccl}
 Production mode  &  $\sigma$ (pb)  &  $\Delta$Scale ($\%$)  &  $\Delta$PDF ($\%$)  &  $\Delta\alpha_s$ ($\%$)  &  Total (pb) \\
 \hline
@@ -96,7 +95,6 @@ $\tquark\hboson (\text{s-channel})$  & $2.87 \cdot 10^{-3}$  & $2.1\%$      & $2
 \hline
 Total                                & $7.10$                &              &              &                     & $0.15$ ($2.1\%$) \\
 \end{tabular}
-\end{center}
 \end{table}
 
 
