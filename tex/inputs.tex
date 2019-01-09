@@ -1,0 +1,145 @@
+\section{Reconstructing decay products of the Higgs boson}
+\label{sec:inputs}
+
+\tk{
+For each of the decay channels:
+\begin{itemize}
+\item Objects reconstruction and identification
+\item Event selection and categorization
+\item Analysis strategy
+\end{itemize}
+}
+
+For all the analyses used as input to the combination ($\hgg$~\cite{Sirunyan:2018kta}, $\hzztofourl$~\cite{CMS_AN_2016-442}, and $\hbb$~\cite{CMS_AN_2016-366}), the data set corresponds to an integrated luminosity of $35.9\fbinv$ recorded by the CMS experiment in 2016.
+The $\hbb$ decay channel is only included in the combination of the $\pth$ spectra, improving the measurements at the higher end of the distribution ($\pth > 350$\GeV) where the data from the $\hgg$ and $\hzz$ decay channels are limited.
+All analyses provide the parametrization of the folding matrix $M_{ji}^{k}$ (which is the probability for an event in generator-level bin $i$ to be reconstructed in bin $j$ and category $k$) in terms of a common generator-level binning, that is used for the combined spectra.
+Given the limited statistical precision in the individual channels, the results of the $\hzz$ and $\hbb$ channels individually are reported for a coarser binning, which is provided in Tables~\ref{tab:binningpth}--\ref{tab:binningptjet} for each of the observables.
+This binning coincides with the binning at the reconstruction level.
+
+
+The SM prediction for the differential cross sections is simulated with $\MGvATNLO$ v2.2.2~\cite{Alwall:2014hca} for each of the four dominant Higgs boson production modes: gluon-gluon fusion (\ggh), vector boson fusion, associated production with a $\wboson$/$\zboson$ boson, and associated production with a top quark-antiquark pair.
+A contribution from Higgs boson production in association with bottom quarks is not simulated, but included assuming its acceptance is equal to that from Higgs boson production via gluon fusion.
+The matrix element calculation includes the emission of up to two additional partons and is performed at NLO accuracy in perturbative quantum chromodynamics (QCD).
+Events are interfaced to \PYTHIA8.205~\cite{Sjostrand:2014zea} for parton showering and hadronization with the CUETP8M1~\cite{Skands:1695787} underlying event tune.
+The matrix element calculation is matched to the parton shower following the prescription in Ref.~\cite{Frederix:2012ps}.
+A weight depending on $\pth$ and $\njets$ is applied to simulated $\ggh$ events to match the predictions from the {\textsc{nnlops}} program~\cite{Hamilton:2012np, Kardos:2014dua}, as discussed in Ref.~\cite{Sirunyan:2018koj}.
+The set of parton distribution functions used in all simulations is NNPDF3.0~\cite{Ball:2014uwa}.
+The hadronic jets are clustered from the particle-flow candidates~\cite{Sirunyan:2017ulk} in the case of data and simulation, and from stable particles excluding neutrinos in the case of generated events, using the anti-$\kt$ clustering algorithm~\cite{Cacciari:2008gp} with a distance parameter of $0.4$.
+The measurements are reported in terms of kinematic observables defined before the decay of the Higgs boson, i.e. at the generator level.
+
+
+Each of the analyses used as input to the combination corresponds to a different fiducial phase space definition and applies a different event categorization.
+In the case of the $\hgg$ analysis, the fiducial phase space is defined by requiring the ratio of the leading (subleading) photon $\pt$ to the diphoton mass to be greater than $1/3$ ($1/4$).
+In addition, for each photon candidate the scalar sum of the generator-level $\pt$ of stable particles contained in a cone of radius $\Delta R=0.3$ around the candidate is required to be less than 10\GeV, where $\Delta R = \sqrt{\smash[b]{(\Delta\eta)^2+(\Delta\phi)^2}}$ is the angular separation between particles and $\Delta\phi$ is the azimuthal angle between two particles in radians.
+The selected photon pairs are categorized according to their estimated relative invariant mass resolution~\cite{Sirunyan:2018kta}.
+In the case of the $\hzz$ analysis, the 4-lepton mass is required to be greater than 70\GeV, the leading $\zboson$ boson candidate invariant mass must be greater than 40\GeV, and leptons must be separated in angular space by at least $\Delta R > 0.02$.
+Furthermore, at least two leptons must each have a $\pt>10$\GeV and at least one a $\pt > 20$\GeV.
+The selected events are categorized according to their lepton configuration in the final state (4 electrons, 4 muons, or 2 electrons and 2 muons).
+In the case of the $\hbb$ analysis, the analysis strategy requires the presence of a single anti-$\kt$ jet with a distance parameter of $0.8$, $\pt>450\,$GeV, and $\abs{\eta}<2.5$.
+For this analysis, the data is not unfolded to a fiducial phase space.
+Soft and wide-angle radiation is removed using the soft-drop grooming algorithm~\cite{Dasgupta:2013ihk,Larkoski:2014wba}.
+The jet mass after application of the soft-drop algorithm, $\msd$, peaks close to the Higgs boson mass in the case of signal events.
+To avoid finite-cone effects and the nonperturbative regime of the $\msd$ calculation, events are selected based on the dimensionless mass scale variable for QCD jets defined as $\rho=\log\left(\msd^2/\pt^2\right)$~\cite{Dasgupta:2013ihk}, which relates the jet $\pt$ to the jet mass.
+Events with isolated electrons, muons, or \taulepton leptons with $\pt>10$\GeV and $\abs{\eta}<2.5$ are vetoed in order to reduce the background from SM electroweak processes, and events with a missing transverse momentum greater than $140$\GeV are vetoed in order to reduce the background from top quark-antiquark pair production.
+Additionally, a selection criterion is applied based on the compatibility of the single anti-$\kt$ jet with having a two-prong substructure~\cite{Dolen:2016kst,Moult:2016cvt,Larkoski:2013eya,Thaler:2010tr}.
+Events are categorized according to their likelihood of consisting of two $\bquark$ quarks, which is computed using the double-$\bquark$ tagger algorithm~\cite{Sirunyan:2017ezt}.
+
+
+Minor modifications are applied to the individual analyses in Refs.~\cite{Sirunyan:2018kta,CMS_AN_2016-442,CMS_AN_2016-366} to provide the inputs used for the combination of differential observables.
+For $\hgg$, an additional bin, $\pth>600$\GeV, is included in the $\pth$ spectrum.
+For $\hzz$, the binning is modified for multiple kinematic observables to align with the binning of the $\hgg$ analysis.
+Furthermore, the branching fractions of the two $\zboson$ bosons to the various lepton configurations are fixed to their SM values, whereas in Ref.~\cite{CMS_AN_2016-442} these are allowed to float.
+For $\hbb$ the signal is split into two $\pt$ bins at the generator level:
+the first with $350\le\pt<600$\GeV and the second an overflow bin with $\pt\ge600$\GeV, which aligns with the binning of the other channels.
+At the reconstruction level two bins are employed, with $400\le\pt<600$ and $\pt\ge600$\GeV, which is a slight modification with respect to the binning used in Ref.~\cite{CMS_AN_2016-366}.
+The redefinition of the reconstructed $\pt$ categories necessitates a reevaluation of the background model, which is performed using the same procedure as in the original analysis.
+For the purpose of the combination in this analysis, the fiducial measurements from the $\hgg$ and $\hzz$ channels are extrapolated to the inclusive phase space~\cite{Alwall:2014hca,Hamilton:2012np,Kardos:2014dua}.
+
+
+\begin{table*}[htb]
+    \centering
+    \topcaption{
+        The reconstruction-level binning for $\pth$ for the $\hgg$, $\hzz$, and $\hbb$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningpth}
+    \tabletextwidth{
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{lccccccccc}
+    Channel & \multicolumn{9}{l}{$\pth$ binning (GeV)} \\[\tablelineskip]
+    \hline
+    $\hgg$
+        & [0, 15)    & [15, 30)   & [30, 45)   & [45, 80)        & [80, 120)
+        & [120, 200) & [200, 350) & [350, 600) & [600, $\infty$)
+        \\
+    $\hzz$
+        & [0, 15) & [15, 30)
+        & \multicolumn{2}{l}{[30,  80)}
+        & \multicolumn{2}{l}{[80,  200)}
+        & \multicolumn{3}{l}{[200, $\infty$)}
+        \\
+    $\hbb$
+        & \multicolumn{7}{@{{}}c@{{}}}{None} & [350, 600) & [600, $\infty$)
+        \\
+    \end{tabular}
+    }
+    \end{table*}
+
+\begin{table}[htb]
+    \centering
+    \topcaption{
+        The binning for $\njets$ for the $\hgg$ and the $\hzz$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningnjets}
+    \begin{tabular}{lccccc}
+    Channel & \multicolumn{5}{l}{$\njets$ binning} \\[\tablelineskip]
+    \hline
+    $\hgg$ & 0 & 1 & 2 & 3 & $\ge$4 \\
+    $\hzz$ & 0 & 1 & 2 & \multicolumn{2}{l}{$\ge$3} \\
+    \end{tabular}
+    \end{table}
+
+\begin{table*}[htb]
+    \centering
+    \topcaption{
+        The binning for $\absy$ for the $\hgg$ and the $\hzz$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningabsy}
+    \begin{tabular}{lcccccc}
+    Channel & \multicolumn{6}{l}{$\absy$ binning} \\[\tablelineskip]
+    \hline
+    $\hgg$ & [0.0, 0.15) & [0.15, 0.30) & [0.30, 0.60) & [0.60, 0.90) & [0.90, 1.20) & [1.20, 2.50] \\
+    $\hzz$ & [0.0, 0.15) & [0.15, 0.30) & [0.30, 0.60) & [0.60, 0.90) & [0.90, 1.20) & [1.20, 2.50] \\
+    \end{tabular}
+    \end{table*}
+
+\begin{table*}[h!]
+    \centering
+    \topcaption{
+        The binning for $\ptjet$ for the $\hgg$ and the $\hzz$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningptjet}
+    \begin{tabular}{lcccccc}
+    Channel & \multicolumn{6}{l}{$\ptjet$ binning (GeV)} \\[\tablelineskip]
+    \hline
+    $\hgg$ & [0, 30) & [30, 55) & [55, 95) & [95, 120) & [120, 200) & [200, $\infty$) \\
+    $\hzz$ & [0, 30) & [30, 55) & [55, 95) & \multicolumn{3}{l}{ [95, $\infty$) } \\
+    \end{tabular}
+    \end{table*}
+
+
+
+\subsection{\texorpdfstring{$\hgg$}{H to gamma gamma}}
+
+\tk{TODO}
+
+\subsection{\texorpdfstring{$\hzztofourl$}{H to ZZ to four leptons}}
+
+\tk{TODO}
+
+\subsection{\texorpdfstring{$\hbb$}{H to bb}}
+
+\tk{TODO}
