@@ -96,9 +96,6 @@ The evolution of the delivered luminosity and the collected luminosity by the CM
 \end{figure}
 
 
-
-
-% ____________________________________________________________________________
 \subsection{The CMS detector}
 \label{sec:cmsdetector}
 
@@ -110,7 +107,7 @@ The components of the detector are illustrated in Fig.~\ref{fig:cmsgeometry}; st
 % 
 These detectors are enclosed in the superconducting solenoid magnet, which delivers a magnetic field strength of 3.8\unit{T}, is cooled with liquid helium, and is the largest superconducting solenoid to date.
 % 
-With its 14000 tonnes and its length of 28.7\unit{m}, `Compact Muon Solenoid' seems to be a misnomer at first glance, but for the range of detector applications it provides the CMS detector can in fact be considered compact, comparatively.
+With its 14000 tonnes and its length of 28.7\unit{m}, `Compact Muon Solenoid' seems to be a misnomer at first glance, but for the range of detector applications it provides, the CMS detector can in fact be considered relatively compact.
 % 
 Of the stable SM particles listed in Section~\ref{sec:sm}, the CMS detector detects electrons, photons, stable hadrons, and muons; the typical trajectories of these particles are illustrated in Fig.~\ref{fig:cmsslice}.
 % 
@@ -145,14 +142,44 @@ A full description of the CMS detector can be found in Ref.~\cite{Chatrchyan:200
 
 \subsubsection{The inner tracking system}
 
-% http://cms.web.cern.ch/news/tracker-detector
-
-\tk{TODO}
+The inner tracking system, consisting of a pixel detector surrounded by a silicon strips detector, measures the trajectories of charged particles and reconstructs secondary vertices.
+% 
+It is designed once again designed cylindrically, with a length of 5.8\unit{m} and a diameter of 2.5\unit{m}, and is able to perform measurements up to $\abs{\eta} \leq 2.5$.
+% 
+As high radiation levels are part of the operating environment, the tracker is designed to be radiation hard.
+%
+An important design parameter of the inner tracker is the material budget, which directly affects the achievable resolution of the other subdetector systems; the complete inner tracker corresponds to 0.4 radiation lengths in the central region, and increases up to almost 2 radiation lengths in the forward regions~\cite{Chatrchyan:2008zzk}.
+% 
+The trajectory is precisely measured with 11 to 17 trajectory points, which requires 66 million pixels and 91 million strips in the pixel and strips detectors, respectively.
+% 
+The inner tracker is the most important subsystem for low-energy particles; for single muons up to 100\GeV and $\abs{\eta} \leq 1.6$, the \pt resolution is around 1-2\%.
 
 
 \subsubsection{The electromagnetic calorimeter}
 
-\tk{TODO}
+The electromagnetic calorimeter, starting at an inner radius of 1.3\unit{m}, is responsible for the energy measurement of charged particles, and is in particular important for the high-precision measurement of the energy of photons and electrons.
+% 
+It consists of 61200 lead-tungstate crystals in the barrel region, which have a length of 230\unit{mm} and correspond to 25.8 radiation lengths.
+% 
+Lead-tungstate crystals have a short scintillation time, are optically clear, and relatively radiation hard.
+% 
+The barrel region is organized into 36 \textit{supermodules}, each of which consists of 4 \textit{modules}.
+% 
+The modules further removed from the interaction point have their crystals tilted, so that the front face of the crystal is aimed towards the interaction point.
+% 
+The barrel covers the measurements up to $\abs{\eta} \leq 1.479$.
+% 
+The forward regions are covered by two endcaps approximately 3\unit{m} from the interaction point in the longitudinal direction, which extend up to $\abs{\eta} \leq 3.0$ and consist of 7324 identical crystals each.
+% 
+Also these crystals are slanted so that the small front face of the crystal points to the interaction point.
+% 
+The endcaps are prefaced by the 20\unit{cm} thick \textit{preshower}, whose primary purpose is the enhanced identification of neutral pions in the forward region.
+% 
+The preshower is a sampling calorimeter that consists of two layers, each containing a lead plate (which initiates electromagnetic showers) and a silicon strip sensor (which measures the deposited energy and the transverse shower profile).
+
+
+The energy resolution
+
 
 
 \subsubsection{The hadron calorimeter}
