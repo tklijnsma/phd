@@ -165,7 +165,7 @@ Lead-tungstate crystals have a short scintillation time, are optically clear, an
 % 
 The barrel region is organized into 36 \textit{supermodules}, each of which consists of 4 \textit{modules}.
 % 
-The modules further removed from the interaction point have their crystals tilted, so that the front face of the crystal is aimed towards the interaction point.
+The modules further removed from the interaction point have their crystals tilted, so that the front face of the crystal is aimed at the interaction point.
 % 
 The barrel covers the measurements up to $\abs{\eta} \leq 1.479$.
 % 
@@ -178,20 +178,73 @@ The endcaps are prefaced by the 20\unit{cm} thick \textit{preshower}, whose prim
 The preshower is a sampling calorimeter that consists of two layers, each containing a lead plate (which initiates electromagnetic showers) and a silicon strip sensor (which measures the deposited energy and the transverse shower profile).
 
 
-The energy resolution
+The energy resolution of photons, $\sigma_E$, is of utmost importance for the identification of Higgs bosons in the $\hgg$ decay channel.
+% 
+Given a photon energy $E$, the relative resolution can be parametrized as~\cite{CMS:1997ysd}
+% 
+\begin{linenomath}
+\begin{equation}
+\left( \frac{\sigma_E}{E} \right)^2 =
+    \frac{\sigma_\text{noise}^2}{E^2}
+    + \frac{\sigma_\text{stoch}^2}{E}
+    + c^2
+\,,
+\end{equation}
+\end{linenomath}
+% 
+where $\sigma_\text{noise}$ is the noise contribution (including e.g. electronic noise and noise related to pileup), $\sigma_\text{stoch}$ is the (irreducible) stochastic contribution, and $c$ is a constant term.
+% 
+The direct energy measurement performed in ECAL, called the \textit{raw energy} $E_\text{raw}$, is corrected based on other measurable quantities, such as the location of the particle in the detector and the shape of the shower.
+% 
+This correction is called the \textit{energy regression}, which is recomputed for every dataset recorded by the CMS detector.
+% 
+More details on the photon and electron energy regressions for the 2016 dataset can be found in Appendix~\ref{ENERGYREGRESSION}.
+% 
+Under the optimized operating conditions in the CMS detector, the energy resolution for electrons and photons with $10 < E < 2000\GeV$ is about 1\%.
+% 
+At approximately $E > 2000$\GeV, the lead-tungstate crystal read-out becomes \textit{saturated}, meaning the measured raw energy is often simply the maximum allowed value of the analog-to-digital converter.
+% 
+In this case the raw energy is a poor estimate of the true energy, and the shower shape becomes the leading determinant for the corrected energy.
+% 
+For the very-high-energy regime, up to about $6500$\GeV, the energy resolution is at the order of a few percent.
 
 
 
 \subsubsection{The hadron calorimeter}
 
-\tk{TODO}
+The hadron calorimeter, called HCAL, is located between ECAL and the superconducting solenoid, starting at an inner radius of $1.77$\unit{m} and ending at an outer radius of $2.95$\unit{m}.
+% 
+Its primary purpose, as its name suggests, is the accurate energy measurement of hadrons, in particular neutral ones that leave no traces in the inner tracking and ECAL subsystems.
+% 
+Like the previously treated subdetector systems, it is designed cylindrically with a barrel region extending up to $\abs{\eta} < 1.3$ and two endcaps extending up to $\abs{\eta} < 3.0$.
+% 
+As the combined stopping power of the ECAL and HCAL barrel regions is still insufficient for some high energy particles, the HCAL is extended outside the superconducting solenoid by the HCAL Outer Calorimeter, which measures the shower energy deposited after the HCAL barrel.
+% 
+HCAL is a sampling calorimeter, composed of brass absorber plates and plastic scintillators, which are optimized for longterm stability and radiation hardness.
 
 
 \subsubsection{The muon system}
 
-\tk{TODO}
+The CMS muon system is responsible for the identification and measurement of muons, and simultaneously serves as an important part of the trigger system.
+% 
+Muons can be considered stable particles in the context of particle detection at CMS, and unlike most particles they are not stopped by the ECAL and HCAL subdetector systems.
+% 
+Their detection relies on measurements in the inner tracker and the muon system, which is placed outside the superconducting solenoid and interleaved with the iron flux return yoke plates.
+% 
+The muon system comprises four layers of muon detection, which measure the curvature of the muon track in order to determine its energy---the principle is illustrated in Fig.~\ref{fig:cmsslice}, where the light blue hits in the outer layers trace the muon trajectory.
+% 
+The barrel region of the muon system employs drift tubes, arranged in such a way to accurately measure the muon coordinates while preventing dead spots in the efficiency.
+% 
+In the endcaps the neutron-induced background and the muon rate are much higher and the magnetic field is non-uniform; here cathode strip chambers are employed, which operate more reliably under these circumstances.
+% 
+In addition, a redundant trigger system was put in place consisting of cathode strip chambers, in both the barrel and endcap regions.
+
 
 
 \subsubsection{The trigger and data acquisition systems}
 
 \tk{TODO}
+
+
+
+
