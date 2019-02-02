@@ -240,11 +240,32 @@ In the endcaps the neutron-induced background and the muon rate are much higher 
 In addition, a redundant trigger system was put in place consisting of cathode strip chambers, in both the barrel and endcap regions.
 
 
-
 \subsubsection{The trigger and data acquisition systems}
 
-\tk{TODO}
+At the peak of the LHC instantaneous luminosity, bunch crossings take place in the CMS detector at a rate of about 40\unit{MHz}, yielding at the order of a billion proton-proton interactions per second.
+% 
+The size of the full, uncompressed data collected from a single bunch crossing, typically called an \textit{event}, is over a megabyte.
+% 
+The rate at which data is accumulated far surpasses the storage capabilities and the processing rate available to the CMS experiment; instead, only a fraction of the detected events is kept, based on signatures in the events that indicate potentially interesting physics.
+% 
+The very first stage of event selection at CMS is the \textit{Level-1 (L1) trigger}, whose implementation relies mostly on programmable hardware.
+% 
+It is designed to accept events at the rate of about 100\unit{kHz}, using an algorithm based on hits in the muon system and in the calorimeter subdetectors.
+% 
+While the decision to accept or reject is made, which may take at most 3.2\unit{$\mu$s}, the full event is kept in buffers of the front-end electronics.
+
+
+When an event is accepted, the full event is passed to the \textit{High Level Trigger (HLT)}~\cite{Adam:2005zf}, which is implemented as a software running on a dedicated computer cluster.
+% 
+Its decision-making time is longer than the L1 trigger and its algorithms more involved; it can reconstruct final-state objects (at a limited precision) and accept events based on current analysis needs.
+% 
+Events are ran in parallel through several \textit{trigger paths}, each of which can accept the event (even if other paths rejected the event).
+% 
+The HLT reduces the event rate to about 1\unit{kHz}, at which point the event is stored on a central storage server at CERN, and passed along to the Worldwide LHC Computing Grid for reconstruction.
 
 
 
+\subsection{The Worldwide LHC Computing Grid}
+
+The Worldwide LHC Computing Grid (WLCG)
 
