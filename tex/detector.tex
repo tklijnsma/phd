@@ -264,8 +264,61 @@ Events are ran in parallel through several \textit{trigger paths}, each of which
 The HLT reduces the event rate to about 1\unit{kHz}, at which point the event is stored on a central storage server at CERN, and passed along to the Worldwide LHC Computing Grid for reconstruction.
 
 
-
 \subsection{The Worldwide LHC Computing Grid}
 
-The Worldwide LHC Computing Grid (WLCG)
+The computing resources available at CERN are insufficient to reconstruct and analyze all the data that is produced at the LHC experiments.
+% 
+Rather than localizing all computing resources at CERN, instead the resources are scattered all over the globe and are organized in a distributed computing infrastructure, the \textit{Worldwide LHC Computing Grid} (WLCG), following the principles described in Ref.~\cite{thegrid}.
+% 
+The WLCG provides over 10000 grid users nearly real-time access to its data storage and computing resources~\cite{wlcgwebsite}; users of the grid only specify their computing needs, and the grid dispenses the computing load to its available resources.
+% 
+The grid is organized into four \textit{tiers} with varying responsibilities, here described in the context of the CMS experiment~\cite{Bayatyan:838359,CMS:2005aa}:
+% 
+\begin{itemize}
+\item \textbf{Tier 0:} The first tier takes all raw, uncompressed data, called the \emph{RAW datatier}, from the CMS detector for a first pass of the event reconstruction, and archives the RAW data to tape storage.
+% 
+The partially-reconstructed data is then sent to the Tier-1 sites for further processing.
+% 
+The Tier-0 resources are also used for the reprocessing of data when no new data is taken by the detectors (i.e. during downtimes of the LHC).
+% 
+There are two Tier-0 sites; the first, primary site is located at CERN, and the second is located at the Wigner Research Centre for Physics in Budapest, Hungary.
+% 
+These two physical sites, separated by 1200\unit{km}, are connected via three dedicated 100\unit{Gbit/s} data links.
+% 
+Developments are ongoing with the enabling of Tier-0 workflows on other computing sites, such as the CMS Tier-2 site at CSCS in Lugano, Switzerland.
+% 
+\item \textbf{Tier 1:} The main responsibility of the Tier-1 facilities is to provide the permanent storage of all active CMS datasets, and to provide fast access to any of its datasets worldwide to any authorized user.
+% 
+The Tier-1 computing resources are used for reconstruction and other low-level data processing; physics analysis workflows are not performed at the Tier-1 level.
+% 
+At the time of writing, there are 13 active Tier-1 sites (not just dedicated to CMS), listed in Fig.~\ref{fig:wlcg}
+% 
+\item \textbf{Tier 2:} The Tier-2 facilities provide limited storage, relying mostly on the Tier-1 sites for very large datasets.
+% 
+The Tier-2 computing resources are used primarily for event simulation and reconstruction workflows from CMS, but at this tier also private data-analysis workflows and private storage is available to grid users.
+% 
+At the time of writing, there about 160 active Tier-2 sites for all experiments at the LHC.
+% 
+\item \textbf{Tier 3:} The final tier consists of small, private computing clusters.
+% 
+There are only few formal requirements in order for a site to be considered a Tier-3 site, and the other tiers of the grid do not rely on the functioning of Tier-3 sites.
+% 
+This last tier is typically fully dedicated to research groups, and has not just data-analysis workflows enabled, but also custom distributed-computing setups.
+% 
+It is usually also the access point for users to the grid, providing tools for the interaction with datasets stored on the Tier-1 and 2 levels and tools to submit analysis jobs to the Tier-2 computing resources.
+% 
+The analysis carried out in this thesis has been performed exclusively on the Tier-3 site at the Paul Scherrer Institut in Villigen, Switzerland.
+% 
+\end{itemize}
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.7\linewidth]{img/detector/wlcg.png}
+    \caption{
+        Tiers of the WLCG. Taken from Ref.~\cite{wlcgwebsite}.
+        }
+    \label{fig:wlcg}
+  \end{center}
+\end{figure}
 
