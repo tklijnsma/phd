@@ -264,6 +264,34 @@ Events are ran in parallel through several \textit{trigger paths}, each of which
 The HLT reduces the event rate to about 1\unit{kHz}, at which point the event is stored on a central storage server at CERN, and passed along to the Worldwide LHC Computing Grid for reconstruction.
 
 
+
+\subsubsection{Particle-flow reconstruction in the CMS detector}
+
+The detection capabilities per subdetector
+% , outlined in Section~\ref{sec:cmsdetector},
+are generally combined into a single picture of a particle physics event, which is then used for further physics analysis.
+% 
+For example, while the muon system shines in terms of muon identification and momentum measurement, its performance can be increased be including measurements from the inner tracker system.
+% 
+This holistic approach of including as much useful subdetector information as possible into the particle reconstruction algorithm is, within the CMS detector, called \textit{particle-flow (PF) reconstruction}~\cite{Sirunyan:2017ulk}.
+% 
+Here a summary of the particle-flow procedure is treated; a full description can be found in Ref.~\cite{Sirunyan:2017ulk}.
+% 
+The primitive building blocks, called the \textit{PF elements}, are the \textit{tracks} and \textit{hits} in the inner tracker, ECAL, HCAL, and the muon system, and the \textit{vertices}.
+% 
+The PF elements are \textit{linked} into associated sets of elements called \textit{PF blocks}, from which particles are finally reconstructed.
+% 
+Per PF block, the algorithm first identifies and reconstructs muons, and subsequently removes the elements associated with the muons from the block.
+% 
+Secondly, the electrons are identified and reconstructed, aiming to take into account photons from bremsstrahlung into account as well.
+% 
+Isolated photons with high energy are identified and reconstructed simultaneously, leaving hadrons from jet fragmentation and hadronization.
+% 
+Hadrons are typically detected either as charged hadrons (with a track, and hits in the calorimeters), neutral hadrons, nonisolated photons (usually stemming from the $\pi^0$ decay to two photons).
+% 
+After reconstruction of all particles, a post-processing step is applied, correcting for, among other things, cosmic muons, muons decaying inside the detector, and misidentified muons due to punch-through of hadrons through HCAL.
+
+
 \subsection{The Worldwide LHC Computing Grid}
 
 The computing resources available at CERN are insufficient to reconstruct and analyze all the data that is produced at the LHC experiments.
