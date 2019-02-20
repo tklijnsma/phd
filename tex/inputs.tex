@@ -61,7 +61,7 @@ Other important variables include the degree of isolation (i.e. lack of other ca
 
 Globally, a number of loose event selections are applied in order to avoid events in poorly understood regions of the detector, and to avoid regions that are clearly of no interest for the intended signal.
 % 
-Firstly, events are selected with deposits in ECAL at $\eta<2.5$, up to which the detector inefficiency is still negligible, and events with deposits in the region $1.4442 < \eta < 1.566$, which is the difficult-to-model transition region from the barrel to the end cap.
+Firstly, events are selected with deposits in ECAL at $\abs{\eta}<2.5$, up to which the detector inefficiency is still negligible, and events with deposits in the region $1.4442 < \abs{\eta} < 1.566$, which is the difficult-to-model transition region from the barrel to the end cap.
 % 
 Secondly, only events with a leading (subleading) photon candidate with $\pt > 30$ (20)\GeV are considered.
 % 
@@ -91,23 +91,26 @@ Both effects are modeled and included the differential measurement.
 
 Rather than a single $\mgg$ spectrum for all selected events, the events are divided into mutually exclusive \textit{categories} with varying signal-to-background ratios, in order to enhance the sensitivity of the analysis.
 % 
-The categorization applied for the input used in this thesis concerns first a split between the $\ggh$ production mode and all other modes; secondly, the events are split into three categories of varying diphoton mass resolution, $\sigma_{\mgg}$.
+The categorization applied for the input used in this thesis concerns first a split between the $\ggh$ production mode and all other modes; secondly, the events are split into three categories of varying relative diphoton mass resolution, $\sigma_{\mgg} / \mgg$.
 % 
 Events are then further split up into bins of the differential variable of interest.
 % 
 This division of events yields one $\mgg$ spectrum to be fitted per production mode, category, and bin of the differential variable.
 % 
-Examples of the (unfitted) signal and background distributions in the $\mgg$ spectrum, including the actual event counts in the 2016 dataset, are shown in Fig.~\ref{fig:example_mgg}.
+An example of the (unfitted) signal and background distributions in the $\mgg$ spectrum, including the actual event counts in the 2016 dataset, are shown in Fig.~\ref{fig:example_mgg} (left) for one bin of the $\pth$ spectrum, and for all $\pth$ bins combined (right).
 % 
 Note that the signal includes contributions from the outside-of-acceptance region and from inefficiencies of other $\pt$ bins.
 
 \begin{figure}[hbtp]
   \begin{center}
-    \includegraphics[width=0.7\linewidth]{img/inputs/hgg/example_mgg.png}
+    \includegraphics[width=0.49\linewidth]{img/inputs/hgg/example_mgg.png}
+    \includegraphics[width=0.49\linewidth]{img/inputs/hgg/example_mgg_allbins.pdf}
     \caption{
-        Example of the $\mgg$ spectrum.
+        Examples of the $\mgg$ spectrum in the first $\sigma_{\mgg} / \mgg$ category, for only one bin of the $\pth$ spectrum (left) and for all bins combined (right, taken from Ref.~\cite{Sirunyan:2018kta}).
         % 
-        The blue line shows an example of a background distribution, the red lines indicate the signal distributions in addition to the background distribution for 0.5, 1.0, and 2.0 times the SM distribution, and the black dots indicate the actual event counts in the 2016 dataset.
+        In the left plot, the blue line shows an example of a background distribution, the red lines indicate the signal distributions in addition to the background distribution for 0.5, 1.0, and 2.0 times the SM distribution, and the black dots indicate the actual event counts in the 2016 dataset.
+        % 
+        In the right plot, the red line indicates the combined signal and background fit.
         }
     \label{fig:example_mgg}
   \end{center}
@@ -137,34 +140,292 @@ Some of the results obtained in Ref.~\cite{Sirunyan:2018kta} are shown in Fig.~\
 
 
 
-\tk{Maybe move to a global ``Combination'' section, including the binning tables.} With respect to the analysis performed in Ref.~\cite{Sirunyan:2018kta}, a few adaptations were made in order to facilitate the combination of differential cross sections performed in Section~\ref{sec:diffxs}.
-% 
-Firstly, the signal contributions were split into contributions from only $\ggh$ and other production modes.
-% 
-Secondly, the binning of the differential variables was modified slightly: The $\pth$ spectrum contains an additional bin, $\pth>600$\GeV, and an additional bin boundary at $\absy = 1.2$ is included in the $\absy$ spectrum.
-
-
-
 % ____________________________________________________________________________
 \subsection{\texorpdfstring{$\hzztofourl$}{H to ZZ to four leptons}}
 
 \emph{%
 Unless otherwise indicated, all information in this section originates from Ref.~\cite{Sirunyan:2017exp}. This section concerns merely a summary of the full analysis; for more details, see the full documentation.
+% 
+Here the decay channel to four leptons is specifically denoted as `$\hzztofourl$', whereas in the rest of the thesis the notation is simplified to just $\hzz$.
 }
 
-Due to the good energy resolution of leptons in the CMS detector, the $\hzztofourl$ decay channel has an exceptionally clean final state, combined with a good signal-to-background ratio.
+Due to the good energy resolution of leptons in the CMS detector, the $\hzztofourl$ decay channel has an exceptionally clean final state, combined with a large signal-to-background ratio.
 % 
 Its only crutch is the low branching fraction; the first stage of the decay, $\hzz$, has a branching fraction of only $0.26\%$ at $\mh = 125.09\GeV$~\cite{deFlorian:2016spz}; combined with the second stage, requiring the decays of the $\zboson$ bosons to either electrons or muons, reduces the branching fraction further to $1.251 \times 10^{-2}$ \%~\cite{deFlorian:2016spz}.
 % 
 Despite its low branching fraction, the differential measurements performed in the $\hzz$ decay channel have a good precision at low $\pt$; at higher $\pt$ the event count becomes very small and the precision deteriorates.
 
 
+The analysis strategy concerns a fit to the four-lepton mass $\mfourl$ spectrum, in which the signal presents itself as a narrow peak on top of a small continuum background.
+% 
+The background contains an irreducible contribution originating from direct $\zboson\zboson$ production, and a reducible contribution with misidentified leptons.
+% 
+The main reducible backgrounds concerns $\zboson + \bbbar$ and $\ttbar$, where the quarks decay leptonically, and $\zboson + \text{jets}$ events where the jets are misidentified as leptons.
+% 
+The $\mfourl$ spectrum, including the obtained event counts, is shown in Fig.~\ref{fig:example_mfourl}.
+
+
+In order to reduce the contamination from muons originating from in-flight decays, the selected leptons are required to have the same primary vertex.
+% 
+To achieve this, the ratio of the impact parameter, describing to what extent the tracks of the leptons line up with the primary vertex, over the uncertainty on the impact parameter is required to be less than 4.
+% 
+To further reduce the misidentified lepton rate, cuts are also placed on the isolation with respect to hadronic and photonic activity.
+
+
+Also the analysis in the $\hzztofourl$ decay channel employs a fiducial phase space definition.
+% 
+From the four reconstructed leptons, two leptons are required to have $\pt > 10\GeV$, and at least one must have $\pt > 20\GeV$.
+% 
+All leptons are also required to separated in angular space by at least $\Delta R > 0.02$.
+% 
+On a higher level, the leading reconstructed $\zboson$ boson candidate must have an invariant mass of at least 40\GeV, and $\mfourl > 70\GeV$.
+% 
+The event categorization follows simply the lepton configuration in the final state: 4 electrons, 4 muons, or 2 electrons and 2 muons.
+
+
+Due to its poor branching fraction, the event counts for the $\hzztofourl$ channel in the higher $\pth$ bins is very small, and the binning is chosen to be coarser than in the case of the $\hgg$ decay channel.
+% 
+The differential measurements are shown in Fig.\ref{fig:hzz-results} for the $\pth$, $\njets$, and $\ptjet$ spectra.
+
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.7\linewidth]{img/inputs/hzz/m4lspectrum.pdf}
+    \caption{
+        Example of the $\mfourl$ spectrum.
+        % 
+        The color-shaded area indicate the expected event counts according to the SM and the black dots indicate the actual event counts in the 2016 dataset.
+        }
+    \label{fig:example_mfourl}
+  \end{center}
+\end{figure}
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.49\linewidth]{img/inputs/hzz/pth.pdf}
+    \includegraphics[width=0.49\linewidth]{img/inputs/hzz/njets.pdf}
+    \\
+    \includegraphics[width=0.49\linewidth]{img/inputs/hzz/ptjet.pdf}
+    \caption{
+        Differential measurements of the $\pth$ (top left), $\njets$ (top right), and $\ptjet$ (bottom) spectra from the analysis of the $\hzztofourl$ decay channel.
+        % 
+        Taken from Ref.~\cite{Sirunyan:2017exp}.
+        }
+    \label{fig:hzz-results}
+  \end{center}
+\end{figure}
+
 
 
 % ____________________________________________________________________________
-\subsection{\texorpdfstring{$\hbb$}{H to bb}}
+\subsection{\texorpdfstring{Boosted $\ggh\to\bbbar$}{Boosted ggHbb}}
 
-\tk{TODO}
+\emph{%
+Unless otherwise indicated, all information in this section originates from Ref.~\cite{Sirunyan:2017dgc}. This section concerns merely a summary of the full analysis; for more details, see the full documentation.
+}
+
+The final input concerns the search for a highly boosted (i.e. large transverse momentum) Higgs boson decaying to two bottom quarks.
+% 
+For a Higgs boson with a large transverse momentum, the two resulting bottom quarks become very collimated, are are reconstructed in the detector as a single `fat' jet.
+% 
+The challenge in this analysis is to retrieve the decay products via close inspection of the internal substructure of the fat jet.
+% 
+As the Higgs mass is close to the $\zboson$ boson mass, contamination with $\zboson\to\bbbar$ decays is unavoidable.
+% 
+The $\zboson\to\bbbar$ decays are used to validate the analysis, and its signal strength is fitted in tandem with the one for the Higgs decay channel.
+
+
+In terms of event selection, the analysis requires, clearly, the presence of a single fat jet, defined as an anti-$\kt$ jet~\cite{Cacciari:2008gp} with a distance parameter of $0.8$, $\pt > 450$\GeV, and $\abs{\eta}<2.5$.
+% 
+To reduce the background from other electroweak processes, events with isolated electrons, muons or $\taulepton$ leptons with $\pt > 10$, $10$, and $18\GeV$, respectively, are vetoed.
+% 
+Also events with a very large amount of missing transverse energy are vetoed, as this is in principle not expected for this analysis.
+% 
+The fat jet is ran through the soft-drop algorithm~\cite{Dasgupta:2013ihk,Larkoski:2014wba}: Taking the reverse order of the anti-$\kt$ clustering, the algorithm continually removes the softer constituent as long as
+% 
+\begin{linenomath*}
+\begin{equation}
+\frac{ \text{min}( \pt^1, \pt^2 ) }{ \pt^1 + \pt^2 }
+    \leq
+    z \left( \frac{\Delta R_{12}}{R_0} \right)^\beta
+\,,
+\end{equation}
+\end{linenomath*}
+% 
+where $\pt^1$ and $\pt^2$ are the transverse momenta of the unclustered components, $\Delta R_{12}$ is their distance in angular space, $R_0$ is the radius of the initial fat jet, and $z$ and $\beta$ are parameters of the algorithm.
+% 
+The algorithm is designed to remove soft and wide-angle radiation.
+% 
+In the $\hbb$ analysis, the parameters $z$ and $\beta$ are chosen to be $0.1$ and $0$, respectively.
+% 
+The soft-drop algorithm reduces the mass of the fat jet to the new mass $\msd$, also called the soft-drop mass; for events in which the fat jet originates from the QCD background, the mass drop is very large, whereas for fat jets originating from the signal, the mass drop is less pronounced.
+% 
+For signal events, $\msd$ is close to the mass of the Higgs boson.
+% 
+To avoid finite-cone effects and the nonperturbative regime of the $\msd$ calculation, an additional selection is applied based on the dimensionless mass scale variable for QCD jets $\rho=\log\left(\msd^2/\pt^2\right)$~\cite{Dasgupta:2013ihk}, which relates the fat jet $\pt$ to the fat jet mass.
+
+
+An excellent discriminator for signal fat jets and fat jets originating from the QCD background is the $N^1_2$ variable, which is computed using the ratio of the 2-point and 3-point generalized energy correlation functions~\cite{Larkoski:2013eya}.
+% 
+It measures to what extent a jet is consistent with having a two-prong substructure.
+% 
+After a transformation to reduce the correlation of $N^1_2$ with $\rho$ and $\pt$, $N^1_2 \to N_2^{1,\text{DDT}}$ (where DDT stands for Designed Decorrelated Tagger~\cite{Dolen:2016kst}), a selection $N_2^{1,\text{DDT}} < 0$ is applied.
+
+
+The double-$\bquark$-tagger algorithm~\cite{Sirunyan:2017ezt}, based on input variables related to substructure and observables optimized for $\bquark$ identification, is applied on the selected events.
+% 
+Tagged fat jets are tagged such that the fat jets originating from the QCD background are misidentified in $1\%$ of the cases, and with a $33\%$ efficiency for the signal fat jets.
+% 
+Events with a double-$\bquark$-tagged fat jet then constitute the so-called `passing' region, whereas those without it constitute the `failing' region.
+% 
+The failing region is used to constrain the QCD background.
+% 
+The ratio of passing over failing events $R_\text{p/f}$ as a function of $\msd$ and $\pt$ is almost flat; the small remaining dependence on $\msd$ and $\pt$ is parametrized using a polynomial, where the order of the polynomial is determined by a Fisher $F$-test.
+% 
+Much like in the previous two decay channels, the signal is extracted based on a fit to the $\msd$ spectra, where the categories correspond to the passing and failing regions, and to six bins of reconstructed $\pt$ (within $450 < \pt < 1000\GeV$).
+% 
+The analysis employs no fiducial phase space.
+
+
+The $\msd$ spectrum in the passing region is shown in Fig.~\ref{fig:hbbresults} (left).
+% 
+The peak from $\zboson\to\bbbar$ is clearly visible, and is in fact observed with a significance of $5.1$ standard deviations.
+% 
+Figure~\ref{fig:hbbresults} (right) shows the fit of the $\zboson\to\bbbar$ and $\hbb$ channels.
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.49\linewidth]{img/inputs/hbb/msd.pdf}
+    \includegraphics[width=0.49\linewidth]{img/inputs/hbb/signalstrengths.pdf}
+    \caption{
+        Resulting $\msd$ spectrum in the passing region from the $\hbb$ analysis~\cite{Sirunyan:2017dgc} (left), with the pink color-shaded area showing the contribution from $\ggh\to\bbbar$, and the signal strengths of the $\zboson\to\bbbar$ and $\hbb$ channels (right).
+        % 
+        Both taken from Ref.~\cite{Sirunyan:2017dgc}
+        }
+    \label{fig:hbbresults}
+  \end{center}
+\end{figure}
+
+
+
+% ____________________________________________________________________________
+\subsection{Modifications to the inputs for the combination}
+
+With respect to the analyses performed in Refs.~\cite{Sirunyan:2018kta,Sirunyan:2017exp,Sirunyan:2017dgc}, a few adaptations were made in order to facilitate the combination of differential cross sections performed in Section~\ref{sec:diffxs}.
+% 
+For $\hgg$, the signal contributions were split into contributions from only $\ggh$ and other production modes.
+% 
+Additionally, the binning of the differential variables was modified slightly: The $\pth$ spectrum contains an additional bin, $\pth>600$\GeV, and an additional bin boundary at $\absy = 1.2$ is included in the $\absy$ spectrum.
+% 
+For $\hzz$, the binning was adapted in order to conform with those from the $\hgg$ analysis, and the branching fractions of the two $\zboson$ bosons to the various lepton configurations are fixed to their SM values, as opposed to floating branching fractions in the individual analysis.
+
+The individual $\hbb$ analysis does not contain a differential measurement.
+% 
+It was created for the purpose of the combination, by splitting the signal into two $\pt$ bins, the first with $350\le\pt<600$\GeV and the second an overflow bin with $\pt\ge600$\GeV, which aligns with the binning of the other channels.
+% 
+The binning at the reconstructed level is set to $400\le\pt<600$ and $\pt\ge600$\GeV, and necessitates a reevaluation of the polynomial parametrization of $R_\text{p/f}$.
+
+
+In order to combine differential measurements, all inputs must apply a common generator-level binning, which corresponds to the finest generator-level binning of the $\hgg$ channel.
+% 
+However, as the $\hzz$ and $\hbb$ channels often lack statistical precision in such a fine binning scheme, the results of these decay channels individually are sometimes reported in a coarser binning.
+% 
+This coarser binning is in these cases also the reconstruction-level binning of the respective channel.
+% 
+The reconstruction-level binning for each of the four differential variables is given in Tables~\ref{tab:binningpth}--\ref{tab:binningptjet}.
+
+
+
+\begin{table*}[htb]
+    \centering
+    \topcaption{
+        The reconstruction-level binning for $\pth$ for the $\hgg$, $\hzz$, and $\hbb$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningpth}
+    \tabletextwidth{
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{lccccccccc}
+    Channel & \multicolumn{9}{l}{$\pth$ binning (GeV)} \\[\tablelineskip]
+    \hline
+    $\hgg$
+        & [0, 15)    & [15, 30)   & [30, 45)   & [45, 80)        & [80, 120)
+        & [120, 200) & [200, 350) & [350, 600) & [600, $\infty$)
+        \\
+    $\hzz$
+        & [0, 15) & [15, 30)
+        & \multicolumn{2}{l}{[30,  80)}
+        & \multicolumn{2}{l}{[80,  200)}
+        & \multicolumn{3}{l}{[200, $\infty$)}
+        \\
+    $\hbb$
+        & \multicolumn{7}{@{{}}c@{{}}}{None} & [350, 600) & [600, $\infty$)
+        \\
+    \end{tabular}
+    }
+    \end{table*}
+
+\begin{table}[htb]
+    \centering
+    \topcaption{
+        The binning for $\njets$ for the $\hgg$ and the $\hzz$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningnjets}
+    \begin{tabular}{lccccc}
+    Channel & \multicolumn{5}{l}{$\njets$ binning} \\[\tablelineskip]
+    \hline
+    $\hgg$ & 0 & 1 & 2 & 3 & $\ge$4 \\
+    $\hzz$ & 0 & 1 & 2 & \multicolumn{2}{l}{$\ge$3} \\
+    \end{tabular}
+    \end{table}
+
+\begin{table*}[htb]
+    \centering
+    \topcaption{
+        The binning for $\absy$ for the $\hgg$ and the $\hzz$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningabsy}
+    \begin{tabular}{lcccccc}
+    Channel & \multicolumn{6}{l}{$\absy$ binning} \\[\tablelineskip]
+    \hline
+    $\hgg$ & [0.0, 0.15) & [0.15, 0.30) & [0.30, 0.60) & [0.60, 0.90) & [0.90, 1.20) & [1.20, 2.50] \\
+    $\hzz$ & [0.0, 0.15) & [0.15, 0.30) & [0.30, 0.60) & [0.60, 0.90) & [0.90, 1.20) & [1.20, 2.50] \\
+    \end{tabular}
+    \end{table*}
+
+\begin{table*}[h!]
+    \centering
+    \topcaption{
+        The binning for $\ptjet$ for the $\hgg$ and the $\hzz$ channels.
+        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
+        }
+    \label{tab:binningptjet}
+    \begin{tabular}{lcccccc}
+    Channel & \multicolumn{6}{l}{$\ptjet$ binning (GeV)} \\[\tablelineskip]
+    \hline
+    $\hgg$ & [0, 30) & [30, 55) & [55, 95) & [95, 120) & [120, 200) & [200, $\infty$) \\
+    $\hzz$ & [0, 30) & [30, 55) & [55, 95) & \multicolumn{3}{l}{ [95, $\infty$) } \\
+    \end{tabular}
+    \end{table*}
+
+
+
+
+
+
+
+
+
+% For $\hbb$ the signal is split into two $\pt$ bins at the generator level:
+% the first with $350\le\pt<600$\GeV and the second an overflow bin with $\pt\ge600$\GeV, which aligns with the binning of the other channels.
+% At the reconstruction level two bins are employed, with $400\le\pt<600$ and $\pt\ge600$\GeV, which is a slight modification with respect to the binning used in Ref.~\cite{CMS_AN_2016-366}.
+% The redefinition of the reconstructed $\pt$ categories necessitates a reevaluation of the background model, which is performed using the same procedure as in the original analysis.
+
+
 
 
 % \subsection{Paper text}
@@ -191,9 +452,11 @@ Despite its low branching fraction, the differential measurements performed in t
 % In the case of the $\hgg$ analysis, the fiducial phase space is defined by requiring the ratio of the leading (subleading) photon $\pt$ to the diphoton mass to be greater than $1/3$ ($1/4$).
 % In addition, for each photon candidate the scalar sum of the generator-level $\pt$ of stable particles contained in a cone of radius $\Delta R=0.3$ around the candidate is required to be less than 10\GeV, where $\Delta R = \sqrt{\smash[b]{(\Delta\eta)^2+(\Delta\phi)^2}}$ is the angular separation between particles and $\Delta\phi$ is the azimuthal angle between two particles in radians.
 % The selected photon pairs are categorized according to their estimated relative invariant mass resolution~\cite{Sirunyan:2018kta}.
+
 % In the case of the $\hzz$ analysis, the 4-lepton mass is required to be greater than 70\GeV, the leading $\zboson$ boson candidate invariant mass must be greater than 40\GeV, and leptons must be separated in angular space by at least $\Delta R > 0.02$.
 % Furthermore, at least two leptons must each have a $\pt>10$\GeV and at least one a $\pt > 20$\GeV.
 % The selected events are categorized according to their lepton configuration in the final state (4 electrons, 4 muons, or 2 electrons and 2 muons).
+
 % In the case of the $\hbb$ analysis, the analysis strategy requires the presence of a single anti-$\kt$ jet with a distance parameter of $0.8$, $\pt>450\,$GeV, and $\abs{\eta}<2.5$.
 % For this analysis, the data is not unfolded to a fiducial phase space.
 % Soft and wide-angle radiation is removed using the soft-drop grooming algorithm~\cite{Dasgupta:2013ihk,Larkoski:2014wba}.
