@@ -2,31 +2,10 @@
 \label{sec:inputs}
 
 \emph{%
-This section covers object reconstruction at CMS in general, and the analysis strategies for the input analyses of the combination of differential cross sections.
+This section covers the three Higgs boson decay channels that are used as input in the combination of differential cross sections: $\hgg$~\cite{Sirunyan:2018kta}, $\hzz$~\cite{Sirunyan:2017exp}, and $\hbb$~\cite{Sirunyan:2017dgc}.
 % 
+For each of the decay channels, the analysis strategy is briefly discussed, and the principal results for the analyses are shown.
 }
-
-% ____________________________________________________________________________
-\subsection{Event simulation}
-
-\tk{Paper text:} The SM prediction for the differential cross sections is simulated with $\MGvATNLO$ v2.2.2~\cite{Alwall:2014hca} for each of the four dominant Higgs boson production modes: gluon-gluon fusion (\ggh), vector boson fusion, associated production with a $\wboson$/$\zboson$ boson, and associated production with a top quark-antiquark pair.
-% 
-A contribution from Higgs boson production in association with bottom quarks is not simulated, but included assuming its acceptance is equal to that from Higgs boson production via gluon fusion.
-% 
-The matrix element calculation includes the emission of up to two additional partons and is performed at NLO accuracy in perturbative quantum chromodynamics (QCD).
-% 
-Events are interfaced to \PYTHIA8.205~\cite{Sjostrand:2014zea} for parton showering and hadronization with the CUETP8M1~\cite{Skands:1695787} underlying event tune.
-% 
-The matrix element calculation is matched to the parton shower following the prescription in Ref.~\cite{Frederix:2012ps}.
-% 
-A weight depending on $\pth$ and $\njets$ is applied to simulated $\ggh$ events to match the predictions from the {\textsc{nnlops}} program~\cite{Hamilton:2012np, Kardos:2014dua}, as discussed in Ref.~\cite{Sirunyan:2018koj}.
-% 
-The set of parton distribution functions used in all simulations is NNPDF3.0~\cite{Ball:2014uwa}.
-%
-The hadronic jets are clustered from the particle-flow candidates~\cite{Sirunyan:2017ulk} in the case of data and simulation, and from stable particles excluding neutrinos in the case of generated events, using the anti-$\kt$ clustering algorithm~\cite{Cacciari:2008gp} with a distance parameter of $0.4$.
-%
-The measurements are reported in terms of kinematic observables defined before the decay of the Higgs boson, i.e. at the generator level.
-
 
 % ____________________________________________________________________________
 \subsection{\texorpdfstring{$\hgg$}{H to gamma gamma}}
@@ -46,7 +25,7 @@ As discussed in Section~\ref{sec:ecal}, the CMS detector has an excellent photon
 % 
 The shape of the $\mgg$ spectrum is characterized by a peak around 125\GeV, on top of a smooth falling background consisting of an irreducible QCD contribution, and a reducible background of hadrons misidentified as photons (typically $\pi_0$s).
 % 
-The irreducible QCD background, which at leading order concerns two gluons decaying to two photons via a quark loop, is exponentially falling for higher values of $\mgg$.
+The irreducible QCD background, which at leading order concerns for example two gluons decaying to two photons via a quark loop, is exponentially falling for higher values of $\mgg$.
 % 
 As this process concerns real photons, it cannot be suppressed.
 % 
@@ -61,7 +40,7 @@ Other important variables include the degree of isolation (i.e. lack of other ca
 
 Globally, a number of loose event selections are applied in order to avoid events in poorly understood regions of the detector, and to avoid regions that are clearly of no interest for the intended signal.
 % 
-Firstly, events are selected with deposits in ECAL at $\abs{\eta}<2.5$, up to which the detector inefficiency is still negligible, and events with deposits in the region $1.4442 < \abs{\eta} < 1.566$, which is the difficult-to-model transition region from the barrel to the end cap.
+Firstly, events are selected with deposits in ECAL within $\abs{\eta}<2.5$, up to which the detector inefficiency is still negligible, and events with no deposits in the region $1.4442 < \abs{\eta} < 1.566$, which is the difficult-to-model transition region from the barrel to the end cap.
 % 
 Secondly, only events with a leading (subleading) photon candidate with $\pt > 30$ (20)\GeV are considered.
 % 
@@ -183,7 +162,7 @@ On a higher level, the leading reconstructed $\zboson$ boson candidate must have
 The event categorization follows simply the lepton configuration in the final state: 4 electrons, 4 muons, or 2 electrons and 2 muons.
 
 
-Due to its poor branching fraction, the event counts for the $\hzztofourl$ channel in the higher $\pth$ bins is very small, and the binning is chosen to be coarser than in the case of the $\hgg$ decay channel.
+Due to its poor branching fraction, the event rate for the $\hzztofourl$ channel in the higher $\pth$ bins is very small, and the binning is chosen to be coarser than in the case of the $\hgg$ decay channel.
 % 
 The differential measurements are shown in Fig.\ref{fig:hzz-results} for the $\pth$, $\njets$, and $\ptjet$ spectra.
 
@@ -227,13 +206,13 @@ Unless otherwise indicated, all information in this section originates from Ref.
 
 The final input concerns the search for a highly boosted (i.e. large transverse momentum) Higgs boson decaying to two bottom quarks.
 % 
-For a Higgs boson with a large transverse momentum, the two resulting bottom quarks become very collimated, are are reconstructed in the detector as a single `fat' jet.
+For a Higgs boson with a large transverse momentum, the two resulting bottom quarks become very collimated, and are reconstructed in the detector as a single `fat' jet.
 % 
 The challenge in this analysis is to retrieve the decay products via close inspection of the internal substructure of the fat jet.
 % 
 As the Higgs mass is close to the $\zboson$ boson mass, contamination with $\zboson\to\bbbar$ decays is unavoidable.
 % 
-The $\zboson\to\bbbar$ decays are used to validate the analysis, and its signal strength is fitted in tandem with the one for the Higgs decay channel.
+The $\zboson\to\bbbar$ decays are used to validate the analysis, and the corresponding signal strength is fitted in tandem with the one for the Higgs decay channel.
 
 
 In terms of event selection, the analysis requires, clearly, the presence of a single fat jet, defined as an anti-$\kt$ jet~\cite{Cacciari:2008gp} with a distance parameter of $0.8$, $\pt > 450$\GeV, and $\abs{\eta}<2.5$.
@@ -275,7 +254,7 @@ After a transformation to reduce the correlation of $N^1_2$ with $\rho$ and $\pt
 
 The double-$\bquark$-tagger algorithm~\cite{Sirunyan:2017ezt}, based on input variables related to substructure and observables optimized for $\bquark$ identification, is applied on the selected events.
 % 
-Tagged fat jets are tagged such that the fat jets originating from the QCD background are misidentified in $1\%$ of the cases, and with a $33\%$ efficiency for the signal fat jets.
+Fat jets are tagged such that the those originating from the QCD background are misidentified in $1\%$ of the cases, and with a $33\%$ efficiency for the signal ones.
 % 
 Events with a double-$\bquark$-tagged fat jet then constitute the so-called `passing' region, whereas those without it constitute the `failing' region.
 % 
@@ -317,13 +296,13 @@ With respect to the analyses performed in Refs.~\cite{Sirunyan:2018kta,Sirunyan:
 % 
 For $\hgg$, the signal contributions were split into contributions from only $\ggh$ and other production modes.
 % 
-Additionally, the binning of the differential variables was modified slightly: The $\pth$ spectrum contains an additional bin, $\pth>600$\GeV, and an additional bin boundary at $\absy = 1.2$ is included in the $\absy$ spectrum.
+Additionally, the binning of the differential variables is modified slightly: The $\pth$ spectrum contains an additional bin, $\pth>600$\GeV, and an additional bin boundary at $\absy = 1.2$ is included in the $\absy$ spectrum.
 % 
-For $\hzz$, the binning was adapted in order to conform with those from the $\hgg$ analysis, and the branching fractions of the two $\zboson$ bosons to the various lepton configurations are fixed to their SM values, as opposed to floating branching fractions in the individual analysis.
+For $\hzz$, the binning is adapted in order to conform with those from the $\hgg$ analysis, and the branching fractions of the two $\zboson$ bosons to the various lepton configurations are fixed to their SM values, as opposed to floating branching fractions in the individual analysis.
 
 The individual $\hbb$ analysis does not contain a differential measurement.
 % 
-It was created for the purpose of the combination, by splitting the signal into two $\pt$ bins, the first with $350\le\pt<600$\GeV and the second an overflow bin with $\pt\ge600$\GeV, which aligns with the binning of the other channels.
+It is created for the purpose of the combination, by splitting the signal into two $\pt$ bins, the first with $350\le\pt<600$\GeV and the second an overflow bin with $\pt\ge600$\GeV, which aligns with the binning of the other channels.
 % 
 The binning at the reconstructed level is set to $400\le\pt<600$ and $\pt\ge600$\GeV, and necessitates a reevaluation of the polynomial parametrization of $R_\text{p/f}$.
 
