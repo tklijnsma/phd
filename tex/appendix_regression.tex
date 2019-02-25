@@ -87,29 +87,46 @@ Subsequently, a second BDT is trained, this time including the tracker variables
 % 
 \frac{\Etrue}{E_\text{estimate}} =
 % 
-\frac{\Etrue}
-{
-    \left( \frac{\sigma^2_{\abs{p}}}{\sigma^2_{\abs{p}} + \sigma^2_{\Ecorr}} \right) \Ecorr
-    +
-    \left( \frac{\sigma^2_{\Ecorr}}{\sigma^2_{\abs{p}} + \sigma^2_{\Ecorr}} \right) \abs{p}
-}
+\frac{\Etrue}{ w_\text{ECAL} \Ecorr + w_\text{tracker} \abs{p} }
 \,,
 \end{equation}
 \end{linenomath*}
 % 
-where $\abs{p}$ is the absolute momentum determined from the tracker and $\sigma_{\abs{p}}$ its uncertainty.
+where $\abs{p}$ is the absolute momentum determined from the tracker, and the weights are defined as
+% 
+\begin{linenomath*}
+\begin{equation}
+w_\text{ECAL} = \left( \frac{\sigma^2_{\abs{p}}}{\sigma^2_{\abs{p}} + \sigma^2_{\Ecorr}} \right)
+\;,\quad
+w_\text{tracker} = \left( \frac{\sigma^2_{\Ecorr}}{\sigma^2_{\abs{p}} + \sigma^2_{\Ecorr}} \right)
+\,.
+\end{equation}
+\end{linenomath*}
 % 
 The denominator is essentially a weighted sum of the energy estimations from the tracker and from ECAL, where the weights are determined by the respective uncertainties.
 % 
 With this two-tiered approach, the regression has only to learn in the second stage to trust the tracker energy estimate more for low-energy electrons, and the ECAL estimate for high-energy electrons, greatly reducing the required training time and improving the chances for convergence.
+% 
+Histograms of the weights for increasing electron $\pt$ are shown in Fig.~\ref{fig:regressionweights}; for very low $\pt$, the tracker weight is typically larger, whereas for a larger $\pt$ the weight assigned to the corrected ECAL energy measurement is larger.
 
 
-\tk{Todo: Saturation and Results.}
+With respect to previous versions of this regression (meant for data collected by the CMS detector before 2016), the results described here include variables pertaining to \textit{crystal saturation}, the effect that occurs when the deposited energy exceeds the maximum allowed value of the analog-to-digital converter.
+% 
+This effect occurs for energy deposits greater than approximately $2000\GeV$, and severely deteriorates the energy scale and resolution.
 
 
 
-
-
-
-
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.99\linewidth]{img/regression/weightplot.pdf}
+    \caption{
+        Weights based on uncertainties in energy resolution for the tracker energy measurement (top row) and the ECAL energy measurement (bottom row), for increasing electron $\pt$.
+        %
+        For larger electron $\pt$, the weight assigned to the corrected ECAL energy measurement from the first BDT is larger, whereas for small electron $\pt$ the weight assigned to the energy estimate from the tracker is larger.
+        % 
+        For a particular subset of events, the tracker energy resolution is, by chance, very poor; this leads to a nearly full weight placed on the ECAL energy measurement in these cases, visible as a peak at 1.0 in the $w_\text{ECAL}$ histograms.
+        }
+    \label{fig:regressionweights}
+  \end{center}
+\end{figure}
 
