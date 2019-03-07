@@ -25,7 +25,9 @@
     \SetWatermarkText{DRAFT}
     \SetWatermarkScale{7}
     \SetWatermarkLightness{0.9}
-    }{}
+    }{
+    \usepackage{graphicx}
+    }
 
 % Page break at sections
 \RequirePackage{titlesec}
