@@ -23,7 +23,7 @@ The achievable center-of-mass energy for proton-proton collisions, the primary r
 % 
 The latest data from the LHC, including the data used in this thesis, was collected at $\sqrt{s}=13\TeV$.
 % 
-The LHC employs 16 radiofrequency (RF) cavities in order to create tight particle bunches and to accelerate particles from the insertion energy of about 450\GeV to 6.5\TeV.
+The LHC employs 16 radiofrequency (RF) cavities in order to create tight particle bunches and to accelerate particles from the SPS injection energy of about 450\GeV to 6.5\TeV.
 
 
 \begin{figure}[hbtp]
@@ -75,7 +75,7 @@ where $f$ is the revolution frequency and $N_b$ is the number of bunches.
 % 
 The \textit{integrated luminosity} $L$ is given by the integral of the instantaneous luminosity over time and is typically expressed in units of \fbinv.
 % 
-It is the typical quantity employed for indicating the size of a collection of data.
+$L$ is the typical quantity employed for indicating the size of a collection of data.
 
 
 At the time of writing, the LHC has just finished its second data-taking run, colloquially referred to as `Run 2'.
@@ -104,7 +104,7 @@ The evolution of the delivered luminosity and the collected luminosity by the CM
 
 As a general-purpose detector, the CMS detector was designed to be able to detect most SM particles over a large range of energy scales.
 % 
-The cylindrical shape, with the beam axis at its center, provides a nearly complete solid angle coverage, up to a pseudo-rapidity of $\eta \leq 3.0$.
+The cylindrical shape, with the beam axis at its center, provides a nearly complete solid angle coverage, up to a pseudo-rapidity of $\eta \lesssim 5.0$.
 % 
 The components of the detector are illustrated in Fig.~\ref{fig:cmsgeometry}; starting from the beam axis, the first detector is the silicon tracker, followed by the electromagnetic calorimeter (ECAL), and the hadron calorimeter (HCAL).
 % 
@@ -147,13 +147,13 @@ A full description of the CMS detector can be found in Ref.~\cite{Chatrchyan:200
 
 The inner tracking system, consisting of a pixel detector surrounded by a silicon strips detector, measures the trajectories of charged particles and reconstructs secondary vertices.
 % 
-It is designed once again designed cylindrically, with a length of 5.8\unit{m} and a diameter of 2.5\unit{m}, and is able to perform measurements up to $\abs{\eta} \leq 2.5$.
+It is designed cylindrically, with a length of 5.8\unit{m} and a diameter of 2.5\unit{m}, and is able to perform measurements up to $\abs{\eta} \leq 2.5$.
 % 
 As high radiation levels are part of the operating environment, the tracker is designed to be radiation hard.
 %
 An important design parameter of the inner tracker is the material budget, which directly affects the achievable resolution of the other subdetector systems; the complete inner tracker corresponds to 0.4 radiation lengths in the central region, and increases up to almost 2 radiation lengths in the forward regions~\cite{Chatrchyan:2008zzk}.
 % 
-The trajectory is precisely measured with 11 to 17 trajectory points, which requires 66 million pixels and 91 million strips in the pixel and strips detectors, respectively.
+The charged particle trajectory is precisely measured with 11 to 17 trajectory points, which requires 124 million pixels and 91 million strips in the pixel and strips detectors, respectively.
 % 
 The inner tracker is the most important subsystem for low-energy particles; for single muons up to 100\GeV and $\abs{\eta} \leq 1.6$, the \pt resolution is around 1-2\%.
 
@@ -161,21 +161,23 @@ The inner tracker is the most important subsystem for low-energy particles; for 
 \subsubsection{The electromagnetic calorimeter}
 \label{sec:ecal}
 
-The electromagnetic calorimeter, starting at an inner radius of 1.3\unit{m}, is responsible for the energy measurement of charged particles, and is in particular important for the high-precision measurement of the energy of photons and electrons.
+The electromagnetic calorimeter, starting at an inner radius of 1.3\unit{m}, is responsible for the energy measurement of particles subject to the electromagnetic interaction, and is in particular important for the high-precision measurement of the energy of photons and electrons.
 % 
 It consists of 61200 lead-tungstate crystals in the barrel region, which have a length of 230\unit{mm} and correspond to 25.8 radiation lengths.
 % 
-Lead-tungstate crystals have a short scintillation time, are optically clear, and relatively radiation hard.
+Lead-tungstate crystals have a short scintillation time, are optically transparent, and relatively radiation hard.
 % 
 The barrel region is organized into 36 \textit{supermodules}, each of which consists of 4 \textit{modules}.
 % 
-The modules further removed from the interaction point have their crystals tilted, so that the front face of the crystal is aimed at the interaction point.
+The modules further removed from the interaction point have their crystals tilted, so that the front face of the crystal is aimed at the \textit{nearly} interaction point---a slight additional tilt with respect to the direct line to the interaction point is kept (in both the $\eta$ and the $\phi$ directions) to avoid cracks in the detector, creating a so-called \textit{pseudo-projective geometry}.
 % 
 The barrel covers the measurements up to $\abs{\eta} \leq 1.479$.
 % 
 The forward regions are covered by two endcaps approximately 3\unit{m} from the interaction point in the longitudinal direction, which extend up to $\abs{\eta} \leq 3.0$ and consist of 7324 identical crystals each.
 % 
-Also these crystals are slanted so that the small front face of the crystal points to the interaction point.
+Also these crystals are mounted in a pseudo-projective geometry.
+% 
+% Also these crystals are slanted so that the small front face of the crystal points to the interaction point.
 % 
 The endcaps are prefaced by the 20\unit{cm} thick \textit{preshower}, whose primary purpose is the enhanced identification of neutral pions in the forward region.
 % 
@@ -196,22 +198,21 @@ Given a photon energy $E$, the relative resolution can be parametrized as~\cite{
 \end{equation}
 \end{linenomath}
 % 
-where $\sigma_\text{noise}$ is the noise contribution (including e.g. electronic noise and noise related to pileup), $\sigma_\text{stoch}$ is the (irreducible) stochastic contribution, and $c$ is a constant term.
+where $\sigma_\text{noise}$ is the noise contribution (including e.g. electronic noise and noise related to pileup), $\sigma_\text{stoch}$ is the (irreducible) stochastic contribution, and $c$ is a constant noise term originating from electronic noise.
 % 
 The direct energy measurement performed in ECAL, called the \textit{raw energy} $E_\text{raw}$, is corrected based on other measurable quantities, such as the location of the particle in the detector and the shape of the shower.
 % 
-This correction is called the \textit{energy regression}, which is recomputed for every dataset recorded by the CMS detector.
+This correction is called the \textit{energy regression}, and it is recomputed for every dataset recorded by the CMS detector.
 % 
 More details on the photon and electron energy regressions for the 2016 dataset can be found in Appendix~\ref{app:regression}.
 % 
 Under the optimized operating conditions in the CMS detector, the energy resolution for electrons and photons with $10 < E < 2000\GeV$ is about 1\%.
 % 
-At approximately $E > 2000$\GeV, the lead-tungstate crystal read-out becomes \textit{saturated}, meaning the measured raw energy is often simply the maximum allowed value of the analog-to-digital converter.
+At approximately $E > 2000$\GeV, the lead-tungstate crystal read-out becomes \textit{saturated}, meaning the recorded raw energy is often simply the maximum allowed value of the analog-to-digital converter.
 % 
 In this case the raw energy is a poor estimate of the true energy, and the shower shape becomes the leading determinant for the corrected energy.
 % 
-For the very-high-energy regime, up to about $6500$\GeV, the energy resolution is at the order of a few percent.
-
+For the very-high-energy regime, up to about $6500$\GeV, the energy resolution is at the order of a few percent in Monte Carlo simulations; there are no clear validation procedures for this energy regime, and the results obtained should be considered an extrapolation.
 
 
 \subsubsection{The hadron calorimeter}
@@ -227,11 +228,21 @@ As the combined stopping power of the ECAL and HCAL barrel regions is still insu
 HCAL is a sampling calorimeter, composed of brass absorber plates and plastic scintillators, which are optimized for longterm stability and radiation hardness.
 
 
+A somewhat detached component of the HCAL subdetector is the \textit{HCAL Forward calorimeter} (HF), whose front face is placed 11.2\unit{m} away from the interaction point.
+% 
+It extends the HCAL solid angle coverage up to $\abs{\eta} = 5.0$, allows identification of very-forward jets, and improves the measurement of the missing transverse energy.
+% 
+Due to its placement at the very forward and backward regions of the detector, HF operates under extremely harsh radiation conditions.
+% 
+Its materials, steel absorbers with inserted quartz fibers as the active material, were chosen with mostly this high radiation dose in mind.
+
+
+
 \subsubsection{The muon system}
 
 The CMS muon system is responsible for the identification and measurement of muons, and simultaneously serves as an important part of the trigger system.
 % 
-Muons can be considered stable particles in the context of particle detection at CMS, and unlike most particles they are not stopped by the ECAL and HCAL subdetector systems.
+Muons can be considered stable particles in the context of particle detection at CMS, and unlike other SM particles (except neutrinos) they are not stopped by the ECAL and HCAL subdetector systems.
 % 
 Their detection relies on measurements in the inner tracker and the muon system, which is placed outside the superconducting solenoid and interleaved with the iron flux return yoke plates.
 % 
@@ -250,7 +261,7 @@ At the peak of the LHC instantaneous luminosity, bunch crossings take place in t
 % 
 The size of the full, uncompressed data collected from a single bunch crossing, typically called an \textit{event}, is over a megabyte.
 % 
-The rate at which data is accumulated far surpasses the storage capabilities and the processing rate available to the CMS experiment; instead, only a fraction of the detected events is kept, based on signatures in the events that indicate potentially interesting physics.
+The rate at which data is accumulated far surpasses the bandwidth, storage capabilities, and the processing rate available to the CMS experiment; instead, only a fraction of the detected events is kept, based on signatures in the events that indicate potentially interesting physics.
 % 
 The very first stage of event selection at CMS is the \textit{Level-1 (L1) trigger}, whose implementation relies mostly on programmable hardware.
 % 
@@ -263,7 +274,7 @@ When an event is accepted, the full event is passed to the \textit{High Level Tr
 % 
 Its decision-making time is longer than the L1 trigger and its algorithms more involved; it can reconstruct final-state objects (at a limited precision) and accept events based on current analysis needs.
 % 
-Events are ran in parallel through several \textit{trigger paths}, each of which can accept the event (even if other paths rejected the event).
+Events are ran in parallel through several \textit{trigger paths}, each of which can accept the event (even if other paths reject the event).
 % 
 The HLT reduces the event rate to about 1\unit{kHz}, at which point the event is stored on a central storage server at CERN, and passed along to the Worldwide LHC Computing Grid for reconstruction.
 
@@ -275,7 +286,9 @@ The detection capabilities per subdetector
 % , outlined in Section~\ref{sec:cmsdetector},
 are generally combined into a single picture of a particle physics event, which is then used for further physics analysis.
 % 
-For example, while the muon system shines in terms of muon identification and momentum measurement, its performance can be increased be including measurements from the inner tracker system.
+% For example, while the muon system shines in terms of muon identification and momentum measurement, its performance can be increased be including measurements from the inner tracker system.
+% 
+For example, the energy resolution of jets is improved substantially by combining information from the tracker and the calorimeters.
 % 
 This holistic approach of including as much useful subdetector information as possible into the particle reconstruction algorithm is, within the CMS detector, called \textit{particle-flow (PF) reconstruction}~\cite{Sirunyan:2017ulk}.
 % 
@@ -311,7 +324,13 @@ The grid is organized into four \textit{tiers} with varying responsibilities, he
 % 
 The partially-reconstructed data is then sent to the Tier-1 sites for further processing.
 % 
-The Tier-0 resources are also used for the reprocessing of data when no new data is taken by the detectors (i.e. during downtimes of the LHC).
+The Tier-0 resources are also used for the reprocessing%
+% 
+\footnote{%
+\textit{Reprocessing} of data is necessary whenever the conditions of the detector are updated, or when the reconstruction algorithms have been improved since the last reconstruction.
+}
+% 
+of data when no new data is taken by the detectors (i.e. during downtimes of the LHC).
 % 
 There are two Tier-0 sites; the first, primary site is located at CERN, and the second is located at the Wigner Research Centre for Physics in Budapest, Hungary.
 % 
