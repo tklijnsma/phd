@@ -53,7 +53,17 @@ Additional theoretical uncertainties due to the PDF and $\as$ are estimated to b
 
 The magnitude of the scale uncertainties provides only part of the full picture; typically, scale uncertainties are subject to pronounced bin-to-bin correlations, although the correlation structure is difficult to assess a priori.
 % 
-The size of the bin-to-bin correlations are theoretically as ill-known as the missing higher order contributions; as was the case for the size of the uncertainties, we can only define an estimation method that makes sense from first principles.
+The size of the bin-to-bin correlations are theoretically as ill-known as the missing higher order contributions%
+% 
+\footnote{%
+One of the few approaches studied in literature to calculate bin-to-bin correlations for the scale uncertainties is the Stewart-Tackmann procedure~\cite{Stewart:2011cf}.
+% 
+The procedure was designed for correlations in the $\njets$ spectrum, and relies on the presence of clearly defined regions in the spectrum in which the theoretical calculations (i.e. the terms in the perturbative expansion) differ significantly.
+% 
+While for the $\njets$ spectrum such regions exist (i.e. the zero-jet and the one-or-more-jets regions), the $\pth$ spectrum has no such clearly defined regions, rendering the Stewart-Tackmann procedure inappropriate.
+}
+% 
+; as was the case for the size of the uncertainties, we can only define an estimation method that makes sense from first principles.
 % 
 To this extent, a procedure is adopted that produces a correlation coefficient $\rho_{ab}$ directly from the individual scale variations:
 % 
@@ -74,11 +84,25 @@ To this extent, a procedure is adopted that produces a correlation coefficient $
 % 
 where $\sigma_{a (b), i}$ is the cross section in bin $a$ ($b$) of the $i^\text{th}$ scale variation, $\overline{\sigma}_{a (b)}$ is the mean cross section in bin $a$ ($b$), and $\rho_{ab}$ is the resulting correlation coefficient between bin $a$ and $b$.
 % 
+An example of the bin-to-bin correlation between two $\pth$ bins is illustrated in Fig.~\ref{fig:corrplot}.
+% 
 The resulting correlation matrices for the experimental binning are shown in Fig.~\ref{fig:scalecorrelationmatrices} for the variations of $\kappab$ and $\kappac$ (left) and the variations of $\kappat$, $\cg$, and $\kappab$ (right).
 % 
 In the moderate $\pth$ region, $15 \leq \pth \leq 600\GeV$, the correlation structure is characterized by strong positive correlations.
 % 
 The outer bins on either side of the spectrum, $\pth<15$ and $\pth>600$\GeV, are anti-correlated with the bins in the moderate $\pth$ region.
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\halflinewidth]{img/interpretation/other/corrplot.pdf}
+    \caption{
+        Scale uncertainty correlation between the bins $15 < \pth < 30\GeV$ and $85 < \pth < 125\GeV$ for the $(\kappat=1, \cg=0, \kappab=1)$ variation of the model from Ref.~\cite{Grazzini:2017szg,Grazzini:2016paz}.
+        % 
+        The black lines show the mean per bin, and the red line shows the correlation.
+        }
+    \label{fig:corrplot}
+  \end{center}
+\end{figure}
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -117,7 +141,7 @@ For the variations of $\kappat$, $\cg$, and $\kappab$, it now becomes apparent t
 \end{figure}
 
 
-The effect of the adopted procedure on the results of the interpretation is assessed by performing the same interpretation under three scenarios: The bin-to-bin correlations as described above, no bin-to-bin correlations (i.e. no off-diagonal components in the correlation matrix), and no theoretical uncertainties whatsoever.
+The effect of the adopted procedure on the results of the interpretation is assessed by performing the same interpretation under three scenarios: the bin-to-bin correlations as described above, no bin-to-bin correlations (i.e. no off-diagonal components in the correlation matrix), and no theoretical uncertainties whatsoever.
 % 
 With respect to the uncorrelated scale uncertainties (no theoretical uncertainties whatsoever), the adopted procedure increases the overall uncertainty of the interpretation by about $1\%$ ($5\%$).
 % 
@@ -165,29 +189,28 @@ Some of the interpretations in Sections~\ref{sec:interpretation-results-ktcgkb} 
 These fits are in principle subject to theoretical uncertainties in the branching fractions, stemming from input parameters of the branching fraction calculation ($\as$, $\mb$, $\mc$ and $\mt$) and missing higher order contributions in the calculations of the partial decay widths.
 % 
 The impact of these theoretical uncertainties on the interpretation results are assessed.
-
-
+% 
 The uncertainties from missing higher order contributions are assumed to be uncorrelated, whereas the parametric uncertainties are assumed to be fully correlated.
 % 
 Uncertainties on the partial widths are taken from Ref.~\cite{deFlorian:2016spz}.
 % 
-Figure~\ref{fig:kbkc-brcomparison} shows the expected simultaneous fit result of $\kappab$ and $\kappac$ with branching fractions fixed to their SM expectation, with and without the uncertainties on the branching fractions.
+% Figure~\ref{fig:kbkc-brcomparison} shows the expected simultaneous fit result of $\kappab$ and $\kappac$ with branching fractions fixed to their SM expectation, with and without the uncertainties on the branching fractions.
 % 
-The theoretical uncertainties on the branching fractions have a clearly negligible impact on the overall interpretation uncertainty, and are thus not further taken into account.
+The theoretical uncertainties on the branching fractions turn out to have a negligible impact on the overall interpretation uncertainty, very well ${<}1\%$, and are thus not further taken into account.
 
 
-\begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\halflinewidth]{img/interpretation/other/multicont_Yukawa_compareBRuncertainties_asimov.pdf}
-    % 
-    \caption{
-        Expected simultaneous fits of $\kappab$ and $\kappac$ to the differential $\pth$ spectrum using only the $\hzz$ channel, with (red) and without (blue) the branching fraction uncertainties.
-        % 
-        The branching fractions were fixed to their SM expected value.
-        % 
-        While the contours are numerically confirmed to be slightly larger when branching fraction uncertainties are taken into account, the overall impact is very small.
-        }
-    \label{fig:kbkc-brcomparison}
-  \end{center}
-\end{figure}
+% \begin{figure}[hbtp]
+%   \begin{center}
+%     \includegraphics[width=\halflinewidth]{img/interpretation/other/multicont_Yukawa_compareBRuncertainties_asimov.pdf}
+%     % 
+%     \caption{
+%         Expected simultaneous fits of $\kappab$ and $\kappac$ to the differential $\pth$ spectrum using only the $\hzz$ channel, with (red) and without (blue) the branching fraction uncertainties.
+%         % 
+%         The branching fractions were fixed to their SM expected value.
+%         % 
+%         While the contours are numerically confirmed to be slightly larger when branching fraction uncertainties are taken into account, the overall impact is very small.
+%         }
+%     \label{fig:kbkc-brcomparison}
+%   \end{center}
+% \end{figure}
 
