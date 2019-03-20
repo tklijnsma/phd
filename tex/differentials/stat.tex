@@ -54,10 +54,10 @@ The unfolding of bin-to-bin migrations is mathematically an ill-defined problem,
 % 
 A study of the need for regularization of detector unfolding is performed in Appendix~\ref{sec:regularization}.
 % 
-Following the prescription in Ref.~\cite{Hansen:LShape}, it is found that no regularization term for the unfolding procedure was needed.
+Following the prescription in Ref.~\cite{Hansen:LShape}, it is found that no regularization term for the unfolding procedure is needed.
 
 
-The input analyses considered all perform a cross section measurement based on a fit to a kinematic observable, commonly the invariant mass of the reconstructed decay products.
+All the input analyses considered perform a cross section measurement based on a fit to a kinematic observable, commonly the invariant mass of the reconstructed decay products.
 % 
 The kinematic observable, denoted by $\mathcal{O}$, is the diphoton invariant mass, the four-lepton invariant mass, and $\msd$ for the $\hgg$, $\hzz$, and $\hbb$ channels, respectively.
 % 
@@ -89,7 +89,7 @@ where
 % 
 \item $f_{j}^{\text{sig},\,km}(\mathcal{O},\vec{\theta})$ is the probability distribution function of signal events in observable $\mathcal{O}$; and
 % 
-\item $n^{\text{OOA},\,km}_i$ is the number of events reconstructed in bin $i$ originating from outside the fiducial phase space, and $f^{\text{OOA},\,km}( \mathcal{O} | \vec{\theta} )$ is the distribution thereof.
+\item $n^{\text{OOA},\,km}_i$ is the number of events reconstructed in bin $i$ originating from outside the fiducial phase space (see Section~\ref{sec:inputs}), and $f^{\text{OOA},\,km}( \mathcal{O} | \vec{\theta} )$ is the distribution thereof.
 % 
 \end{itemize}
 % 
@@ -143,7 +143,7 @@ Note $\text{pdf}(\mathcal{O})$ has, by construction, a normalization of $1$.
 
 Up to now, $\mathcal{O}$ was considered a continuous variable.
 % 
-However, due to constraints on available computing time, it is necessary to perform a binned fit of the distribution of $\mathcal{O}$ rather than an unbinned fit.
+However, due to constraints on available computing time, it is necessary to perform a binned fit of the distribution of $\mathcal{O}$ rather than an unbinned one.
 % , which would require substantially more computing resources.
 % 
 The index $l$ will refer to the $l^\text{th}$ bin of the binning of $\mathcal{O}$.
@@ -205,7 +205,7 @@ where $n_c$ is the number of decay channels included in the combination
 % , $\mathcal{L}_m$ is the likelihood formula from Eq.~(\ref{eq:L_per_decaychannel}) specific to the decay channel $m$,
 and $\text{pdf}(\vec{\theta})$ is the probability distribution function of the nuisance parameters.
 % 
-For the individual analyses, the number of categories, invariant mass bins, and even the number of reconstructed bins may differ, although the number of bins at the generator level and their binning need to be aligned between decay channels.
+For the individual analyses, the number of categories, invariant mass bins, and even the number of reconstructed bins may differ, although the binning at the generator level needs to be aligned between decay channels.
 % 
 Note that a single common set of differential cross sections and nuisance parameters is fitted to data in all decay channels simultaneously.
 
