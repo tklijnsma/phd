@@ -17,16 +17,22 @@ Typically the coefficients are only non-negligible for a limited number of parti
 % 
 The variations of $\Delta\sigma^{\ggh}_i$ are precomputed by the theorists for given values of the couplings; what remains is to find the coefficients $A_{ab,\,i}$.
 % 
-Assuming there are no statistical fluctuations in the input spectra, finding the coefficients can be done by simple matrix inversion.
+Assuming there are no statistical fluctuations%
+%
+\footnote{%
+The statistical fluctuations discussed in this section originate from a lack of simulated statistics, and do not concern statistical fluctuations in data.
+}
+%
+in the input spectra, finding the coefficients can be done by simple matrix inversion.
 % 
 Taking for example three simultaneous variations of $\kappat$ and $\cg$, $(\kappa_{\tquark,\,1}, c_{\gluon,\,1})$, $(\kappa_{\tquark,\,2}, c_{\gluon,\,2})$, and $(\kappa_{\tquark,\,3}, c_{\gluon,\,3})$, one can write for a single bin in the $\pth$ spectrum:
 % 
 \begin{linenomath*}
 \begin{equation}
 \left[\begin{array}{c}
-\Delta\sigma_1 \\
-\Delta\sigma_2 \\
-\Delta\sigma_3
+\Delta\sigma_1^{\ggh} \\
+\Delta\sigma_2^{\ggh} \\
+\Delta\sigma_3^{\ggh}
 \end{array}\right]
     =
     \left[\begin{array}{ccc}
@@ -63,15 +69,19 @@ C
         \end{array}\right]^{-1}
     %
     \left[\begin{array}{c}
-        \Delta\sigma_1 \\
-        \Delta\sigma_2 \\
-        \Delta\sigma_3
+        \Delta\sigma_1^{\ggh} \\
+        \Delta\sigma_2^{\ggh} \\
+        \Delta\sigma_3^{\ggh}
         \end{array}\right]
     \,.
 \end{equation}
 \end{linenomath*}
 % 
 As the statistical fluctuations are negligible for the precomputed spectra from Refs.~\cite{Grazzini:2017szg,Grazzini:2016paz}, this methods works well; the precomputed spectra and the parametrization at the same values of the couplings are plotted in Fig.~\ref{fig:theories_ktcgkb}, for simultaneous variations of $\kappat$ and $\cg$ (left) and for $\kappat$ and $\kappab$ (right).
+% 
+Note that the other production modes, while a relatively small contribution, are included in the fit as well.
+% 
+For these modes, the scaling behavior in terms of the Higgs boson couplings is simpler: the $\tth$ and $\bbh$ production modes scale with $\kappat^2$ and $\kappab^2$, respectively, and the $\vbf$ and $\vh$ production modes are independent of $\kappat$, $\cg$, and $\kappab$.
 
 
 \begin{figure}[hbtp]
@@ -102,7 +112,7 @@ The coefficients of the interference terms with the top quark are non-negligible
 \begin{linenomath*}
 \begin{equation}
 \begin{split}
-\Delta\sigma
+\Delta\sigma^{\ggh}
   & = A \kappab^2 + B \kappac^2 + C \kappab \kappac
     + D \kappat \kappab + E \kappat \kappac + F \kappat^2
   \\
@@ -189,6 +199,10 @@ In other words, the shape of the $\pth$ spectrum via $\ggh$ is only a function o
 where $c$ is a real-valued constant.
 % 
 The argument follows analogously for variations of $\kappat$ and $\kappab$.
+% 
+Note that the shapes of other production modes are, unlike $\ggh$, constant under variations of the couplings.
+% 
+As the measured Higgs boson production cross section contains contributions from all production modes, these other production modes are taken into account, assuring that the parametrization in Equation~(\ref{eq:kappa-parametrization}), which is valid only for $\ggh$, is not fitted on observed data from all production modes by itself.
 
 
 For the variations of $\kappab$ and $\kappac$, the interference terms due to the top quark break the ratio-dependence observed in Equation~(\ref{eq:interpretation-shape-ktcg}).
@@ -238,7 +252,6 @@ Only in the limit of large couplings these interference terms are negligible, an
 \end{linenomath*}
 % 
 For the fits in this thesis however, the couplings never become large enough for the linear terms to be negligible.
-
 
 
 
