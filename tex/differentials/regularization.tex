@@ -22,12 +22,12 @@ In matrix form, detector folding can be written as
 % 
 \begin{linenomath*}
 \begin{equation}
-K \vec{\mu}_{\text{gen}} = \vec{\mu}_{\text{reco}}
+K \vec{\mu}_{\text{gen}} + \vec{b} = \vec{\mu}_{\text{reco}}
 \,,
 \end{equation}
 \end{linenomath*}
 %
-where $K$ is the response matrix, $\vec{\mu}_{\text{gen}}$ is a vector of the fiducial cross sections at the generator level and $\vec{\mu}_{\text{reco}}$ the observed spectrum.
+where $K$ is the response matrix, $\vec{b}$ is the bias vector (which for the rest of this section is assumed to be $\vec{0}$), $\vec{\mu}_{\text{gen}}$ is a vector of the fiducial cross sections at the generator level (the `truth' in the case at hand), and $\vec{\mu}_{\text{reco}}$ the observed spectrum.
 % 
 Naively one could estimate $K$ using Monte Carlo simulations and find $\vec{\mu}_{\text{gen}}$ by simply inverting:
 % 
@@ -38,7 +38,13 @@ Naively one could estimate $K$ using Monte Carlo simulations and find $\vec{\mu}
 \end{equation}
 \end{linenomath*}
 %
-In practice, simple inversion of $K$ often leads to strongly oscillating components in $\vec{\mu}_{\text{gen}}$ due to unreasonably large weights on bins with few events. In the unfolding problem one is not interested in the exact solution, but in the most likely physical solution. Finding this solution is done by adding a regularization term to the overall likelihood scan:
+In practice, simple inversion of $K$ often leads to strongly oscillating components in $\vec{\mu}_{\text{gen}}$ due to unreasonably large weights on bins with few events.
+% 
+% In the unfolding problem one is not interested in the exact solution, but in the most likely physical solution. 
+% 
+In the unfolding problem, the goal is to retrieve the truth distribution as accurately as possible, while reducing the effect of statistical noise.
+% 
+This can be done by adding a regularization term to the overall likelihood scan, a method usually called \textit{Tikhonov regularization}~\cite{Phillips:1962ofa,Tikhonov}:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -83,7 +89,7 @@ An example of such a shape is given in Fig.~\ref{fig:expectedlshape}.
 
 \begin{figure}[ht]
  \begin{center}
-   \includegraphics[width=\halflinewidth]{img/differentials/regularization/Lshape2.pdf}
+   \includegraphics[width=\halflinewidth]{img/differentials/regularization/lshapetheory.pdf}
    \caption{ Expected shape of the regularization contribution vs. the residual term. Taken from Ref.~\cite{Hansen:LShape} (adapted). }
    \label{fig:expectedlshape}
  \end{center}
