@@ -69,6 +69,7 @@
 \RequirePackage{multirow}
 \RequirePackage{bm}
 \RequirePackage{doi}
+\RequirePackage[bottom]{footmisc} % Getting footnotes always at the bottom of the page
 
 \RequirePackage[numbers,sort&compress,merge]{natbib} % Makes sure citations get a dash
 
