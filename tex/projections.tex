@@ -11,19 +11,19 @@ Section~\ref{sec:projection-results}, treating the projection results, closely f
 
 \subsection{The High-Luminosity LHC}
 
-The LHC and its detectors operate under a harsh radiation environment, and as such its equipment has a limited lifetime.
+The LHC and its detectors operate in a harsh radiation environment, and as such its equipment has a limited lifetime.
 % 
 In preparation for the upcoming data-taking period, which starts in 2021 and is known in the community as `Run 3', already significant upgrades to the ATLAS and CMS detectors have taken place.
 % 
-However, a number of key components of the LHC and its detectors will reach the end of their lifetime in the 2020s~\cite{Apollinari:2017cqg}.
+However, a number of key components of the LHC and its detectors will reach the end of their lifetime in the 2020s~\cite{hllhc}.
 % 
-Moreover, after Run 3 it is of limited use to run at the current values of instantaneous luminosity: Without any hardware upgrade, it would take over 10 years to halve the statistical component of the uncertainty of a given measurement~\cite{Apollinari:2017cqg} at the end of Run 3.
+Moreover, after Run 3 it is of limited use to run at the current values of instantaneous luminosity: Without any hardware upgrade, it would take over 10 years to halve the statistical component of the uncertainty of a given measurement~\cite{hllhc} at the end of Run 3.
 % 
 In preparation for the needed hardware replacement, already in 2011 the High-Luminosity Large Hadron Collider project (HL-LHC) was initiated, aiming to exploit the LHC to its fullest extent.
 % 
 The project comprises hardware upgrades, many of which require innovations to overcome serious technical challenges, and projected physics results for the LHC and all of its detectors.
 % 
-Among the most difficult technical challenges are innovative $11$-$12\,$T superconducting magnets, highly compact superconducting cavities for beam rotation with ultra-precise phase control, new technology for beam collimation, and high-power superconducting links with almost zero energy dissipation~\cite{Apollinari:2017cqg}.
+Among the most difficult technical challenges are innovative $11$-$12\,$T superconducting magnets, highly compact superconducting cavities for beam rotation with ultra-precise phase control, new technology for beam collimation, and high-power superconducting links with almost zero energy dissipation~\cite{hllhc}.
 % 
 The project was formally approved in 2015, and the required research, development, and implementation is expected to take at least 10 years.
 % 
@@ -32,7 +32,7 @@ Overall, the HL-LHC is expected to take about $3000\fbinv$ of data over about 12
 
 \subsection{Scenarios for the systematic uncertainties at \texorpdfstring{$3000\fbinv$}{3000 fb-1}}
 
-By construction, given $N$ times the current amount of data, the statistical component of the uncertainty of any given measurement is expected to improve by a factor of $1/\sqrt{N}$.
+Barring analysis improvements, given $N$ times the current amount of data, the statistical component of the uncertainty of any given measurement is expected to improve by a factor of $1/\sqrt{N}$.
 % 
 The systematic component is less obvious: some are estimated using data, and it can be reasonably assumed that they will improve for HL-LHC; for others, the magnitude will depend greatly on the implementation of the hardware upgrades.
 % 
@@ -43,7 +43,15 @@ In the context of Higgs boson physics, CMS and ATLAS have jointly defined \texti
 \begin{itemize}
 \item \textbf{Scenario 1 (S1):} Systematic uncertainties are kept constant. Essentially the performance of the detector is in this case assumed to be unchanged;
 % 
-\item \textbf{Scenario 2 (S2):} Per systematic uncertainty, a decision is made on its scaling behavior given more luminosity. The recommendations for systematic uncertainties can be found in more detail in Ref.~\cite{CMS:2018qgz}.
+\item \textbf{Scenario 2 (S2):} Per systematic uncertainty, a decision is made on its scaling behavior given more luminosity.
+% 
+For most systematic uncertainties, it is chosen to scale the uncertainty down as if it were a statistical uncertainty, until some floor value is reached.
+% 
+Table~\ref{tab:s2unc} lists some typical systematic uncertainties in analyses concerning the Higgs boson and their corresponding floor value.
+% 
+Theoretical uncertainties are halved with respect to their Run 2 value.
+% 
+The recommendations for systematic uncertainties can be found in more detail in Ref.~\cite{CMS:2018qgz}.
 % 
 \item \textbf{Statistical uncertainty only:} It is assumed that the systematic uncertainties vanish entirely.
 \end{itemize}
@@ -53,6 +61,18 @@ Scenario 1 can be considered a pessimistic scenario, as it assumes no improvemen
 The scenario considering only statistical uncertainties is the most optimistic scenario; and scenario 2, the most `realistic' one, lies somewhere in between S1 and the scenario considering only statistical uncertainties.
 % 
 For the projections of the interpretations of differential cross sections only S1 and S2 will be considered.
+
+
+\begin{table}[hbtp]
+\centering
+\topcaption{
+    Systematic uncertainties and their floor values in S2.
+    % 
+    Taken from Ref.~\cite{CMS:2018qgz}.
+    }
+\label{tab:s2unc}
+\includegraphics[width=0.99\linewidth]{img/projections/hllhc-unc-s2.pdf}
+\end{table}
 
 
 
@@ -83,11 +103,16 @@ With respect to the uncertainties at the current integrated luminosity of 35.9\f
 The uncertainties in the lower $\pth$ region are no longer statistically dominated however, as can been seen by comparing Table~\ref{tab:proj_pth_unc_scen1} with Table~\ref{tab:proj_pth_unc_scen2}, where the reduced systematic uncertainties in S2 yield a reduction in the total uncertainty of up to 25\% compared to S1.
 % 
 As expected, the systematic uncertainties in S2 lie in between those of S1 and the statistical-uncertainty-only scenario.
+% 
+The uncertainties in percentages are shown in Fig.~\ref{fig:hllhc-pth-unc-scenarios}, for each scenario and for the observed uncertainties at the current luminosity (see Section~\ref{sec:diffxs-results}).
 
 
 \begin{table}[htb]
-\footnotesize
-\begin{center}
+\centering
+\topcaption{
+    Relative uncertainties on the projected $\pth$ spectrum under S1 at $3000\fbinv$.
+    }
+\label{tab:proj_pth_unc_scen1}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
 \hline
 $\pth$       & 0-15    &  15-30   &  30-45    &  45-80   &  80-120  &  120-200  &  200-350  &  350-600  &  600-$\infty$  \\
@@ -101,16 +126,14 @@ $\hbb$       & \multicolumn{7}{c|}{\textit{None}}                               
 Combination  & 4.70\%  &  4.36\%  &  5.04\%   &  4.66\%  &  4.84\%  &  4.73\%   &  5.23\%   &  8.53\%   &  25.45\%  \\
 \hline
 \end{tabular}
-\end{center}
-\caption{
-    Relative uncertainties on the projected $\pth$ spectrum under S1 at $3000\fbinv$.
-    }
-\label{tab:proj_pth_unc_scen1}
 \end{table}
 
 \begin{table}[htb]
-\footnotesize
-\begin{center}
+\centering
+\topcaption{
+    Relative uncertainties on the projected $\pth$ spectrum under S2 (with YR18 systematic uncertainties) at $3000\fbinv$.
+    }
+\label{tab:proj_pth_unc_scen2}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
 \hline
 $\pth$       & 0-15    &  15-30   &  30-45    &  45-80   &  80-120  &  120-200  &  200-350  &  350-600  &  600-$\infty$  \\
@@ -124,17 +147,15 @@ $\hbb$       &  \multicolumn{7}{c|}{\textit{None}}                              
 Combination  &  3.72\%  &   3.26\%  &  4.22\%   &   3.75\%   &   3.97\%   &   3.83\%   &  4.37\%   &  8.04\%   &   24.54\%    \\
 \hline
 \end{tabular}
-\end{center}
-\caption{
-    Relative uncertainties on the projected $\pth$ spectrum under S2 (with YR18 systematic uncertainties) at $3000\fbinv$.
-    }
-\label{tab:proj_pth_unc_scen2}
 \end{table}
 
 
 \begin{table}[ht]
-\footnotesize
-\begin{center}
+\centering
+\topcaption{
+    Relative uncertainties on the projected $\pth$ spectrum  at $3000\fbinv$ assuming vanishing systematic uncertainties.
+    }
+\label{tab:proj_pth_unc_statonly}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
 \hline
 $\pth$       & 0-15    &  15-30   &  30-45    &  45-80   &  80-120  &  120-200  &  200-350  &  350-600  &  600-$\infty$  \\
@@ -148,11 +169,6 @@ $\hbb$       &  \multicolumn{7}{c|}{\textit{None}}                              
 Combination  &  2.92\%  &  2.50\%  &  3.67\%  &  3.11\%  &  3.36\%  &  3.20\%   &  3.79\%  &  7.61\%   &  22.25\%    \\
 \hline
 \end{tabular}
-\end{center}
-\caption{
-    Relative uncertainties on the projected $\pth$ spectrum  at $3000\fbinv$ assuming vanishing systematic uncertainties.
-    }
-\label{tab:proj_pth_unc_statonly}
 \end{table}
 
 
@@ -165,6 +181,19 @@ Combination  &  2.92\%  &  2.50\%  &  3.67\%  &  3.11\%  &  3.36\%  &  3.20\%   
         Projected differential cross section for the $\pth$ spectrum at an integrated luminosity of 3000\fbinv, under S1 (left) and S2 (right).
         }
     \label{fig:proj_pth}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.49\linewidth]{img/projections/hllhc-pth-unc-scenarios.pdf}
+    \caption{
+        Projected uncertainties (\%) on the differential cross section for the $\pth$ spectrum at an integrated luminosity of 3000\fbinv, under S1 (red), S2 (blue), and assuming no systematic uncertainties (green).
+        % 
+        The current observed uncertainties (at $35.9\fbinv$) are shown in black, and are halved in order to prevent stretching the plot.
+        }
+    \label{fig:hllhc-pth-unc-scenarios}
   \end{center}
 \end{figure}
 
