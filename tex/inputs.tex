@@ -56,7 +56,7 @@ These criteria make sure the photon candidates are contained in a sufficiently s
 
 In order to reduce the model dependence of the measurement, the $\hgg$ analysis is performed in a \textit{fiducial phase space}.
 % 
-The fiducial phase space is typically a part of the full phase space in which, from the experimental side, the detector is well understood, and, from a theoretical side, the theoretical uncertainties are small.
+The fiducial phase space is typically a part of the full phase space in which from the experimental side the detector is well understood, and from the theoretical side the theoretical uncertainties are small.
 % 
 As it is unlikely that our understanding of the detector or the theoretical calculations in this phase space will change radically, these requirements ensure the validity of the final results on the long term.
 % 
@@ -72,7 +72,7 @@ A similar effect occurs among bins of the differential variable; events originat
 % 
 This effect is referred to as \textit{bin-to-bin migrations}.
 % 
-Both effects are modeled and included the differential measurement.
+Both effects are modeled and included the differential measurement (see Section~\ref{sec:stat}).
 
 
 Rather than a single $\mgg$ spectrum for all selected events, the events are divided into mutually exclusive \textit{categories} with varying signal-to-background ratios, in order to enhance the sensitivity of the analysis.
@@ -146,7 +146,7 @@ The analysis strategy concerns a fit to the four-lepton mass $\mfourl$ spectrum,
 % 
 The background contains an irreducible contribution originating from direct $\zboson\zboson$ production, and a reducible contribution with misidentified leptons.
 % 
-The main reducible backgrounds concerns $\zboson + \bbbar$ and $\ttbar$, where the quarks decay (semi)leptonically, and $\zboson + \text{jets}$ events where the jets are misidentified as leptons.
+The main reducible backgrounds concern $\zboson + \bbbar$ and $\ttbar$, where the quarks decay (semi)leptonically, and $\zboson + \text{jets}$ events where the jets are misidentified as leptons.
 % 
 The $\mfourl$ spectrum, including the obtained event counts, is shown in Fig.~\ref{fig:example_mfourl}.
 
@@ -181,7 +181,7 @@ The differential measurements are shown in Fig.\ref{fig:hzz-results} for the $\p
     \caption{
         Example of the $\mfourl$ spectrum.
         % 
-        The color-shaded area indicate the expected event counts according to the SM and the black dots indicate the actual event counts in the 2016 dataset.
+        The color-shaded areas indicate the expected event counts according to the SM and the black dots indicate the actual event counts in the 2016 dataset.
         }
     \label{fig:example_mfourl}
   \end{center}
@@ -297,7 +297,7 @@ Figure~\ref{fig:hbbresults} (right) shows the fit of the $\zboson\to\bbbar$ and 
 
 
 % ____________________________________________________________________________
-\subsection{Modifications to the inputs for the combination}
+\subsection{Modifications to the inputs of the combination}
 
 With respect to the analyses performed in Refs.~\cite{Sirunyan:2018kta,Sirunyan:2017exp,Sirunyan:2017dgc}, a few adaptations were made in order to facilitate the combination of differential cross sections performed in Section~\ref{sec:diffxs}.
 % 
@@ -313,7 +313,7 @@ The individual $\hbb$ analysis does not contain a differential measurement.
 % 
 It is created for the purpose of the combination, by splitting the signal into two $\pt$ bins, the first with $350\le\pt<600$\GeV and the second an overflow bin with $\pt\ge600$\GeV, which aligns with the binning of the other channels.
 % 
-The binning at the reconstructed level is set to $400\le\pt<600$ and $\pt\ge600$\GeV, and necessitates a reevaluation of the polynomial parametrization of $R_\text{p/f}$.
+The binning at the reconstructed level is set to $450\le\pt<600$ and $\pt\ge600$\GeV, and necessitates a reevaluation of the polynomial parametrization of $R_\text{p/f}$.
 
 
 In order to combine differential measurements, all inputs must apply a common generator-level binning, which corresponds to the finest generator-level binning of the $\hgg$ channel.
@@ -357,10 +357,7 @@ The reconstruction-level binning for each of the four differential variables is 
 
 \begin{table}[htb]
     \centering
-    \topcaption{
-        The binning for $\njets$ for the $\hgg$ and the $\hzz$ channels.
-        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
-        }
+    \topcaption{As Table~\ref{tab:binningpth}, but now concerning the $\njets$ binning.}
     \label{tab:binningnjets}
     \begin{tabular}{lccccc}
     Channel & \multicolumn{5}{l}{$\njets$ binning} \\[\tablelineskip]
@@ -372,10 +369,7 @@ The reconstruction-level binning for each of the four differential variables is 
 
 \begin{table*}[htb]
     \centering
-    \topcaption{
-        The binning for $\absy$ for the $\hgg$ and the $\hzz$ channels.
-        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
-        }
+    \topcaption{As Table~\ref{tab:binningpth}, but now concerning the $\absy$ binning.}
     \label{tab:binningabsy}
     \begin{tabular}{lcccccc}
     Channel & \multicolumn{6}{l}{$\absy$ binning} \\[\tablelineskip]
@@ -387,10 +381,7 @@ The reconstruction-level binning for each of the four differential variables is 
 
 \begin{table*}[h!]
     \centering
-    \topcaption{
-        The binning for $\ptjet$ for the $\hgg$ and the $\hzz$ channels.
-        This binning coincides with the binning of the unfolded cross sections in which the individual results are reported.
-        }
+    \topcaption{As Table~\ref{tab:binningpth}, but now concerning the $\ptjet$ binning.}
     \label{tab:binningptjet}
     \begin{tabular}{lcccccc}
     Channel & \multicolumn{6}{l}{$\ptjet$ binning (GeV)} \\[\tablelineskip]

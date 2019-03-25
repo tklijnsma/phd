@@ -19,7 +19,7 @@ For a more comprehensive, accessible overview of particle physics, the reader is
 
 The standard model (SM), widely recognized as one of the greatest successes of particle physics, is the physics model that summarizes, to the best of our knowledge, the particles that exist in nature, and how they interact with one another.
 % 
-Its predictions are confirmed by many experiments performed in the second half of the 20${}^\text{th}$ century at scales extending over several orders of magnitude.
+Its predictions are confirmed by many experiments performed since the second half of the 20${}^\text{th}$ century at scales extending over several orders of magnitude.
 % 
 The discovery~\cite{Aad:2012tfa,Chatrchyan:2012xdj,Chatrchyan:2013lba} of a particle compatible with the SM Higgs boson at the CERN LHC completed an important part of the puzzle of the SM, the mechanism behind the generation of the mass of the intermediate vector bosons.
 % 
@@ -71,7 +71,7 @@ Although undeniably a great success, the SM comes with a number of important `ga
 % 
 For example, it lacks a description of gravity, highlighting the largest incompatibility of the SM with the theory of general relativity.
 % 
-Furthermore, a description of dark matter and energy is lacking, the SM fails to explain the nautrinos have mass, and the observed matter-antimatter imbalance in the universe is also unexplained.
+Furthermore, a description of dark matter and energy is lacking, and the SM fails to explain why neutrinos have mass, the extraordinary lightness of the Higgs, and the observed matter-antimatter imbalance in the universe.
 % 
 These problems highlight some gaps in our description of naturally observed phenomena, but also on a more theoretical level there are aspects of the SM that are, for lack of a better word, uncomfortable.
 % 
@@ -79,7 +79,7 @@ Overlooking for the moment the problem of massive neutrinos, the SM Lagrangian h
 % 
 Although their experimentally determined values are used in the SM predictions, there is no satisfying underlying theory explaining these parameters, which include for example the quark and lepton masses and the coupling constants of the electromagnetic, strong, and weak interactions.
 % 
-Given that the universe would look profoundly different under reasonably small variations of the values of these parameters~\cite{Cahn:1996ag}, it is a big open question how the parameters ended up having the values they have.
+Given that the universe would look profoundly different under reasonably small variations of the values of these parameters~\cite{Cahn:1996ag}, it is an intriguing open question how the parameters ended up having the values they have.
 % 
 % In fact, it is not even understood why there are 3 generations of leptons and quarks, rather than just 1, or any other number.
 
@@ -260,7 +260,7 @@ Rather than looking at the SM directly, consider a Lagrangian with a complex sca
 % 
 where $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ and $V(\phi)$ is a potential that yields a self-interaction for $\phi$.
 % 
-It can be easily verified that this Lagrangian is invariant under the transformations
+It can be easily verified that this Lagrangian is invariant under the transformation
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -362,7 +362,7 @@ Although the Higgs mechanism incorporates masses into the SM Lagrangian beautifu
   \begin{center}
     \includegraphics[width=\halflinewidth]{img/theory/grandcomb/massproportion.pdf}
     \caption{
-        Observed Higgs boson couplings as a function of the corresponding particle masses, with the SM shown as a black dotted line.
+        Observed Higgs boson couplings at the CMS detector as a function of the corresponding particle masses, with the SM shown as a black dotted line.
         % 
         Taken from Ref.~\cite{Sirunyan:2018koj}.
         }
@@ -396,7 +396,7 @@ The coupling modifiers naturally affect the production as well as the decay of t
 
 The Higgs boson production and decay is possible through a myriad of modes and channels, and most of them are relevant in the context of hadron colliders.
 % 
-As the rest of this thesis is concerned with Higgs boson couplings, also the scaling of the production modes and decay channels in terms of Higgs boson couplings is discussed briefly.
+As the results in Section~\ref{sec:interpretation} are concerned with Higgs boson couplings, also the scaling of the production modes and decay channels in terms of Higgs boson couplings is discussed briefly.
 % 
 The Higgs boson is produced at hadron colliders through the following production modes (sorted by decreasing production cross section):
 % 
@@ -458,13 +458,13 @@ For the fermions, the decay width is given by (excluding QCD corrections in the 
 \end{equation}
 \end{linenomath*}
 % 
-where $g$ is the electroweak coupling constant.
+where $g$ is the electroweak coupling constant, $m_f$ is the mass of fermion $f$, $m_\wboson$ is the $\wboson$ mass, and $\mh$ is the Higgs boson mass.
 % 
 The decay width becomes larger for heavier fermions, with the kinematically not accessible exception of the decay width to two top quarks.
 % 
 % Since the Higgs boson-fermion couplings are proportional to the fermion mass, the decay width is typically larger for heavier fermions, with the obvious exception of the decay width to two top quarks.
 % 
-In practice, the decay width to quarks lighter than the charm is negligible, as well as the decay width to two electrons.
+In practice, the decay width to quarks lighter than the charm quark is negligible, as well as the decay width to two electrons.
 % 
 The leading-order decay widths to vector bosons are given by~\cite{higgshunter}
 % 
@@ -623,7 +623,7 @@ The matrix element can be calculated in terms of the Mandelstam variables, and t
 % 
 % , yielding the transverse momentum spectrum.
 % 
-In the case of $\ggh$, the transverse momentum of the Higgs boson originates from QCD radiation---e.g. from the radiation of a single gluon ($\gluon\gluon\to\hboson\gluon$)---the contribution of which appears beyond the leading-order calculation.
+In the case of $\ggh$, the transverse momentum of the Higgs boson originates mostly from QCD radiation---e.g. from the radiation of a single gluon ($\gluon\gluon\to\hboson\gluon$)---the contribution of which appears beyond the leading-order calculation.
 % 
 The lowest-order differential cross sections of Higgs boson production via $\ggh$ were first calculated in Ref.~\cite{Ellis:1987xu}; assuming an infinite top quark mass (called the \textit{heavy top mass limit} $\mt \gg \mh$, abbreviated as HTL), one finds the following expression:
 % 
@@ -650,11 +650,16 @@ where the sum over matrix elements $\sum\abs{\mathcal{M}}^2$ is given by the sur
 \end{equation}
 \end{linenomath*}
 % 
-Extending the HTL calculation to higher orders or to include quark mass effects is unfortunately not as simplistic.
+Extending this calculation beyond the leading order is more complicated, and so is including the the finite quark mass effects.
 % 
-Figure~\ref{fig:finitequarkmasseffects} shows the $\pth$ spectra including various quark mass effects, at NLO and $\sqrt{s}=8\TeV$; especially in the tails of the distribution, the difference between the HTL calculation and the one including finite quark mass effects becomes striking: Including the finite quark mass effects in the calculation makes the $\pth$ spectrum significantly softer.
+Figure~\ref{fig:finitequarkmasseffects} shows the $\pth$ spectra including various quark mass effects, at NLO and $\sqrt{s}=8\TeV$.
 % 
-At the time of writing, the $\pth$ spectrum in the HTL is known at NNLO~\cite{Boughezal:2015dra,Boughezal:2015aha,Chen:2016zka}, but a precision study of the $\ggh$ loop requires the inclusion of quark mass effects.
+Especially in the tails of the distribution, the difference between the HTL calculation and the one including finite quark mass effects becomes striking: Including the finite quark mass effects in the calculation makes the $\pth$ spectrum significantly softer.
+
+
+At the time of writing, the $\pth$ spectrum in the HTL is known at NNLO~\cite{Boughezal:2015dra,Boughezal:2015aha,Chen:2016zka}.
+% 
+For the interpretation carried out in Section~\ref{sec:interpretation}, it is vital to include the finite quark mass effects in the $\ggh$ loop in the calculation as well.
 % 
 The lowest-order cross section including quark mass effects, which can be found in Ref.~\cite{Ellis:1987xu}, contains terms with double logarithms for QCD radiation at moderate transverse momentum ($\mq \ll \pth \ll \mh$)~\cite{Baur:1989cm,Bishara:2016jga}, stemming from interference terms in the $\ggh$ production loop:
 % 
@@ -694,9 +699,9 @@ Their analytic resummation under the assumption of finite quark masses has been 
 
 In this thesis two particular calculations are considered, both computed up to NNLO and employing a resummation up to NNLL, and both investigating the properties of the $\pth$ spectrum under variations of the Higgs boson couplings.
 % 
-The first concerns an \textit{effective field theory}, in which the current SM Lagrangian is considered merely an effective low-energy Lagrangian; the actual effective Lagrangian is considered to contain higher-dimensional terms, that reduce to the SM Lagrangian only at low energy.
+Both concern an \textit{effective field theory}, in which the SM Lagrangian is considered merely an effective low-energy Lagrangian; the actual effective Lagrangian is considered to contain higher-dimensional terms, that reduce to the SM Lagrangian only at low energy.
 % 
-Furthermore, the effective Lagrangian must have the same symmetries as present in the current SM Lagrangian~\cite{Grzadkowski:2010es}.
+Furthermore, the effective Lagrangian must have the same symmetries as present in the SM Lagrangian~\cite{Grzadkowski:2010es}.
 % 
 To first approximation, one adds \textit{dimension-6 operators} to the SM Lagrangian:
 % 
@@ -713,6 +718,7 @@ In the model built in Refs.~\cite{Grazzini:2017szg,Grazzini:2016paz}, three dime
 % 
 \begin{linenomath*}
 \begin{equation}
+\label{eq:dimsixops}
 \frac{c_1}{\Lambda^2} \mathcal{O}_1 \to \frac{\alphas}{\pi v} \cg \hboson \, G^a_{\mu\nu} G^{a,\mu\nu}
 \,,\quad 
 \frac{c_2}{\Lambda^2} \mathcal{O}_2 \to \frac{m_\tquark}{v} \kappat \hboson \, \ttbar
@@ -737,7 +743,7 @@ In this particular model, the inclusive cross section is approximately given by
 \end{equation}
 \end{linenomath*}
 % 
-where the factor of 12 appears as a result of the definition of the corresponding dimension-6 operator~\cite{Grazzini:2016paz}.
+where the factor of 12 appears as a result of the definition of the dimension-6 operator $\mathcal{O}_1$ in Equation~(\ref{eq:dimsixops}) (see Ref.~\cite{Grazzini:2016paz}).
 % 
 As first discussed in Ref.~\cite{Azatov:2013xha}, the shape of the $\pth$ distribution is able to break the degeneracy between $\cg$ and $\kappat$ in the inclusive cross section.
 % 
@@ -776,9 +782,15 @@ A selection of calculations obtained from this model are shown in Fig.~\ref{fig:
 
 The second model~\cite{Bishara:2016jga} under consideration concerns variations of the Higgs boson couplings to lighter quarks, namely $\kappab$ and $\kappac$, while taking into account the interference of the top quark loop with that from the bottom and charm quarks in the gluon fusion production loop.
 % 
-Its calculation is also based on effective field theory, and has been made possible at NNLO+NNLL due to recent developments in resummation techniques~\cite{Bozzi:2003jy,Becher:2010tm,Monni:2016ktx}, and specific treatment of the mass corrections~\cite{Banfi:2013eda}.
+Its calculation is also based on effective field theory, using state-of-the-art resummation techniques~\cite{Bozzi:2003jy,Becher:2010tm,Mantler:2012bj,Grazzini:2013mca,Monni:2016ktx}, and a specific treatment of the mass corrections~\cite{Banfi:2013eda}.
 % 
 Some precomputed spectra from Ref.~\cite{Bishara:2016jga} are shown in Fig.~\ref{fig:kbkc-precomputed}.
+% 
+This model is already used in Ref.~\cite{Bishara:2016jga} to fit $\kappab$ and $\kappac$ to a measurement of the $\pth$ spectrum conducted by the ATLAS Collaboration, using data collected at $\sqrt{s}=8$\TeV corresponding to an integrated luminosity of $20.3$\fbinv.
+% 
+The result of this interpretation is shown in Fig.~\ref{fig:kbkc_constraints}.
+% 
+Note that this interpretation is based on a smaller dataset than the one used for the interpretation in this thesis, and that here the branching fractions are assumed to be fixed to their SM value.
 
 
 \begin{figure}[hbtp]
@@ -793,6 +805,20 @@ Some precomputed spectra from Ref.~\cite{Bishara:2016jga} are shown in Fig.~\ref
   \end{center}
 \end{figure}
 
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{img/theory/kbkc_constraints.pdf}
+    \caption{
+        Simultaneous fit of $\kappab$ and $\kappac$ to data.
+        % 
+        The SM is indicated by the black cross.
+        % 
+        Taken from Ref.~\cite{Bishara:2016jga}.
+        }
+    \label{fig:kbkc_constraints}
+  \end{center}
+\end{figure}
+
 
 
 % ____________________________________________________________________________
@@ -802,7 +828,7 @@ The theoretical aspects covered in this chapter are used as input in a simulatio
 % 
 Simulating proton-proton collisions is a complicated matter; the composition of the proton, the hard scattering interaction, and the parton showering and hadronization to ensure the color neutral final state all occur at different energy and time scales.
 % 
-These parts of the full particle physics event can be considered independent of one another, an idea termed the \textit{factorization theorem}.
+These parts of modeling the full particle physics event can be considered independent of one another, an idea called the \textit{factorization theorem}.
 
 
 Proton-proton interactions are actually interactions of the constituents of the proton, which are the \textit{valence quarks} (the quarks which give the proton its physical characteristics, such as its charge), \textit{sea quarks} (which originate from vacuum fluctuations), and gluons.
