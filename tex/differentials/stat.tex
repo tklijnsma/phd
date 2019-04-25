@@ -74,7 +74,7 @@ S^{km}_{i}( \mathcal{O} | \vec{\Delta\sigma}, \vec{\theta})
         \cdot f_{j}^{\text{sig},\,km}( \mathcal{O} | \vec{\theta} )
     % 
     \\ &
-    + n^{\text{OOA},\,km}_i
+    + n^{\text{OOA},\,km}_i(\vec{\theta})
         \cdot f^{\text{OOA},\,km}_i( \mathcal{O} | \vec{\theta} )
 \,,
 %
@@ -89,7 +89,7 @@ where
 % 
 \item $f_{j}^{\text{sig},\,km}(\mathcal{O},\vec{\theta})$ is the probability distribution function of signal events in observable $\mathcal{O}$; and
 % 
-\item $n^{\text{OOA},\,km}_i$ is the number of events reconstructed in bin $i$ originating from outside the fiducial phase space (see Section~\ref{sec:inputs}), and $f^{\text{OOA},\,km}( \mathcal{O} | \vec{\theta} )$ is the distribution thereof.
+\item $n^{\text{OOA},\,km}_i(\vec{\theta})$ is the number of events reconstructed in bin $i$ originating from outside the fiducial phase space (see Section~\ref{sec:inputs}), and $f^{\text{OOA},\,km}( \mathcal{O} | \vec{\theta} )$ is the distribution thereof.
 % 
 \end{itemize}
 % 
@@ -99,7 +99,7 @@ Note that the unit of $S$ as defined in Equation~(\ref{eq:Ssig}) is \textit{numb
 % 
 \begin{linenomath*}
 \begin{equation}
-\int_\mathcal{O} S_i^{km}( \mathcal{O} | \vec{\Delta\sigma}, \vec{\theta})
+\int \mathrm{d} \mathcal{O} \, S_i^{km}( \mathcal{O} | \vec{\Delta\sigma}, \vec{\theta})
     = n_i^{\text{sig},\,km}(\vec{\Delta\sigma} | \vec{\theta})
       + n^{\text{OOA},\,km}_i
 \,.

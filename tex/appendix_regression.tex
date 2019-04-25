@@ -14,7 +14,7 @@ These corrections are required mostly to solve the lack of containment of the pa
 % 
 For example, gaps in between the crystals and modules may cause some deposited energy not to be reconstructed, a problem referred to as limited \textit{local containment}.
 % 
-In addition, there is a non-negligible amount of material in between the interaction point and ECAL, leading to photon conversions and brehmstrahlung for electrons.
+In addition, there is a non-negligible amount of material in between the interaction point and ECAL, leading to photon conversions and bremsstrahlung for electrons.
 % 
 The radiated particles from these effects are typically bent along the $\phi$ direction due to the strong magnetic field, and may on occasion fail to be included in the determination of the supercluster~\cite{Chatrchyan:2013dga}.
 % 
@@ -27,7 +27,7 @@ The regression is carried out via a \textit{semiparametric boosted decision tree
 % 
 This type of multivariate analysis is called `semiparametric' as the product is parametric, but the decision tree itself is determined the same way as a regular BDT, independent of an a priori parametrization.
 % 
-The parametric form chosen in the leafs is a so-called \textit{double-sided crystal ball function} (DCSB) function, with the following formulaic form~\cite{Aad:2015oqa}:
+The parametric form chosen in the leafs is a so-called \textit{double-sided crystal ball function} (DCSB) function, with the following algebraic form~\cite{Aad:2015oqa}:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -58,23 +58,23 @@ The most important variables, however, pertain to the \textit{shower shape} of t
 % 
 In the case of electrons, a second set of variables is available from the tracker; these are mostly important for low-energy electrons.
 % 
-The regression is performed separately for the barrel and endcap regions, and as such the input variables also differ slightly; for example, in the endcap regions the preshower energy measurement is included as an input, and rather than $\eta$ and $\phi$, the location of the superclusters are given in planar coordinates.
+The regression is performed separately for the barrel and endcap regions, and as such the input variables also differ slightly; for example, in the endcap regions the preshower energy measurement is included as an input, and rather than $\eta$ and $\phi$, the locations of the superclusters are given in planar coordinates.
 
 
 For low-energy electrons, the most prominent variables for the energy correction are those from the tracker.
 % 
-While an obvious fact from physics concerns, in a BDT these type of trivialities must be learned through the analysis of large amounts of data.
+While an obvious fact from physics considerations, in a BDT these type of trivialities must be learned through the analysis of large amounts of data.
 % 
 In order to speed up the training, increase chances of convergence, and to improve the final result, it is typically preferable to design the training with these given facts in mind.
 % 
 The energy regression for electrons is determined by first training a BDT using only ECAL variables.
 %
-As a target function, which is to be brought as closely to 1 as possible with minimal standard deviation per leaf, it uses
+As a target function, which is to be brought as closely to 1 as possible via multiplication with the to-be-determined correction with minimal standard deviation per leaf, it uses
 % 
 \begin{linenomath*}
 \begin{equation}
 \text{target}_1 = \frac{\Etrue}{\Eraw}
-\,.
+\,,
 \end{equation}
 \end{linenomath*}
 % 
@@ -147,6 +147,8 @@ Unlike the raw energy measurement, the corrected energy shows no drastic underes
     \caption{
         Example of crystal saturation for high-energy electrons.
         % 
+        The red line is a DSCB fit to the histogram.
+        % 
         The ratio of $\Eraw$ over $\Etrue$ is close to 1.0 when crystals are not saturated; in these cases the uncorrected energy measurement is not too far off from the true energy.
         % 
         However, for high-energy electrons more crystals saturate, and the raw energy strongly underestimates the true energy.
@@ -161,6 +163,8 @@ Unlike the raw energy measurement, the corrected energy shows no drastic underes
     \caption{
         Corrected energy estimate for electrons, using only the first stage of the training (i.e.\ without any information from the inner tracker).
         % 
+        The red line is a DSCB fit to the histogram.
+        % 
         The corrected energy is a very good estimate of the true energy, despite the relatively large number of saturated crystals in this region of phase space.
         }
     \label{fig:saturation_corrected}
@@ -174,7 +178,7 @@ The raw energy measurement is clearly a poor estimate of the true energy, not re
 % 
 The first stage (and final stage in the case of photons) of the regression brings the scale within per-mille level agreement with respect to the true energy, and provides an evident improvement with respect to the previous version of the regression.
 % 
-Around $50\GeV$, the scale using only ECAL variables in the case of electrons seems to deviate sharply from the trend; this deviation is merely a misdetermination of the parameter $\mu$ from the histogram, and is of no concern for the actual performance of the regression.
+Around $50\GeV$, the scale using only ECAL variables in the case of electrons seems to deviate sharply from the trend; this deviation is merely a poor determination of the parameter $\mu$ from the histogram, and is of no concern for the actual performance of the regression.
 % 
 % Similar misdeterminations occur frequently in the results that follow, and will be pointed out where needed.
 
