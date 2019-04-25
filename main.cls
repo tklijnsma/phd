@@ -16,18 +16,18 @@
 % Line numbers
 \RequirePackage{lineno}
 \ifbool{draftmode}{
-    \linenumbers
+    % \linenumbers
     }{}
 
-% Draft watermark if in draftmode
-\ifbool{draftmode}{
-    \RequirePackage{draftwatermark}
-    \SetWatermarkText{DRAFT}
-    \SetWatermarkScale{7}
-    \SetWatermarkLightness{0.9}
-    }{
-    \usepackage{graphicx}
-    }
+% % Draft watermark if in draftmode
+% \ifbool{draftmode}{
+%     \RequirePackage{draftwatermark}
+%     \SetWatermarkText{DRAFT}
+%     \SetWatermarkScale{7}
+%     \SetWatermarkLightness{0.9}
+%     }{
+%     }
+\RequirePackage{graphicx}
 
 % Page break at sections
 \RequirePackage{titlesec}
