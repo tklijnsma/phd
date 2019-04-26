@@ -610,7 +610,7 @@ The interpretation performed in Section~\ref{sec:interpretation} is concerned wi
 
 As this thesis is concerned primarily with the interpretation of the $\pth$ spectrum, this section shortly introduces the main aspects of its calculation and the most recently obtained results.
 % 
-The transverse momentum can be written in terms of the Mandelstam variables $s$, $u$, and $t$~\cite{peskin}:
+In general, the transverse momentum can be written in terms of the Mandelstam variables $s$, $u$, and $t$~\cite{peskin}:
 % 
 \begin{linenomath*}
 \begin{equation}
@@ -643,7 +643,7 @@ where the sum over matrix elements $\sum\abs{\mathcal{M}}^2$ is given by the sur
 \sum_\text{spins, colors} \abs{\mathcal{M}}^2
 = \alpha_w \alpha_s^3 \frac{4 N_c v}{9} % Not 100% sure this is N_c.. looks like it though
 \left(
-    \frac{\mh^8 + s^4 + t^8 + u^4}{ s \, t \, u \; m_\wboson^2 }
+    \frac{\mh^8 + s^4 + t^4 + u^4}{ s \, t \, u \; m_\wboson^2 }
     \right)
 \quad \text{(HTL)}
 \,.
@@ -823,6 +823,7 @@ Note that this interpretation is based on a smaller dataset than the one used fo
 
 % ____________________________________________________________________________
 \subsection{Simulation}
+\label{sec:simulation}
 
 The theoretical aspects covered in this chapter are used as input in a simulation of particle physics data, which is ultimately what actual particle physics data is compared to derive measurements.
 % 
@@ -876,6 +877,8 @@ As the partons radiate, the energy per particle decreases, until the point where
 This second step is called the \textit{hadronization}.
 % 
 Finally, in order to fully simulate real conditions, the \textit{underlying event} must be taken into account, which consists of the (typically) hadronic activity from the partons that were not part of the hard interaction.
+% 
+This stage is what will in the rest of the thesis be referred to as the \textit{generator level} (as opposed to the \textit{reconstruction level}, which takes into account also the detector folding).
 
 
 The SM prediction for the differential cross sections in this thesis is simulated with $\MGvATNLO$ v2.2.2~\cite{Alwall:2014hca} for each of the four most prominent Higgs boson production modes ($\ggh$, VBF, VH, and $\tth$).
